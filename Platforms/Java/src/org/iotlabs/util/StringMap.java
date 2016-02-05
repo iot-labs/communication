@@ -5,7 +5,7 @@ import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
 
-import javax.servlet.http.HttpServletRequest;
+//import javax.servlet.http.HttpServletRequest;
 
 /**
  * extends HashMap 을 해서 HashMap 과 비슷한 구조체 클래스 이다.
@@ -20,16 +20,16 @@ public class StringMap extends HashMap {
 	private List list;
 	private int listSize;
 	
-	public StringMap( HttpServletRequest req ) {
-		Enumeration e = req.getParameterNames(); 
-		String key = null; 
-		String value = null;
-		while (e.hasMoreElements()){ 
-			key = e.nextElement().toString();
-			value = req.getParameter(key);
-			put(key,value);
-		} 
-	}
+//	public StringMap( HttpServletRequest req ) {
+//		Enumeration e = req.getParameterNames(); 
+//		String key = null; 
+//		String value = null;
+//		while (e.hasMoreElements()){ 
+//			key = e.nextElement().toString();
+//			value = req.getParameter(key);
+//			put(key,value);
+//		} 
+//	}
 	
 	public StringMap( List list ) {
 		this.list = list;
