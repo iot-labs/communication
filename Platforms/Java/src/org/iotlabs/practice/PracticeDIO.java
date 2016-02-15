@@ -13,7 +13,7 @@ public class PracticeDIO {
 			
 			for( int i=0; i< 5; i++ ) {
 				pin.setValue(flag);
-				Thread.sleep(1000 * 2) // 2sec
+				Thread.sleep(1000 * 2); // 2sec
 			}
 		} catch (Exception e) {
 			e.printStackTrace();
