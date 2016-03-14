@@ -50,3 +50,18 @@ IoT 디바이스는 잘 다루지만 Web 개발에 익숙하지 않은 개발자
 전세계적으로 IoT 의 영향력이 확대 되고, 우리나라에서도 많은 분야해서 IoT 를 접목하는 시도가 있습니다. 이에 따라 많은 학생이나 입문자들이 IoT 아이템을 개발/발전 시켜나가고 있지만, S/W 를 전공하지 않은 학생이나 일반인들에게는 큰 진입장벽이 되는 부분이 있습니다.
 
 IoT Labs 에서는 이 진입장벽을 낮춤으로써 S/W  를 전공하지 않은 분들도 쉽게 IoT 아이디어를 개발/발전 시킬 수 있도록 돕고 싶습니다.
+
+----
+
+### 구현 범위
+
+- Device 통신
+	- MQTT , Web Socket , Bluetooth
+- Data 저장
+	- JDBC , JSON Store , Redis
+- Data 분석 (Dashboard)
+	- (미정. 제안 보내주세요)
+- API 연동
+	- Facebook
+	- Twitter
+	- Gmail 
