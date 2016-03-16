@@ -65,3 +65,14 @@ IoT Labs 에서는 이 진입장벽을 낮춤으로써 S/W  를 전공하지 않
 	- Facebook
 	- Twitter
 	- Gmail 
+
+----
+
+## 진행상황
+
+- Device 통신 : `진행중` ![](https://img.shields.io/badge/Development-Processing-green.svg?style=flat)
+- Data 저장 : `진행중` ![](https://img.shields.io/badge/Development-Processing-green.svg?style=flat)
+- Data 분석 (Dashboard) : `예정됨` ![](https://img.shields.io/badge/Development-Scheduled-green.svg?style=flat)
+- API 연동 : `예정됨` ![](https://img.shields.io/badge/Development-Scheduled-green.svg?style=flat)
+
+
