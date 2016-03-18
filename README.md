@@ -75,4 +75,41 @@ IoT Labs 에서는 이 진입장벽을 낮춤으로써 S/W  를 전공하지 않
 - Data 분석 (Dashboard) : `예정됨` ![](https://img.shields.io/badge/Development-Scheduled-green.svg?style=flat)
 - API 연동 : `예정됨` ![](https://img.shields.io/badge/Development-Scheduled-green.svg?style=flat)
 
+----
+
+## 사례조사
+
+> IoT 관련 라이브러리와 프로젝트등의 리서치
+
+### 국내
+
+#### Thing+
+
+<img src="https://raw.githubusercontent.com/jongkwang/IoTLabs/master/assets/img/case_research1.png">
+
+IoT 클라우드 플랫폼을 기반으로 IoT 서비스를 구축 할 수 있도록 도와준다.
+
+> Ref. : https://thingplus.net/
+
+##### 특징
+* IoT Device 간 연결 작업 지원 <code>(우리 프로젝트인 IoT Labs 와 같은 기능 제공)</code>
+* 클라우드 기반으로 동작한다 <code>(IoT Labs 에 없는 기능)</code>
+* 포털을 이용한 서비스 제공 <code>(IoT Labs 와 비슷한 기능)</code>
+* API 기능 제공 <code>(IoT Labs 와 비슷한 기능)</code>
+
+<img src="https://raw.githubusercontent.com/jongkwang/IoTLabs/master/assets/img/case_research2.png">
+> Image from Thing+ (https://thingplus.net/)
+
+
+##### Thing+ 의 UI 기능
+
+* 대시보드 제공
+	* 센서 데이터를 대시보드 형태로 제공
+* 룰과 타임라인 제공
+	* IFTTT 처럼 조건에 따른 액션(Action)을 정할 수 있음
+* 차트와 통계 제공
+	* 상세한 데이터는 Chart 로 분석
+	* 기간별 통계 분석(Statistics)
+
+----
 
