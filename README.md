@@ -134,3 +134,32 @@ LG CNS 에서 제공하는 IoT 플랫폼. <small>*아직 이름이 정해지진 
 > Image from LG CNS (http://blog.lgcns.com/817)
 
 ----
+
+
+### 국외
+
+#### AWS IoT
+
+<img src="https://raw.githubusercontent.com/jongkwang/IoTLabs/master/assets/img/case_research_aws_iot1.png" height=100>
+
+LG CNS 에서 제공하는 IoT 플랫폼. <small>*아직 이름이 정해지진 않았음*</small>
+
+> Ref. : http://blog.lgcns.com/817
+
+##### 특징
+
+* 디바이스 연결  및 관리
+	* MQTT
+	* WebSockets
+	* HTTP
+* 디바이스 연결 및 데이터 보안
+	* 모든 연결 지점에서 인증 및 엔드-투-엔드 암호화를 제공
+	* 세분화된 권한이 설정된 정책을 적용
+* 디바이스 데이터 처리
+	* 기존의 AWS 서비스 들과 연계 가능 : AWS Lambda, Amazon Kinesis, Amazon S3, Amazon Machine Learning, Amazon DynamoDB, Amazon CloudWatch, Amazon Elasticsearch Service
+* 디바이스 상태를 확인 및 설정
+	* 상태를 확인하거나 설정
+	* 디바이스가 언제나 온라인인 것처럼 표시
+
+<img src="https://raw.githubusercontent.com/jongkwang/IoTLabs/master/assets/img/case_research_aws_iot2.png">
+> Image from AWS (https://aws.amazon.com/ko/iot/how-it-works/)
