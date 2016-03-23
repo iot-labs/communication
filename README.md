@@ -184,3 +184,15 @@ LG CNS 에서 제공하는 IoT 플랫폼. <small>*아직 이름이 정해지진 
 
 ----
 
+## 참여
+
+## Issue
+사용문의 또는 질문 사항들은 [Github 이슈](https://github.com/jongkwang/IoTLabs/issues)에 올려 주시면 바로 처리 해 드리겠습니다.
+많은 의견 부탁드립니다.
+
+## Contribution
+IoT Labs를 개선해주세요. Contribution은 언제나 환영합니다.
+
+## Support
+
+* 이 프로젝트는 [공개SW 개잘자 Lab](http://devlab.oss.kr/)의 지원을 받고 있습니다.
