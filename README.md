@@ -163,3 +163,24 @@ LG CNS 에서 제공하는 IoT 플랫폼. <small>*아직 이름이 정해지진 
 
 <img src="https://raw.githubusercontent.com/jongkwang/IoTLabs/master/assets/img/case_research_aws_iot2.png">
 > Image from AWS (https://aws.amazon.com/ko/iot/how-it-works/)
+
+----
+
+#### GE (General Electric)
+
+> *(내용이 많아서 문서 이동 됨) - [바로가기](https://github.com/jongkwang/IoTLabs/wiki/Case-Research---%EC%82%AC%EB%A1%80%EC%A1%B0%EC%82%AC)*
+
+----
+
+#### 인텔(Intel)
+
+> *(내용이 많아서 문서 이동 됨) - [바로가기](https://github.com/jongkwang/IoTLabs/wiki/Case-Research---%EC%82%AC%EB%A1%80%EC%A1%B0%EC%82%AC)*
+
+----
+
+#### Splunk
+
+> *(내용이 많아서 문서 이동 됨) - [바로가기](https://github.com/jongkwang/IoTLabs/wiki/Case-Research---%EC%82%AC%EB%A1%80%EC%A1%B0%EC%82%AC)*
+
+----
+
