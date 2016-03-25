@@ -200,10 +200,10 @@ IoT Labs를 개선해주세요. Contribution은 언제나 환영합니다.
 
 ## License
 * [IoT Labs](https://github.com/jongkwang/IoTLabs) 는 [MIT](https://opensource.org/licenses/MIT) 라이센스를 따르며,
-* 그리고 함께 사용된 SW와 폰트의 라이센스도 준수해야 합니다.
+* 함께 사용된 SW와 폰트의 라이센스도 준수해야 합니다.
 * 함께 사용된 SW 와 폰트
 	* Font
-		* [스케치명조]([공개SW 개잘자 Lab](http://devlab.oss.kr/)) 폰트가 사용 되었습니다.
+		* [스케치명조](http://www.asiasoft.co.kr/) 폰트가 사용 되었습니다.
 	* Open Source
 		* [Paho](http://www.eclipse.org/paho/) - [Eclipse Public License 1.0](http://projects.eclipse.org/content/eclipse-public-license-1.0)
 		* [RabbitMQ](https://www.rabbitmq.com/) - [Mozilla Public License](https://www.rabbitmq.com/mpl.html)
