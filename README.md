@@ -195,7 +195,7 @@ IoT Labs를 개선해주세요. Contribution은 언제나 환영합니다.
 
 ## Support
 
-* 이 프로젝트는 [공개SW 개잘자 Lab](http://devlab.oss.kr/)의 지원을 받고 있습니다.
+* 이 프로젝트는 [공개SW 개발자 Lab](http://devlab.oss.kr/)의 지원을 받고 있습니다.
 
 
 ## License
