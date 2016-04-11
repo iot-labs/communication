@@ -19,5 +19,6 @@
 	<classpathentry kind="lib" path="lib/pi4j-service-javadoc.jar"/>
 	<classpathentry kind="lib" path="lib/pi4j-service-sources.jar"/>
 	<classpathentry kind="lib" path="lib/pi4j-service.jar"/>
+	<classpathentry kind="lib" path="lib/org.eclipse.paho.client.mqttv3-1.0.2.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

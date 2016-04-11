@@ -31,5 +31,4 @@ public class PahoPublish {
 
 	public static void main(String[] args) {
 	}
-	
 }
