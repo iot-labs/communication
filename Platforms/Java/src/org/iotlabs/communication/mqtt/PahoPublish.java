@@ -30,5 +30,13 @@ public class PahoPublish {
 	}
 
 	public static void main(String[] args) {
+		String MqttBlockerURI = "tcp://127.0.0.1:1883";	// ex) "tcp://127.0.0.1:1883"
+		String MqttClientId = "MyClient_01";			// ex) "MyClient_01"
+		String username = "user";						// ex) user (Bitnami RabbitMQ 의 기본 username 은 "user" 이다)
+		String password = "bitnami";					// ex) bitnami (Bitnami RabbitMQ 의 기본 password 는 "bitnami" 이다)
+		String topic = "/topic/security";
+		String message = "Hello MQTT";
+		
+		PahoPublish publish = new PahoPublish(MqttBlockerURI, MqttClientId, username, password);
 	}
 }
