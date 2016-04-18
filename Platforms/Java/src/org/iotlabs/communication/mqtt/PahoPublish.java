@@ -48,7 +48,7 @@ public class PahoPublish {
 		
 		try {
 			mqttClient.connect(mqttConnectOpts);
-			mqttClient.publish("/topic/security", mqttMessage);
+			mqttClient.publish(topic, mqttMessage);
 			mqttClient.disconnect();
 			
 		} catch (MqttException e) {
