@@ -5,7 +5,7 @@ import org.eclipse.paho.client.mqttv3.MqttConnectOptions;
 import org.eclipse.paho.client.mqttv3.MqttException;
 
 /**
- * MQTT Brocker 의 메세지를 수신한다.
+ * MQTT Broker 의 메세지를 수신한다.
  * @author JongKwang
  *
  */
@@ -13,6 +13,9 @@ public class PahoReceiver {
 
 	private MqttClient mqttClient;
 	private MqttConnectOptions mqttConnectOpts;
+	
+	private final String topic = "/topic/security";
+	private final int qos = 1;
 	
 	public PahoReceiver(String MqttBlockerURI, String MqttClientId, String username, String password) {
 		try {
@@ -35,6 +38,17 @@ public class PahoReceiver {
 		String password = "bitnami"; 					// ex) bitnami (Bitnami RabbitMQ 의 기본 password 는 "bitnami" 이다)
 
 		PahoReceiver pahoReceiver = new PahoReceiver(MqttBlockerURI, MqttClientId, username, password);
+		pahoReceiver.receive();
+	}
+
+	public void receive() {
+		try {
+			mqttClient.connect(mqttConnectOpts);
+			mqttClient.subscribe(topic, qos);
+			
+		} catch (MqttException e) {
+			e.printStackTrace();
+		}
 	}
 }
 
