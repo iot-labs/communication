@@ -1,8 +1,11 @@
 package org.iotlabs.communication.mqtt;
 
+import org.eclipse.paho.client.mqttv3.IMqttDeliveryToken;
+import org.eclipse.paho.client.mqttv3.MqttCallback;
 import org.eclipse.paho.client.mqttv3.MqttClient;
 import org.eclipse.paho.client.mqttv3.MqttConnectOptions;
 import org.eclipse.paho.client.mqttv3.MqttException;
+import org.eclipse.paho.client.mqttv3.MqttMessage;
 
 /**
  * MQTT Broker 의 메세지를 수신한다.
@@ -44,6 +47,34 @@ public class PahoReceiver {
 	public void receive() {
 		try {
 			mqttClient.connect(mqttConnectOpts);
+			mqttClient.setCallback(new MqttCallback() {
+
+				@Override
+				/**
+				 * This method is called when the connection to the server is lost.
+				 */
+				public void connectionLost(Throwable cause) {
+					System.out.println("### It have lost the connection to the Broker");
+				}
+
+				@Override
+				/**
+				 * Called when delivery for a message has been completed, and all acknowledgments have been received.
+				 */
+				public void deliveryComplete(IMqttDeliveryToken arg0) {
+					System.out.println("### It have lost the connection to the Broker");
+				}
+
+				@Override
+				/**
+				 * This method is called when a message arrives from the server.
+				 */
+				public void messageArrived(String arg0, MqttMessage arg1) throws Exception {
+					System.out.println(arg0 + ": " + arg1.toString());
+
+				}
+			}); // close setCallback()
+			
 			mqttClient.subscribe(topic, qos);
 			
 		} catch (MqttException e) {
