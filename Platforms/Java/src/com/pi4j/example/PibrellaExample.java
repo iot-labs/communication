@@ -1,3 +1,4 @@
+package com.pi4j.example;
 import com.pi4j.component.button.ButtonEvent;
 import com.pi4j.component.button.ButtonPressedListener;
 import com.pi4j.component.button.ButtonReleasedListener;
