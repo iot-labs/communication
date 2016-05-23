@@ -20,11 +20,11 @@ public class ConsoleCmd {
 		String s = null;
 		
 		try {
-			Process oProcess = new ProcessBuilder("ls", "-al").start();
+			Process process = new ProcessBuilder("ls", "-al").start();
 
 			// 출력 읽어 오기
-			BufferedReader stdOut = new BufferedReader(new InputStreamReader(oProcess.getInputStream()));
-			BufferedReader stdError = new BufferedReader(new InputStreamReader(oProcess.getErrorStream()));
+			BufferedReader stdOut = new BufferedReader(new InputStreamReader(process.getInputStream()));
+			BufferedReader stdError = new BufferedReader(new InputStreamReader(process.getErrorStream()));
 
 			// 읽어온 출력을 화면에 표시
 			while ((s = stdOut.readLine()) != null)
@@ -32,8 +32,8 @@ public class ConsoleCmd {
 			while ((s = stdError.readLine()) != null)
 				System.err.println(s);
 
-			System.out.println("- oProcess.exitValue() : " + oProcess.exitValue());
-			System.exit(oProcess.exitValue());
+			System.out.println("- process.exitValue() : " + process.exitValue());
+			System.exit(process.exitValue());
 			
 		} catch (IOException e) { // 에러 처리
 			e.printStackTrace();
