@@ -4,4 +4,10 @@
 .project
 .settings/
 .idea/
+.gradle/
+!gradle-wrapper.jar
+.gradletasknamecache
+gradle/wrapper/gradle-wrapper.properties
+/build/
 *.iml
+*.properties
