@@ -15,11 +15,11 @@ import java.util.List;
  *
  */
 public class StringMap extends HashMap {
-	
-	private static final long serialVersionUID = 1L;
-	private List list;
-	private int listSize;
-	
+
+    private static final long serialVersionUID = 1L;
+    private List list;
+    private int listSize;
+
 //	public StringMap( HttpServletRequest req ) {
 //		Enumeration e = req.getParameterNames(); 
 //		String key = null; 
@@ -30,83 +30,83 @@ public class StringMap extends HashMap {
 //			put(key,value);
 //		} 
 //	}
-	
-	public StringMap( List list ) {
-		this.list = list;
-		this.listSize = list.size();
-	}
-	
-	public StringMap(HashMap map) {
-		super.putAll(map);
-	}
 
-	public String get(String key) {
-		String returnValue = null;
-		
-		try {
-			returnValue = super.get(key).toString().trim();
-		} catch (NullPointerException npe) {
-			//npe.printStackTrace();
-			returnValue = "";
-		}
+    public StringMap( List list ) {
+        this.list = list;
+        this.listSize = list.size();
+    }
 
-		return returnValue;
-	}
+    public StringMap(HashMap map) {
+        super.putAll(map);
+    }
 
-	public int getInt(String key) {
-		int returnValue = 0;
-		
-		try {
-			returnValue = Integer.parseInt( this.get(key) );
-		} catch (NullPointerException npe) {
-			npe.printStackTrace();
-			returnValue = 0;
-		}
+    public String get(String key) {
+        String returnValue = null;
 
-		return returnValue;
-	}
+        try {
+            returnValue = super.get(key).toString().trim();
+        } catch (NullPointerException npe) {
+            //npe.printStackTrace();
+            returnValue = "";
+        }
 
-	public void print() {
-		Iterator iterator = null;
-		String key = null;
-		StringBuffer returnValue = new StringBuffer();
-	    
-		iterator = keySet().iterator();
-	    while (iterator.hasNext()) {
-	        key = (String) iterator.next();
-	        returnValue.append(key+":"+get(key)+", ");
-	    }
-	    System.out.println( returnValue.toString() );
-	}
+        return returnValue;
+    }
 
-	// List 처리
-	public StringMap get(int i) {
-		return new StringMap((HashMap)this.list.get( i ));
-	}
-	
-	public void set(int i, StringMap map) {
-		this.list.set(i, map);
-	}
+    public int getInt(String key) {
+        int returnValue = 0;
 
-	// List 처리
-	public int size() {
-		return listSize;
-	}
+        try {
+            returnValue = Integer.parseInt( this.get(key) );
+        } catch (NullPointerException npe) {
+            npe.printStackTrace();
+            returnValue = 0;
+        }
 
-	/**
-	 * 쉬운 디버깅을 위해   List의 값을 모두 출력한다.
-	 */
-	public void printList() {
-		Iterator iterator = null;
-		String key = null;
-	    
-		for( int i = 0; i < listSize; i++) {
-			iterator = get(i).keySet().iterator();
-		    while (iterator.hasNext()) {
-		        key = (String) iterator.next();
-		        System.out.print(key+":");
-		        System.out.print(get(i).get(key)+", ");
-		    }
-		}
-	}
+        return returnValue;
+    }
+
+    public void print() {
+        Iterator iterator = null;
+        String key = null;
+        StringBuffer returnValue = new StringBuffer();
+
+        iterator = keySet().iterator();
+        while (iterator.hasNext()) {
+            key = (String) iterator.next();
+            returnValue.append(key+":"+get(key)+", ");
+        }
+        System.out.println( returnValue.toString() );
+    }
+
+    // List 처리
+    public StringMap get(int i) {
+        return new StringMap((HashMap)this.list.get( i ));
+    }
+
+    public void set(int i, StringMap map) {
+        this.list.set(i, map);
+    }
+
+    // List 처리
+    public int size() {
+        return listSize;
+    }
+
+    /**
+     * 쉬운 디버깅을 위해   List의 값을 모두 출력한다.
+     */
+    public void printList() {
+        Iterator iterator = null;
+        String key = null;
+
+        for( int i = 0; i < listSize; i++) {
+            iterator = get(i).keySet().iterator();
+            while (iterator.hasNext()) {
+                key = (String) iterator.next();
+                System.out.print(key+":");
+                System.out.print(get(i).get(key)+", ");
+            }
+        }
+    }
 }

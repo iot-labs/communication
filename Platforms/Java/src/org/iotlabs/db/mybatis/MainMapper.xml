@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <!-- 
-	실제 쿼리가 담기는 부분
-	namespace 별로 .xml 파일이 구성 된다.
+    실제 쿼리가 담기는 부분
+    namespace 별로 .xml 파일이 구성 된다.
 -->
 <mapper namespace="MainMapper">
-	<select id="test1" resultType="java.util.HashMap" parameterType="java.util.HashMap">
+    <select id="test1" resultType="java.util.HashMap" parameterType="java.util.HashMap">
 <![CDATA[
 select * from Result where resultSeq = #{resultSeq};
 ]]>
-	</select>
-	
-	<update id="updateIPAddress" parameterType="java.util.HashMap">
+    </select>
+
+    <update id="updateIPAddress" parameterType="java.util.HashMap">
 update machineList
    set ip = #{ip}
-	 , updatedDate = now()
+     , updatedDate = now()
  where machineId = #{machineId}
-	</update>
-	
-	<insert id="insertIPAddress" parameterType="java.util.HashMap">
+    </update>
+
+    <insert id="insertIPAddress" parameterType="java.util.HashMap">
 insert into machineList 
 (machineId, ip) 
 values (#{machineId}, #{ip});
-	</insert>
-	
+    </insert>
+
 </mapper>

@@ -1,17 +1,17 @@
 package org.iotlabs.db.mybatis;
 
 public class ReturnSt {
-	
-	public Object result = null;
+
+    public Object result = null;
 }
 
 /*
 {
-	session: true,
-	errorMsg: '',
-	exceptionMsg: '',
-	result: {
-	    name: 'Jeniffer Star'
-	}
+    session: true,
+    errorMsg: '',
+    exceptionMsg: '',
+    result: {
+        name: 'Jeniffer Star'
+    }
 }
 */
