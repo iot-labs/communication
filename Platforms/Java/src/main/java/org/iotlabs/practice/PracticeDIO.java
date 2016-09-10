@@ -3,7 +3,7 @@ package org.iotlabs.practice;
 
 public class PracticeDIO {
 
-	public static void main(String[] args) {
+    public static void main(String[] args) {
 //		try {
 //			GPIOPin pin = (GPIOPin) DeviceManager.open( 18 );
 //			boolean flag = false;
@@ -15,5 +15,5 @@ public class PracticeDIO {
 //		} catch (Exception e) {
 //			e.printStackTrace();
 //		}
-	}
+    }
 }
