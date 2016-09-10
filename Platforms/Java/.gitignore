@@ -11,3 +11,6 @@ gradle/wrapper/gradle-wrapper.properties
 /build/
 *.iml
 *.properties
+
+# mqtt
+.lck
