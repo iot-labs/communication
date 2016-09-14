@@ -4,6 +4,8 @@ import com.google.gson.annotations.SerializedName;
 import org.eclipse.paho.client.mqttv3.MqttMessage;
 import org.iotlabs.models.BaseModel;
 import org.iotlabs.models.mqtt.impl.Header;
+import org.iotlabs.util.StringUtils;
+
 
 public class MqttMsg extends BaseModel {
 
@@ -18,7 +20,7 @@ public class MqttMsg extends BaseModel {
 
     public MqttMsg(String topic, MqttMessage pahoMqttMessage) {
         this.header = new Header(pahoMqttMessage);
-        this.payload = new String(pahoMqttMessage.getPayload());
+        this.payload = StringUtils.getString(pahoMqttMessage.getPayload());
         this.topic = topic;
     }
 

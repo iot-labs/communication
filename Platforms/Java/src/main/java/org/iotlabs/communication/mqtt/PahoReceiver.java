@@ -14,8 +14,8 @@ public class PahoReceiver {
 
     private MqttClient mqttClient;
 
-    private final String topic = "/topic/security";
-    private final int qos = 1;
+    private final static String topic = "/topic/security";
+    private final static int qos = 1;
 
 
     public static void main(String[] args) {

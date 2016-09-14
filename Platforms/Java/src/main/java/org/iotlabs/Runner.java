@@ -1,8 +1,7 @@
 package org.iotlabs;
 
-import io.moquette.interception.AbstractInterceptHandler;
-import io.moquette.interception.messages.InterceptPublishMessage;
 import org.apache.commons.cli.*;
+import org.apache.log4j.Logger;
 import org.iotlabs.communication.mqtt.SimpleMqttBroker;
 
 import java.io.IOException;
@@ -27,6 +26,7 @@ public class Runner {
         try {
             cmd = commandLineParser.parse( options, args);
         } catch (ParseException e) {
+            Logger.getLogger(getClass()).info("Parse input arguments.", e);
             usage();
             return;
         }
@@ -36,7 +36,7 @@ public class Runner {
                 try {
                     startMqttBroker();
                 } catch (IOException e) {
-                    e.printStackTrace();
+                    Logger.getLogger(getClass()).error("Start mqtt broker.", e);
                 }
             }
         } else {
@@ -45,15 +45,7 @@ public class Runner {
     }
 
     private void startMqttBroker() throws IOException {
-        SimpleMqttBroker.getInstance().start(Arrays.asList(new AbstractInterceptHandler() {
-            @Override
-            public void onPublish(InterceptPublishMessage msg) {
-                System.out.println("== Publish Event Recv ==");
-                System.out.println("From : " + msg.getClientID());
-                System.out.println("Topic : " + msg.getTopicName());
-                System.out.println("Content : " + new String(msg.getPayload().array()));
-            }
-        }));
+        SimpleMqttBroker.getInstance().start(null);
     }
 
     private void usage() {

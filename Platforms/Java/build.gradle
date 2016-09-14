@@ -2,13 +2,16 @@ group 'org.iotlabs'
 version '1.0-SNAPSHOT'
 
 apply plugin: 'java'
+apply plugin: 'findbugs'
+apply plugin: 'pmd'
+
 
 sourceCompatibility = 1.8
 
 repositories {
     mavenCentral()
     jcenter()
-    // paho repo
+    // eclipse paho repo
     maven {
         url "https://repo.eclipse.org/content/repositories/paho-snapshots/"
     }
@@ -17,13 +20,49 @@ repositories {
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
     testCompile group: 'junit', name: 'junit', version: '4.11'
+    // common libs
     compile 'commons-cli:commons-cli:1.3.1'
-    compile 'io.moquette:moquette-broker:0.8.1'
-    compile 'com.google.code.gson:gson:2.7'
-    compile group: 'org.mybatis', name: 'mybatis', version: '3.4.0'
+    compile 'org.apache.logging.log4j:log4j-core:2.6.2'
+
+
+    // mqtt
     compile 'org.eclipse.paho:org.eclipse.paho.client.mqttv3:1.0.2'
+    compile 'io.moquette:moquette-broker:0.8.1'
+
+    // database support libs
+    compile 'com.google.code.gson:gson:2.7'
+    compile 'org.mybatis:mybatis:3.4.0'
 }
 
+tasks.withType(FindBugs) {
+    reports {
+        xml.enabled = false
+        html.enabled = true
+    }
+    exclude '**/com/pi4j/*'
+    classes = classes.filter {
+        !it.path.contains(new File("com/pi4j/").path)
+    }
+
+    ignoreFailures = true
+}
+
+tasks.withType(Pmd) {
+    reports {
+        html.destination = file("${pmd.reportsDir}/pmd-report.html")
+        html.enabled = true
+        xml.enabled = false
+    }
+    source = fileTree('src/main/java/org/')
+    ignoreFailures = true
+}
+
+
+/* simple commands */
+
+/**
+ * run moquette broker server
+ */
 task start_mqtt_broker(type: JavaExec, dependsOn: classes) {
     description = 'This task will start mqtt broker server'
     classpath = sourceSets.main.runtimeClasspath
