@@ -1,6 +1,7 @@
 package org.iotlabs;
 
 import org.apache.commons.cli.*;
+import org.apache.log4j.Logger;
 import org.iotlabs.communication.mqtt.SimpleMqttBroker;
 
 import java.io.IOException;
@@ -25,6 +26,7 @@ public class Runner {
         try {
             cmd = commandLineParser.parse( options, args);
         } catch (ParseException e) {
+            Logger.getLogger(getClass()).info("Parse input arguments.", e);
             usage();
             return;
         }
@@ -34,7 +36,7 @@ public class Runner {
                 try {
                     startMqttBroker();
                 } catch (IOException e) {
-                    e.printStackTrace();
+                    Logger.getLogger(getClass()).error("Start mqtt broker.", e);
                 }
             }
         } else {

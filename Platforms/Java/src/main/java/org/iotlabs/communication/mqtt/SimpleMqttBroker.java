@@ -6,7 +6,6 @@ import io.moquette.server.Server;
 import org.iotlabs.util.StringUtils;
 
 import java.io.IOException;
-import java.nio.charset.Charset;
 import java.util.ArrayList;
 import java.util.List;
 

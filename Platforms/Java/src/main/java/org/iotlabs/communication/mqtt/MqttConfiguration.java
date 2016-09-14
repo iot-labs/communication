@@ -1,6 +1,7 @@
 package org.iotlabs.communication.mqtt;
 
 import io.moquette.server.config.IConfig;
+import org.apache.log4j.Logger;
 import org.iotlabs.util.Configuration;
 
 import java.io.IOException;
@@ -19,6 +20,7 @@ public class MqttConfiguration implements IConfig {
         try {
             configuration = new Configuration(filename);
         } catch (IOException e) {
+            Logger.getLogger(getClass()).error("Fail on create MqttConfiguration.", e);
             e.printStackTrace();
         }
     }
@@ -30,12 +32,12 @@ public class MqttConfiguration implements IConfig {
 
     @Override
     public String getProperty(String name) {
-        return configuration.getProperty(name);
+        return configuration.getString(name);
     }
 
     @Override
     public String getProperty(String name, String defaultValue) {
-        return configuration.getProperty(name, defaultValue);
+        return configuration.getString(name, defaultValue);
     }
 
     public Configuration getConfiguration() {

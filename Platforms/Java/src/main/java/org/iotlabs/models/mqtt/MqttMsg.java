@@ -6,7 +6,6 @@ import org.iotlabs.models.BaseModel;
 import org.iotlabs.models.mqtt.impl.Header;
 import org.iotlabs.util.StringUtils;
 
-import java.nio.charset.Charset;
 
 public class MqttMsg extends BaseModel {
 
