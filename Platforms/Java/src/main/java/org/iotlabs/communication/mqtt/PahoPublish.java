@@ -19,7 +19,7 @@ public class PahoPublish {
     public static void main(String[] args) {
         String MqttBlockerURI = "tcp://127.0.0.1:1883"; // ./gradlew start_mqtt_broker
         String MqttClientId = UUID.randomUUID().toString();
-        String topic = "/topic/security";
+        String topic = "/sensor/test";
         String message = "Hello MQTT";
 
         PahoPublish pahoPublish = new PahoPublish(MqttBlockerURI, MqttClientId);

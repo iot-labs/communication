@@ -1,0 +1,20 @@
+{
+  "comments" : "receiver preference example",
+
+  "receivers" : [
+    {
+      "broker_url" : "tcp://127.0.0.1:1883",
+      "client_id" : "test_client_0",
+      "topic" : "/sensor/test",
+      "qos" : 1,
+      "is_persist" : false
+    },
+    {
+      "broker_url" : "tcp://127.0.0.1:1883",
+      "client_id" : "test_client_1",
+      "topic" : "/sensor/test1",
+      "qos" : 1,
+      "is_persist" : true
+    }
+  ]
+}

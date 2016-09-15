@@ -16,9 +16,12 @@ public class MqttMsg extends BaseModel {
     @SerializedName("payload")
     private String payload;
 
-    public MqttMsg() { }
+    public MqttMsg() {
+        super();
+    }
 
     public MqttMsg(String topic, MqttMessage pahoMqttMessage) {
+        super();
         this.header = new Header(pahoMqttMessage);
         this.payload = StringUtils.getString(pahoMqttMessage.getPayload());
         this.topic = topic;
@@ -34,5 +37,14 @@ public class MqttMsg extends BaseModel {
 
     public String getTopic() {
         return topic;
+    }
+
+    @Override
+    public String toString() {
+        return "MqttMsg{" +
+                "header=" + header +
+                ", topic='" + topic + '\'' +
+                ", payload='" + payload + '\'' +
+                '}';
     }
 }

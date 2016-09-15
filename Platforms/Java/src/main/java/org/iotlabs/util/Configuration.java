@@ -12,6 +12,7 @@ import java.util.Properties;
  * Simple Properties Reader for general purpose.
  */
 public class Configuration {
+    private static final Logger logger = Logger.getLogger(Configuration.class);
 
     private final Properties prop = new Properties();
 
@@ -107,7 +108,7 @@ public class Configuration {
             bufferedWriter = new BufferedWriter(fileWriter);
             prop.store(bufferedWriter, comments);
         } catch (IOException e) {
-            Logger.getLogger(getClass()).error("Fail on store properties.", e);
+            logger.error("Fail on store properties.", e);
         } finally {
             IOUtils.closeQuite(fileWriter);
             IOUtils.closeQuite(bufferedWriter);

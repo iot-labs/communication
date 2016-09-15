@@ -62,10 +62,24 @@ tasks.withType(Pmd) {
 
 /**
  * run moquette broker server
+ * ./gradlew -q start_mqtt_broker
  */
 task start_mqtt_broker(type: JavaExec, dependsOn: classes) {
     description = 'This task will start mqtt broker server'
     classpath = sourceSets.main.runtimeClasspath
     main = 'org.iotlabs.Runner'
     args "-mqtt", "start_broker"
+}
+
+/**
+ * register multiple mqtt receivers
+ * ./gradlew -q register_receivers -Pf=src/main/resources/config/mqtt_receiver.json
+ */
+task register_receivers(type: JavaExec, dependsOn: classes) {
+    description = 'This task will register all receivers in preference file.'
+    classpath = sourceSets.main.runtimeClasspath
+    main = 'org.iotlabs.Runner'
+    if (project.hasProperty("f") ) {
+        args "-mqtt", "register_receivers", "-f", f
+    }
 }

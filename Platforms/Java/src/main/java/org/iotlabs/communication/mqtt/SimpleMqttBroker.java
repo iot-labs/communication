@@ -3,6 +3,7 @@ package org.iotlabs.communication.mqtt;
 import io.moquette.interception.InterceptHandler;
 import io.moquette.interception.messages.*;
 import io.moquette.server.Server;
+import org.apache.log4j.Logger;
 import org.iotlabs.util.StringUtils;
 
 import java.io.IOException;
@@ -14,6 +15,8 @@ import java.util.List;
  * @see <a href="https://github.com/andsel/moquette">Java MQTT lightweight broker</a>
  */
 public class SimpleMqttBroker {
+
+    private static final Logger logger = Logger.getLogger(SimpleMqttBroker.class);
 
     private static class Holder {
         private static final SimpleMqttBroker SIMPLE_MQTT_BROKER = new SimpleMqttBroker();
@@ -52,9 +55,9 @@ public class SimpleMqttBroker {
         Runtime.getRuntime().addShutdownHook(new Thread() {
             @Override
             public void run() {
-                System.out.println("Stopping broker");
+                logger.info("Stopping broker");
                 mqttBroker.stopServer();
-                System.out.println("Broker stopped");
+                logger.info("Broker stopped");
             }
         });
     }
