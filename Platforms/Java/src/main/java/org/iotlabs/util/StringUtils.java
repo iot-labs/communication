@@ -6,7 +6,7 @@ import java.nio.charset.Charset;
  * Utility class for string stuff.
  */
 public class StringUtils {
-    private static final Charset CHARSET = Charset.forName("UTF-8");
+    public static final Charset CHARSET = Charset.forName("UTF-8");
 
     /**
      * bytes array to UTF-8 encoded String.
