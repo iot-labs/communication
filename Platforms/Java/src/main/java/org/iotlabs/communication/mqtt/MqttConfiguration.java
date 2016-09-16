@@ -14,13 +14,15 @@ import java.io.IOException;
  */
 public class MqttConfiguration implements IConfig {
 
+    private static final Logger logger = Logger.getLogger(MqttConfiguration.class);
+
     private Configuration configuration;
 
     public MqttConfiguration(String filename) {
         try {
             configuration = new Configuration(filename);
         } catch (IOException e) {
-            Logger.getLogger(getClass()).error("Fail on create MqttConfiguration.", e);
+            logger.error("Fail on create MqttConfiguration.", e);
             e.printStackTrace();
         }
     }

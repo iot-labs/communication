@@ -44,14 +44,14 @@ public class Header extends BaseModel {
      * This variable is for those who wants to implement their own mqtt code.
      */
     @SerializedName("remaining_length")
-    private int remainigLength;
+    private int remainingLength;
 
     public Header(MqttMessage pahoMqttMessage) {
         this.type = MqttType.UNKNOWN;
         this.qos = MqttQos.from(pahoMqttMessage.getQos());
         this.dup = pahoMqttMessage.isDuplicate();
         this.retained = pahoMqttMessage.isRetained();
-        this.remainigLength = VALUE_UNKNOWN;
+        this.remainingLength = VALUE_UNKNOWN;
     }
 
 
@@ -71,7 +71,18 @@ public class Header extends BaseModel {
         return retained;
     }
 
-    public int getRemainigLength() {
-        return remainigLength;
+    public int getRemainingLength() {
+        return remainingLength;
+    }
+
+    @Override
+    public String toString() {
+        return "Header{" +
+                "type=" + type +
+                ", qos=" + qos +
+                ", dup=" + dup +
+                ", retained=" + retained +
+                ", remainingLength=" + remainingLength +
+                '}';
     }
 }
