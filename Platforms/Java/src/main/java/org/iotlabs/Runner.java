@@ -40,7 +40,7 @@ public class Runner {
                 case "register_receivers":
                     if (cmd.hasOption("f")) {
                         String registerReceiverFilePath = cmd.getOptionValue("f");
-                        MqttProxy.getInstance().registerReceivers(registerReceiverFilePath);
+                        MqttProxy.getInstance().registerReceivers(registerReceiverFilePath, null);
                     } else {
                         usage();
                     }
