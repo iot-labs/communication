@@ -1,9 +1,10 @@
-package org.iotlabs.communication.mqtt;
+package org.iotlabs.communication.mqtt.brokers;
 
 import io.moquette.interception.InterceptHandler;
 import io.moquette.interception.messages.*;
 import io.moquette.server.Server;
 import org.apache.log4j.Logger;
+import org.iotlabs.communication.mqtt.MqttConfiguration;
 import org.iotlabs.util.StringUtils;
 
 import java.io.IOException;
@@ -60,6 +61,14 @@ public class SimpleMqttBroker {
                 logger.info("Broker stopped");
             }
         });
+    }
+
+    /**
+     * stop simple mqtt server.
+     */
+    public void stop() {
+        logger.info("Stop mqtt broker.");
+        mqttBroker.stopServer();
     }
 
     private static class LogInterceptHandler implements InterceptHandler {
