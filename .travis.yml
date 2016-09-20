@@ -1,0 +1,4 @@
+# .travis.yml
+language: java
+before_script: cd Platforms/Java
+script: ./gradlew test check
