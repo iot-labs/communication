@@ -1,4 +1,3 @@
-﻿# IoT Labs - 쉬운 IoT 개발 환경을 위한 프레임워크
 @(_Open Frontier)[IoT Labs]
 
 
