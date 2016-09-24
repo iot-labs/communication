@@ -148,7 +148,6 @@ LG CNS 에서 제공하는 IoT 플랫폼. <small>*아직 이름이 정해지진 
 
 ##### 특징
 
-* 디바이스 연결  및 관리
 	* MQTT
 	* WebSockets
 	* HTTP
