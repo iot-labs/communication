@@ -25,7 +25,7 @@ IoT Labs 는 IoT 개발에 어려움이 되는 (통신/저장/분석)을 프레�
 ## Build Status
 #### Platform/Java
 [![Build Status](https://travis-ci.org/toori67/IoTLabs.svg?branch=master)](https://travis-ci.org/toori67/IoTLabs)
-[![Coverage Status](https://coveralls.io/repos/github/toori67/IoTLabs/badge.svg?branch=fix-test-issue)](https://coveralls.io/github/toori67/IoTLabs?branch=fix-test-issue)
+[![Coverage Status](https://coveralls.io/repos/github/toori67/IoTLabs/badge.svg?branch=master)](https://coveralls.io/github/toori67/IoTLabs?branch=master)
 
 
 ## News
