@@ -1,5 +1,10 @@
 # .travis.yml
+env:
+  global:
+    - COVERALLS_REPO_TOKEN=AME7sDQ3lHLAcrrAkWUNWb4CIjZBTbehF
+    - CI_NAME=travis-ci
 language: java
 jdk: oraclejdk8
 before_script: cd Platforms/Java
-script: ./gradlew test check
+script: ./gradlew ci
+after_success: ./gradlew jacocoTestReport coveralls
