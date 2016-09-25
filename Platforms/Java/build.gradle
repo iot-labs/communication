@@ -83,6 +83,11 @@ jacocoTestReport  {
             destination "${buildDir}/reports/jacoco/html/"
         }
         csv.enabled false
+        afterEvaluate {
+            classDirectories = files(classDirectories.files.collect {
+                fileTree(dir: it, exclude: 'com/pi4j/**')
+            })
+        }
     }
 }
 
