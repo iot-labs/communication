@@ -7,4 +7,4 @@ language: java
 jdk: oraclejdk8
 before_script: cd Platforms/Java
 script: ./gradlew ci
-after_success: ./gradlew jacocoTestReport coveralls
+after_success: CI=true CI_name=travis-ci COVERALLS_REPO_TOKEN=AME7sDQ3lHLAcrrAkWUNWb4CIjZBTbehF ./gradlew jacocoTestReport coveralls

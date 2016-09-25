@@ -76,7 +76,7 @@ jacocoTestReport  {
     reports {
         xml{
             enabled true
-            destination "${buildDir}/reports/jacoco/jacoco.xml"
+            destination "${buildDir}/reports/jacoco/test/jacocoTestReport.xml"
         }
         html{
             enabled true
