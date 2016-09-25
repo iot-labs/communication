@@ -61,15 +61,15 @@ IoT Labs 에서는 이 진입장벽을 낮춤으로써 S/W  를 전공하지 않
 ### 구현 범위
 
 - Device 통신
-	- MQTT , Web Socket , Bluetooth
+	- MQTT, Web Socket, Bluetooth
 - Data 저장
-	- JDBC , JSON Store , Redis
+	- JDBC, JSON Store, Redis
 - Data 분석 (Dashboard)
 	- (미정. 제안 보내주세요)
 - API 연동
 	- Facebook
 	- Twitter
-	- Gmail 
+	- Gmail
 
 ----
 
@@ -128,11 +128,11 @@ LG CNS 에서 제공하는 IoT 플랫폼. <small>*아직 이름이 정해지진 
 
 ##### 특징
 
-* Gateway와 Edge Device 관련 기술 
+* Gateway와 Edge Device 관련 기술
 * 대량의 데이터를 안정적으로 전달할 수 있는 통신 기술
 * 이벤트 처리와 데이터 분석 및 추천을 위한 빅데이터(Big Data) 관련 기술
 * 위의 언급한 기술들의 Base 제공 및 융합을 지원할 플랫폼과 Enabler 관련 기술
-* 인증/권한을 통한 데이터 보안뿐만 아니라 디바이스와 칩(Chip) 레벨의 보안 기술 
+* 인증/권한을 통한 데이터 보안뿐만 아니라 디바이스와 칩(Chip) 레벨의 보안 기술
 * 사용자와 상호 작용할 수 있는 UI/UX 기술
 
 <img src="https://raw.githubusercontent.com/jongkwang/IoTLabs/master/assets/img/case_research4.png">
