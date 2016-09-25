@@ -15,7 +15,7 @@ IoT Labs aims to provide a framework for (communication/storage/analysis) in IoT
 	- [Current Status](#current-status)
 	- [API Docs](#-)
 	- [Get Involved](#get-involved)
-		- [Issues](#Issues)
+		- [Issues](#issues)
 		- [Development Participation](#development-participation)
 	- [License](#license)
 
@@ -183,7 +183,7 @@ IoT platform provided by LG CNS. <small>*Offical name to be determined*</small>
 
 ## Get Involved
 
-## Issue
+## Issues
 Please post any questions or suggestions as a [Github Issue](https://github.com/jongkwang/IoTLabs/issues).
 A response will be provided as soon as possible.
 All questions and suggestions are welcome.
