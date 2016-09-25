@@ -8,16 +8,16 @@ IoT Labs aims to provide a framework for (communication/storage/analysis) in IoT
 
 <!-- TOC depthFrom:1 depthTo:6 withLinks:1 updateOnSave:1 orderedList:0 -->
 
-- [IoT Labs - A Framework for Simpler IoT Development Environment](#iot-labs-iot-)
+- [IoT Labs - A Framework for Simpler IoT Development Environment](#)
 	- [News](#news)
-	- [Introduction to IoT Labs](#iot-labs-)
+	- [Introduction to IoT Labs](#introduction-to-iot-labs)
 		- [Scope](#-)
-	- [Current Status](#진행상황)
+	- [Current Status](#current-status)
 	- [API Docs](#api-docs)
-	- [Get Involved](#)
-		- [Suggestions / Issues / Tests](#-)
-		- [Development Participation](#-)
-	- [License](#)
+	- [Get Involved](#get-involved)
+		- [Suggestions / Issues / Tests](#suggestions-/-issues-/-tests)
+		- [Development Participation](#development-participation)
+	- [License](#license)
 
 <!-- /TOC -->
 
