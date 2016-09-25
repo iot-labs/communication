@@ -1,14 +1,13 @@
-group 'org.iotlabs'
-version '1.0-SNAPSHOT'
-
-apply plugin: 'java'
-apply plugin: 'findbugs'
-apply plugin: 'pmd'
-apply plugin: 'jacoco'
 plugins {
+    id 'java'
+    id 'findbugs'
+    id 'pmd'
+    id 'jacoco'
     id 'com.github.kt3k.coveralls' version '2.6.3'
 }
 
+group 'org.iotlabs'
+version '1.0-SNAPSHOT'
 
 sourceCompatibility = 1.8
 
