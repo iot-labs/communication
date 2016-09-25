@@ -8,14 +8,14 @@ IoT Labs aims to provide a framework for (communication/storage/analysis) in IoT
 
 <!-- TOC depthFrom:1 depthTo:6 withLinks:1 updateOnSave:1 orderedList:0 -->
 
-- [IoT Labs - A Framework for Simpler IoT Development Environment](#)
+- [IoT Labs - A Framework for Simpler IoT Development Environment](#-)
 	- [News](#news)
 	- [Introduction to IoT Labs](#introduction-to-iot-labs)
-		- [Scope](#-)
+		- [Scope](#scope)
 	- [Current Status](#current-status)
-	- [API Docs](#api-docs)
+	- [API Docs](#-)
 	- [Get Involved](#get-involved)
-		- [Suggestions / Issues / Tests](#suggestions-/-issues-/-tests)
+		- [Issues](#Issues)
 		- [Development Participation](#development-participation)
 	- [License](#license)
 
@@ -188,7 +188,7 @@ Please post any questions or suggestions as a [Github Issue](https://github.com/
 A response will be provided as soon as possible.
 All questions and suggestions are welcome.
 
-## Contribution
+## Development Participation
 Help us improve IoT Labs. Contributions are always welcome.
 
 ## Support
