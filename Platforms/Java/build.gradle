@@ -1,10 +1,13 @@
+plugins {
+    id 'java'
+    id 'findbugs'
+    id 'pmd'
+    id 'jacoco'
+    id 'com.github.kt3k.coveralls' version '2.6.3'
+}
+
 group 'org.iotlabs'
 version '1.0-SNAPSHOT'
-
-apply plugin: 'java'
-apply plugin: 'findbugs'
-apply plugin: 'pmd'
-
 
 sourceCompatibility = 1.8
 
@@ -37,10 +40,11 @@ dependencies {
     compile 'org.mybatis:mybatis:3.4.0'
 }
 
+// static code analyze with findbugs
 tasks.withType(FindBugs) {
     reports {
-        xml.enabled = false
-        html.enabled = true
+        xml.enabled = true
+        html.enabled = false
     }
     exclude '**/com/pi4j/*'
     classes = classes.filter {
@@ -50,16 +54,49 @@ tasks.withType(FindBugs) {
     ignoreFailures = true
 }
 
+// static code analyze with pmd
 tasks.withType(Pmd) {
     reports {
         html.destination = file("${pmd.reportsDir}/pmd-report.html")
         html.enabled = true
-        xml.enabled = false
+        xml.destination = file("${pmd.reportsDir}/pmd-report.xml")
+        xml.enabled = true
     }
     source = fileTree('src/main/java/org/')
     ignoreFailures = true
 }
 
+// jacoco for codecoverage
+jacoco {
+    toolVersion = "0.7.6.201602180812"
+}
+jacocoTestReport  {
+    group = "Reporting"
+    description = "Generate Jacoco coverage reports after running tests."
+    reports {
+        xml{
+            enabled true
+            destination "${buildDir}/reports/jacoco/test/jacocoTestReport.xml"
+        }
+        html{
+            enabled true
+            destination "${buildDir}/reports/jacoco/html/"
+        }
+        csv.enabled false
+        afterEvaluate {
+            classDirectories = files(classDirectories.files.collect {
+                fileTree(dir: it, exclude: 'com/pi4j/**')
+            })
+        }
+    }
+}
+
+/**
+ * continuous integration task
+ */
+task ci(dependsOn: ['check']){
+
+}
 
 /* simple commands */
 
