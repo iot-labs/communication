@@ -17,6 +17,7 @@ IoT Labs aims to provide a framework for (communication/storage/analysis) in IoT
 	- [Get Involved](#get-involved)
 		- [Issues](#issues)
 		- [Development Participation](#development-participation)
+		- [Sponsor](#sponsor)
 	- [License](#license)
 
 <!-- /TOC -->
@@ -27,10 +28,10 @@ IoT Labs aims to provide a framework for (communication/storage/analysis) in IoT
 * 2016.06.23 : MQTT Broker functioning (24/7)
 
 ## Introduction to IoT Labs
-IoT Labs was created to help IoT devices developers who are not used to web development environments.
+IoT Labs was created to help IoT device developers who are not familiar with web development environments.
 The goal of this project is to help developers realize their IoT ideas.
 
-This project aims to utilize the most common and simple technologies, and emphasizes detailed description. Developers will be able to learn and understand IoT Labs through many of its examples and real-world application case studies.
+This project aims to utilize the most common and simple technologies, and emphasizes detailed description of its features. Developers will be able to learn and understand IoT Labs through many of its examples and real-world application case studies.
 
 ## Overview
 
@@ -47,9 +48,9 @@ This project aims to utilize the most common and simple technologies, and emphas
 
 ### Project Goal
 
-The influence of IoT technology is increasing and there have been many attempts to incorporate IoT in various fields. Thus, many students and beginners are developing and improving their IoT ideas. But there is a steep learning curve for those who have no background in software engineering.
+The influence of IoT technology is increasing and there have been many attempts to incorporate IoT technology in various fields. Many students and less-experienced developers are trying to create and improve their IoT ideas. But there is a steep learning curve for those who have no background in software engineering.
 
-IoT Labs strives to help those who have bright ideas but are less experienced in software engineering by lowering the learning curve.
+IoT Labs strives to help those who have great ideas but are not familiar with software engineering by lowering the learning curve of software development.
 
 ----
 
@@ -60,7 +61,7 @@ IoT Labs strives to help those who have bright ideas but are less experienced in
 - Data Storage
 	- JDBC, JSON Store, Redis
 - Data Analysis (Dashboard)
-	- (Undecided. Suggestions are welcome)
+	- (Undecided. Suggestions are welcome.)
 - API
 	- Facebook
 	- Twitter
@@ -124,8 +125,8 @@ IoT platform provided by LG CNS. <small>*Offical name to be determined*</small>
 ##### Characteristics
 
 * Technology for gateways and edge devices
-* Communications technology to transfer large data reliably
-* Big data technology used in event processing and data analysis & suggestions
+* Communications technology to transfer large data with reliability
+* Big data technology used in event processing and data analysis & suggestions based on user data
 * Technology for platforms and enablers for basing and integrating above-mentioned functionalities
 * Data security through authentication/privilege and device-level, chip-level security
 * UI/UX technologies for user interaction
@@ -191,7 +192,7 @@ All questions and suggestions are welcome.
 ## Development Participation
 Help us improve IoT Labs. Contributions are always welcome.
 
-## Support
+## Sponsor
 
 * This project is sponsored by [KossLab](http://devlab.oss.kr/).
 
@@ -199,7 +200,7 @@ Help us improve IoT Labs. Contributions are always welcome.
 ## License
 * [IoT Labs](https://github.com/jongkwang/IoTLabs) is under [MIT](https://opensource.org/licenses/MIT) license.
 * The respective licenses of all software and fonts must be honored.
-* Software and fonts used
+* Software and fonts used:
 	* Font
 		* [스케치명조](http://www.asiasoft.co.kr/)
 	* Open Source
