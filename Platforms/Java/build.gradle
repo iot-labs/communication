@@ -38,6 +38,9 @@ dependencies {
     // database support libs
     compile 'com.google.code.gson:gson:2.7'
     compile 'org.mybatis:mybatis:3.4.0'
+
+    // web framework
+    compile 'com.sparkjava:spark-core:2.5'
 }
 
 // static code analyze with findbugs

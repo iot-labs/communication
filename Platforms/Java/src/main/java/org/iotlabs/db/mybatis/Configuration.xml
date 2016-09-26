@@ -21,7 +21,7 @@
 
     <mappers>
         <mapper resource="org/iotlabs/db/mybatis/MainMapper.xml" />
-        <mapper resource="org/iotlabs/db/mybatis/mqttmsg/MqttMsgMapper.xml" />
+        <mapper resource="/resources/sql/mqttmsg/MqttMsgMapper.xml" />
     </mappers>
 
 </configuration>
