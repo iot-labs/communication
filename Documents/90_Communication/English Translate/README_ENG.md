@@ -1,4 +1,4 @@
-# IoT Labs - A Framework for Simpler IoT Development Environment
+# (Internet of Things) IoT Labs - A Framework for Simpler IoT Development Environment
 @(_Open Frontier)[IoT Labs]
 
 
@@ -27,10 +27,10 @@ IoT Labs aims to provide a framework for (communication/storage/analysis) in IoT
 * 2016.06.23 : MQTT Broker functioning (24/7)
 
 ## Introduction to IoT Labs
-IoT Labs was created to help IoT devices developers who are not used to web development environments.
+IoT Labs is created to help IoT device developers who are not familiar with web development environments.
 The goal of this project is to help developers realize their IoT ideas.
 
-This project aims to utilize the most common and simple technologies, and emphasizes detailed description. Developers will be able to learn and understand IoT Labs through many of its examples and real-world application case studies.
+This project aims to utilize the most common and simple technologies, and emphasizes detailed description. Developers will be able to learn and understand IoT Labs through many examples and real-world application case studies.
 
 ## Overview
 
@@ -47,7 +47,7 @@ This project aims to utilize the most common and simple technologies, and emphas
 
 ### Project Goal
 
-The influence of IoT technology is increasing and there have been many attempts to incorporate IoT in various fields. Thus, many students and beginners are developing and improving their IoT ideas. But there is a steep learning curve for those who have no background in software engineering.
+Nowadays capabilities of computers are expanding dynamically, and therefore, as a of major network, the Internet. Following decades since computers are introduced, Human-Computer interaction has been the main method of data mining, generating information and presenting to the public. The problem is, nevertheless, if they school more engineers and computer scientists in the future, limited resources and time are supposed to be the next obstacle to develop technology progressively. If we had IoT technologies those can capture data and gather them without interaction of humans, it would be possible to monitor the process easily and reduce waste, cost and loss.Therefore, the influence of IoT technology is increasing and there have been many attempts to incorporate IoT in various fields. Many students and start-ups teams are developing and presenting their IoT ideas. However, the challenging point of this gradual process that there is a steep downward learning curve for those who have no background in software engineering but only with ambitious determination and realistic ideas.
 
 IoT Labs strives to help those who have bright ideas but are less experienced in software engineering by lowering the learning curve.
 
