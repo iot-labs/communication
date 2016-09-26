@@ -7,26 +7,25 @@ import org.iotlabs.models.mqtt.MqttMsg;
 import java.util.HashMap;
 import java.util.List;
 
-public class MqttMsgDao {
+class MqttMsgDao implements MqttMsgService{
   private SqlSession session = MyBatisManager.getSqlMapper().openSession();
-
-  private HashMap<String,MqttMsg> mqttMsgSelectOne(String query,MqttMsg msg){
+  public HashMap<String,MqttMsg> mqttMsgSelectOne(String query,MqttMsg msg){
     HashMap<String,MqttMsg> result = session.selectOne(query,msg);
     session.close();
     return result;
   }
-  private List<MqttMsg> mqttMsgSelectList(String query, MqttMsg msg){
+  public List<MqttMsg> mqttMsgSelectList(String query, MqttMsg msg){
     List<MqttMsg> result = session.selectList(query,msg);
     session.close();
     return result;
   }
-  private int mqttMsgInsert(String query,MqttMsg map){
+  public int mqttMsgInsert(String query,MqttMsg map){
     return wrapSession(session.insert(query,map));
   }
-  private int mqttMsgUpdate(String query,MqttMsg map){
+  public int mqttMsgUpdate(String query,MqttMsg map){
     return wrapSession(session.update(query,map));
   }
-  private int mqttMsgDelete(String query,MqttMsg map){
+  public int mqttMsgDelete(String query,MqttMsg map){
     return wrapSession(session.delete(query,map));
   }
   private int wrapSession(int result){
