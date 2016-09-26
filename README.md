@@ -6,6 +6,56 @@ IoT Labs 는 IoT 개발에 어려움이 되는 (통신/저장/분석)을 프레�
 
 ----
 
+## Dashboard - 공개SW 해커톤
+
+> 공개SW 해커톤 관련해서 꼭 보셔야 하는 것은 이곳에 정리 하겠습니다.
+
+#### 해커톤 공지
+* 번개 공지
+ * 일시 : 화요일 19시
+ * 장소 : 서울 강남구 테헤란로 311, 7층 KossLab
+ * 안건 : Free Talking
+ * 식사 : 자장면 or 인근 식당
+* 하단 커뮤니케이션 채널에 가입 해주세요. (Facebook & Slack)
+* Github 사용법 또는 막히는 것 있으면 언제든지 Slack 으로 제가 도움 요청하세요!! (저는 항상 StangBy 상대 입니다)
+
+#### 커뮤니케이션
+* Github : https://github.com/jongkwang/IoTLabs
+* 커뮤니티 : https://www.facebook.com/groups/IoTLabs
+* 채팅(Slack) : iotlabs-team.slack.com
+ * Design / General / HW / SW / Random : 5개 채널 운영중
+  * 채널에 가입 안하시면 채팅이 보이지 않습니다.
+
+#### 해커톤에서 필수 이수 사항
+* 해커톤에서 이것은 해주셔야 "이수"로 인정 하겠습니다
+ * 커밋 3~5회
+ * 하지만, 커밋 3회가 어려운 것 잘 알고 있습니다.
+ * 그래서, 쉽게 목표를 달성 하실 수 있도록 안내를 다시 배포 하겠습니다. (상세 방법 작성 중...)
+
+#### 현재 진행 상황 - 지진알림이 + LED 램프
+* H/W : 송정우님께서 진행 중이십니다
+
+#### 현재 진행 상황 - 화분
+* H/W : 황종순님께서 진행 중이십니다
+
+#### 현재 진행 상황 - Environment
+* Environment : 이성민님
+* MySQL + MyBatis : jayong 님
+* Machine 구성 : 김종광
+
+#### 현재 진행 상황 - 참여하시고 싶으신 분
+
+* 사실, 팀장의 역할은 일을 잘 시키는 것에 있습니다.
+ * 그런데 제가 역량 부족으로 일을 원할하게 시키지 못하고 있는점 이해해 주세요 ㅠㅠ (정보가 너무 없어요 ㅠㅠ)
+* 지금이라도 "슬랙 > wanted 채널"을 통해서 손들어 주시면 할 일을 같이 고민 하도록 하겠습니다. !!
+* 적극참여자는 Wanted 채널로 남겨주시고요.
+* 소극적 참여자는 참여 방법을 안내해 드리겠습니다. ^^
+
+
+
+
+----
+
 <!-- TOC depthFrom:1 depthTo:6 withLinks:1 updateOnSave:1 orderedList:0 -->
 
 - [IoT Labs - 쉬운 IoT 개발 환경을 위한 프레임워크](#iot-labs-iot-)
