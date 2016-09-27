@@ -2,12 +2,34 @@
 #include <JSN270.h>
 #include <Arduino.h>
 #include <SoftwareSerial.h>
+
+
+#include <Wire.h>
+
+#define MPU6050_address 0x68
+#define MPU6050_PWR1 0x6B
+#define MPU6050_data_address 0x3b
+
 #include "DHT11.h"
+
 DHT11 dht11(6);
+
+//#define SSID      "JSN270_2G"		// your wifi network SSID
+//#define KEY       "12345678"		// your wifi network password
+//#define SSID      "iPhonekkye"    // your wifi network SSID
+//#define KEY       "9698pqe75615"    // your wifi network password
 
 #define SSID      "G5_2935"    // your wifi network SSID
 #define KEY       "qwer1234"    // your wifi network password
+
+
+//#define SSID      "G Pro2_9436"    // your wifi network SSID
+//#define KEY       "82000687"    // your wifi network password
+
+
 #define AUTH       "WPA2" 		// your wifi network security (NONE, WEP, WPA, WPA2)
+//http://223.62.163.86/
+
 #define USE_DHCP_IP 1
 
 #if !USE_DHCP_IP
@@ -20,15 +42,24 @@ DHT11 dht11(6);
 #define PROTOCOL       "TCP"
 
 int led_status = 0;
+    
 SoftwareSerial mySerial(3, 2); // RX, TX
+ 
 JSN270 JSN270(&mySerial);
+
 void setup() {
-  // put your setup code here, to run once:
 	char c;
 
 	mySerial.begin(9600);
 	Serial.begin(9600);
-    Serial.println("Serial communication test");
+
+  Wire.begin();
+  Wire.beginTransmission(MPU6050_address);//mpu address set
+  Wire.write(MPU6050_PWR1);
+  Wire.write(0);//bit 6 sleep mode set
+  Wire.endTransmission();
+
+	Serial.println("--------- JSN270 Simple HTTP server Test --------");
 
 	// wait for initilization of JSN270
 	delay(5000);
@@ -76,7 +107,6 @@ void setup() {
 }
 
 void loop() {
-  // put your main code here, to run repeatedly:
 	if (!JSN270.server(SERVER_PORT, PROTOCOL)) {
 		Serial.println("Failed connect ");
 		Serial.println("Restart System");
@@ -84,6 +114,33 @@ void loop() {
 		Serial.println("Waiting for connection...");
 	}
 
+ int accel_x, accel_y, accel_z;
+ int gyro_x, gyro_y, gyro_z;
+  int temp;
+
+  Wire.beginTransmission(MPU6050_address);
+  Wire.write(MPU6050_data_address);
+  Wire.endTransmission(false);//계속 통신하계사든 으미 false는
+
+  Wire.requestFrom(MPU6050_address,14);//data address의 2바이트 읽기
+  if(Wire.available() == 14){
+    accel_x = Wire.read() << 8 | Wire.read();
+    accel_x = Wire.read() << 8 | Wire.read();
+    accel_x = Wire.read() << 8 | Wire.read();
+    temp = Wire.read() << 8 | Wire.read();
+    gyro_x = Wire.read() << 8 | Wire.read();
+    gyro_y = Wire.read() << 8 | Wire.read();
+    gyro_z = Wire.read() << 8 | Wire.read();
+  }
+
+  Serial.print("ac_x: "); Serial.print(accel_x);
+  Serial.print(" ac_y: ");  Serial.print(accel_y);
+  Serial.print(" ac_z: ");  Serial.print(accel_z);
+  Serial.print(" temp: ");  Serial.print(temp / 340 + 36.53);
+  Serial.print(" gy_x: ");  Serial.print(gyro_x);
+  Serial.print(" gy_y: ");  Serial.print(gyro_y);
+  Serial.print(" gy_z: ");  Serial.println(gyro_z);
+      
 	String currentLine = "";                // make a String to hold incoming data from the client
 	int get_http_request = 0;
 
@@ -129,6 +186,20 @@ void loop() {
               Serial.print("temperature : "); Serial.print(temp);
               Serial.print("humidity: ");  Serial.print(humidity);
 
+              
+              JSN270.print("&nbsp;Accelater X : ");
+              JSN270.print(accel_x);
+              JSN270.print("&nbsp;Accelater Y : ");
+              JSN270.print(accel_y);
+              JSN270.print("&nbsp;Accelater Z : ");
+              JSN270.print(accel_z);
+
+              JSN270.print("&nbsp;gyro X : ");
+              JSN270.print(gyro_x);
+              JSN270.print("&nbsp;gyro Y : ");
+              JSN270.print(gyro_y);
+              JSN270.print("&nbsp;gyro Z : ");
+              JSN270.print(gyro_z);
               
               JSN270.println("</H4>");
             }
@@ -186,8 +257,4 @@ void loop() {
 	// close the connection
 	JSN270.sendCommand("at+nclose\r");
 	Serial.println("client disonnected");
-            if(error = dht11.read(humidity, temp) == 0) {
-              Serial.print("humidity: ");  Serial.print(humidity);
-
-}
 }
