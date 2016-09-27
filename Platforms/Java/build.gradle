@@ -39,10 +39,10 @@ dependencies {
 
     // spark web frameworks
     compile 'com.sparkjava:spark-core:2.5'
-    compile 'org.projectlombok:lombok:1.16.10'
 
     // front page
     compile 'org.webjars:bootstrap:4.0.0-alpha.3'
+    compile 'com.sparkjava:spark-template-thymeleaf:2.3'
 
     testCompile 'junit:junit:4.11'
 }
