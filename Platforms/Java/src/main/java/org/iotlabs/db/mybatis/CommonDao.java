@@ -41,7 +41,7 @@ public class CommonDao {
     }
 
     public ArrayList<HashMap> commonSelectList(String query, HashMap p) {
-        ArrayList<HashMap> list = new ArrayList();
+        ArrayList<HashMap> list = new ArrayList<>();
         SqlSession session = null;
         try {
             session = MyBatisManager.getSqlMapper().openSession();
