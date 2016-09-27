@@ -41,6 +41,9 @@ dependencies {
     compile 'com.sparkjava:spark-core:2.5'
     compile 'org.projectlombok:lombok:1.16.10'
 
+    // front page
+    compile 'org.webjars:bootstrap:4.0.0-alpha.3'
+
     testCompile 'junit:junit:4.11'
 }
 
