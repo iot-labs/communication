@@ -31,6 +31,23 @@ IoT Labs 는 IoT 개발에 어려움이 되는 (통신/저장/분석)을 프레�
  * 커밋 3~5회
  * 하지만, 커밋 3회가 어려운 것 잘 알고 있습니다.
  * 그래서, 쉽게 목표를 달성 하실 수 있도록 안내를 다시 배포 하겠습니다. (상세 방법 작성 중...)
+ 
+#### 해커톤 이수를 위한 추천 작업
+* 해커톤에서 3번 이상 커밋이 있는 분을 이수로 간주 하도록 하겠습니다.
+* README.md 파일 맞춤법을 수정해 주세요.
+ * 저번에 수정하신 분들 대부분이 Version Conflict 발생하여 Pull Request 가 Reject 되었습니다
+ * 새로 받으셔서(Pull) 다시 고쳐 주셔야 합니다.
+ * URL : https://github.com/jongkwang/IoTLabs/blob/master/README.md
+* 기존 코드에 주석을 넣어주세요.
+ * 한글 주석도 좋습니다
+ * 중요하지 않은 주석도 좋습니다.!! (이건 참여에 의미가 있으니까요)
+ * 주석 입력 대상 예시 : https://github.com/jongkwang/IoTLabs/blob/master/Platforms/Java/src/test/java/org/iotlabs/communication/mqtt/clients/BaseClientTest.java
+ * 클래스 주석이나 메소드 주석이 없으니까 넣어주시면 좋겠어요!!
+ * 권장 포멧 : http://javacan.tistory.com/entry/24 참조
+* Gradle 튜토리얼을 만들어 주세요
+ * Github 에서 Download 받아서 Gradlew 로 MQTT서버 띄우는 과정을
+ * `IoTLabs/Documents/Tutorial/README_여러분아이디.md` 파일로 만들어 주세요.
+ 
 
 #### 현재 진행 상황 - 지진알림이 + LED 램프
 * H/W : 송정우님께서 진행 중이십니다
