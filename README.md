@@ -109,6 +109,10 @@ IoT Labs aims to provide a framework for (communication/storage/analysis) in IoT
 <!-- /TOC -->
 
 ----
+## Build Status
+#### Platform/Java
+[![Build Status](https://travis-ci.org/toori67/IoTLabs.svg?branch=master)](https://travis-ci.org/toori67/IoTLabs)
+[![Coverage Status](https://coveralls.io/repos/github/toori67/IoTLabs/badge.svg?branch=master)](https://coveralls.io/github/toori67/IoTLabs?branch=master)
 
 ## News
 * 2016.06.23 : MQTT Broker functioning (24/7)
