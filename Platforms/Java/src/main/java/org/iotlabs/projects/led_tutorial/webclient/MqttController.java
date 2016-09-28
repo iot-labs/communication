@@ -1,4 +1,4 @@
-package org.iotlabs.communication.mqtt;
+package org.iotlabs.projects.led_tutorial.webclient;
 
 import org.iotlabs.models.mqtt.MqttMsg;
 import spark.ModelAndView;
