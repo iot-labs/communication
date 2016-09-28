@@ -3,6 +3,7 @@ package org.iotlabs;
 import org.apache.commons.cli.*;
 import org.apache.log4j.Logger;
 import org.iotlabs.communication.mqtt.MqttProxy;
+import org.iotlabs.webserver.SparkProxy;
 
 /**
  * the very entrance of IoTLabs
@@ -22,6 +23,7 @@ public class Runner {
 
         options.addOption(Option.builder("mqtt").hasArg(true).build());
         options.addOption(Option.builder("f").hasArg(true).build());
+        options.addOption(Option.builder("server").hasArg(false).build());
 
         CommandLine cmd;
         try {
@@ -48,6 +50,8 @@ public class Runner {
                 default:
                     usage();
             }
+        } else if (cmd.hasOption("server")) {
+            SparkProxy.getInstance().run();
         } else {
             usage();
         }
