@@ -2,14 +2,14 @@
 
 @(GY-521 6축 가속센서 소개)
 
-![Alt text](./227-a-mpu-6050-triple-axis-accelerometer-gyroscope-6-dof-module-600x600.jpg)
+![enter image description here](https://raw.githubusercontent.com/maestroxhyun/IoTLabs/master/assets/img/introduce_mpu-6050.png)
 
 GY-521는 자이로 센서와 가속도계가 합쳐진 모듈로써, 
 X,Y,Z축의 기울기측정과 X,Y,Z축의 가속도 측정을 해주는 i2c 통신을 하는 센서
 
 i2c 통신?
 
-![Alt text](./i2c001.png)
+![enter image description here](https://raw.githubusercontent.com/maestroxhyun/IoTLabs/master/assets/img/introduce_i2c.png)
 
 I2C는 풀업 저항이 연결된 직렬 데이터(SDA)와 직렬 클럭(SCL)이라는 두 개의 양 방향 오픈 컬렉터 라인을 사용하며 최대 전압은 +5V 이며, 일반적으로 +3.3V 를 사용합니다.
 
@@ -54,7 +54,7 @@ sudo i2cdetect -y 1 (라즈베리파이2)
 
 - 아래와 같이 나오는 것 확인
 
-![Alt text](./제목 없음3.png)
+![enter image description here](https://raw.githubusercontent.com/maestroxhyun/IoTLabs/master/assets/img/introduce_accelerator.png)
 
 ## 코드설명
 
