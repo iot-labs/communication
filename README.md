@@ -1,23 +1,16 @@
-# IoT Labs - 쉬운 IoT 개발 환경을 위한 프레임워크
+# IoT Labs - 쉬운 IoT 개발 환경을 위한 프레임워크 <br/> IoT Labs - A Framework for Simpler IoT Development Environment
 @(_Open Frontier)[IoT Labs]
 
-IoT Labs 는 IoT 개발에 어려움이 되는 (통신/저장/분석)을 프레임워크로 제공하여 보다 쉬운 개발 환경 제공을  목표로 합니다.
-
-----
-
-# IoT Labs - A Framework for Simpler IoT Development Environment
-@(_Open Frontier)[IoT Labs]
-
+IoT Labs 는 IoT 개발에 어려움이 되는 (통신/저장/분석)을 프레임워크로 제공하여 보다 쉬운 개발 환경 제공을  목표로 합니다. <br/>
 IoT Labs aims to provide a framework for (communication/storage/analysis) in IoT development for increased productivity.
 
 ----
 
-<!-- TOC depthFrom:1 depthTo:2 withLinks:1 updateOnSave:1 orderedList:0 -->
+<!-- TOC depthFrom:1 depthTo:1 withLinks:1 updateOnSave:1 orderedList:0 -->
 
-- [IoT Labs - Top](#-)
-	- [Dashboard - 공개SW 해커톤](#dashboard)
-	- [IoT Labs - English](#iotlabs-english)
-	- [IoT Labs - Korean](#iotlabs-korean)
+- [Dashboard - 공개SW 해커톤](#dashboard)
+- [IoT Labs - English](#iotlabs-english)
+- [IoT Labs - Korean](#iotlabs-korean)
 
 <!-- /TOC -->
 
@@ -101,7 +94,7 @@ IoT Labs aims to provide a framework for (communication/storage/analysis) in IoT
 
 <!-- TOC depthFrom:1 depthTo:6 withLinks:1 updateOnSave:1 orderedList:0 -->
 
-- [IoT Labs - A Framework for Simpler IoT Development Environment](#-)
+- [IoT Labs - A Framework for Simpler IoT Development Environment](#iotlabs-english)
 	- [News](#news)
 	- [Introduction to IoT Labs](#introduction-to-iot-labs)
 		- [Scope](#scope)
@@ -335,7 +328,7 @@ IoT Labs 는 IoT 개발에 어려움이 되는 (통신/저장/분석)을 프레�
 
 <!-- TOC depthFrom:1 depthTo:6 withLinks:1 updateOnSave:1 orderedList:0 -->
 
-- [IoT Labs - 쉬운 IoT 개발 환경을 위한 프레임워크](#iot-labs-iot-)
+- [IoT Labs - 쉬운 IoT 개발 환경을 위한 프레임워크](#iotlabs-korean)
 	- [News](#news)
 	- [IoT Labs 소개](#iot-labs-)
 		- [구현 범위](#-)
