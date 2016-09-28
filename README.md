@@ -95,7 +95,7 @@ IoT Labs aims to provide a framework for (communication/storage/analysis) in IoT
 <!-- TOC depthFrom:1 depthTo:6 withLinks:1 updateOnSave:1 orderedList:0 -->
 
 - [IoT Labs - A Framework for Simpler IoT Development Environment](#iotlabs-english)
-	- [News](#news)
+	- [News](#news-english)
 	- [Introduction to IoT Labs](#introduction-to-iot-labs)
 		- [Scope](#scope)
 	- [Current Status](#current-status)
@@ -114,7 +114,7 @@ IoT Labs aims to provide a framework for (communication/storage/analysis) in IoT
 [![Build Status](https://travis-ci.org/toori67/IoTLabs.svg?branch=master)](https://travis-ci.org/toori67/IoTLabs)
 [![Coverage Status](https://coveralls.io/repos/github/toori67/IoTLabs/badge.svg?branch=master)](https://coveralls.io/github/toori67/IoTLabs?branch=master)
 
-## News
+## <a name="news-english">News
 * 2016.06.23 : MQTT Broker functioning (24/7)
 
 ## Introduction to IoT Labs
@@ -333,15 +333,15 @@ IoT Labs 는 IoT 개발에 어려움이 되는 (통신/저장/분석)을 프레�
 <!-- TOC depthFrom:1 depthTo:6 withLinks:1 updateOnSave:1 orderedList:0 -->
 
 - [IoT Labs - 쉬운 IoT 개발 환경을 위한 프레임워크](#iotlabs-korean)
-	- [News](#news)
-	- [IoT Labs 소개](#iot-labs-)
-		- [구현 범위](#-)
+	- [News](#news-korean)
+	- [IoT Labs 소개](#introduction-korean)
+		- [구현 범위](#구현-범위)
 	- [진행상황](#진행상황)
-	- [API Docs](#api-docs)
-	- [참여](#)
-		- [제안 / 이슈 / 테스트](#-)
-		- [개발 참여](#-)
-	- [라이센스](#)
+	- [API Docs](#-)
+	- [참여](#참여)
+		- [제안 / 이슈 / 테스트](#issue)
+		- [개발 참여](#contribution-korean)
+	- [라이센스](#license-korean)
 
 <!-- /TOC -->
 
@@ -352,10 +352,10 @@ IoT Labs 는 IoT 개발에 어려움이 되는 (통신/저장/분석)을 프레�
 [![Coverage Status](https://coveralls.io/repos/github/toori67/IoTLabs/badge.svg?branch=master)](https://coveralls.io/github/toori67/IoTLabs?branch=master)
 
 
-## News
+## <a name="news-korean">News
 * 2016.06.23 : MQTT Broker 동작중 (24/7)
 
-## IoT Labs 소개
+## <a name="introduction-korean">IoT Labs 소개
 IoT 디바이스는 잘 다루지만 Web 개발에 익숙하지 않은 개발자를 위해 만들었습니다.
 자신의 IoT 아이디어를 쉽게 구현 할 수 있게 도움을 주려는 것이 이 프로젝트의 목적 입니다.
 
@@ -519,7 +519,7 @@ LG CNS 에서 제공하는 IoT 플랫폼. <small>*아직 이름이 정해지진 
 사용문의 또는 질문 사항들은 [Github 이슈](https://github.com/jongkwang/IoTLabs/issues)에 올려 주시면 바로 처리 해 드리겠습니다.
 많은 의견 부탁드립니다.
 
-## Contribution
+## <a name="contribution-korean">Contribution
 IoT Labs를 개선해주세요. Contribution은 언제나 환영합니다.
 
 ## Support
@@ -527,7 +527,7 @@ IoT Labs를 개선해주세요. Contribution은 언제나 환영합니다.
 * 이 프로젝트는 [공개SW 개발자 Lab](http://devlab.oss.kr/)의 지원을 받고 있습니다.
 
 
-## License
+## <a name="license-korean">License
 * [IoT Labs](https://github.com/jongkwang/IoTLabs) 는 [MIT](https://opensource.org/licenses/MIT) 라이센스를 따르며,
 * 함께 사용된 SW와 폰트의 라이센스도 준수해야 합니다.
 * 함께 사용된 SW 와 폰트
