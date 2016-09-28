@@ -1,4 +1,4 @@
-package org.iotlabs.front;
+package org.iotlabs.projects.led_tutorial.webclient;
 
 import org.thymeleaf.TemplateEngine;
 import org.thymeleaf.context.Context;
