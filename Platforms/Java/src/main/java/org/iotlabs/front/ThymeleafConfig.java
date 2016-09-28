@@ -11,7 +11,7 @@ import java.util.Map;
 public class ThymeleafConfig extends TemplateEngine{
   private static final String DEFAULT_PREFIX = "templates/";
   private static final String DEFAULT_SUFFIX = ".html";
-  private static final String DEFAULT_TEMPLATE_MODE = "XHTML";
+  private static final String DEFAULT_TEMPLATE_MODE = "HTML5";
   private static final long DEFAULT_CACHE_TTL_MS = 3600000L;
 
   private TemplateEngine templateEngine;
@@ -31,7 +31,6 @@ public class ThymeleafConfig extends TemplateEngine{
     templateEngine.setTemplateResolver(templateResolver);
   }
 
-  @SuppressWarnings("unchecked")
   public String render(ModelAndView modelAndView) {
     Object model = modelAndView.getModel();
 
