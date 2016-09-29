@@ -13,8 +13,8 @@
     - [Open Project in Intellij IDEA](#open-in-intellij)
     - [Test Gradle](#test-gradle)
 - [Run MQTT](#run-mqtt)
-    - [Start MQTT Broker](#)
-    - [Start Register Receiver](#)
+    - [Start MQTT Broker](#start-mqtt-broker)
+    - [Start Register Receiver](#start-register-receiver)
 
 ----
 
@@ -91,3 +91,14 @@
 ----
 
 ## <a name="run-mqtt">Run MQTT
+
+### <a name="start-mqtt-broker">Start MQTT Broker
+- Start MQTT broker using the `gradlew.bat -q start_mqtt_broker` command
+    - <img src="https://raw.githubusercontent.com/mjkim610/IoTLabs/master/assets/img/mqtt_tutorial_mjkim610/start-mqtt-broker.png">
+
+### <a name="start-register-receiver">Start Register Receiver
+- Start register receiver by using the `gradlew.bat -q register_receivers -Pf=src/main/resources/config/mqtt_receiver.json` command
+    - <img src="https://raw.githubusercontent.com/mjkim610/IoTLabs/master/assets/img/mqtt_tutorial_mjkim610/register-receiver.png">
+
+- Check that the connect event has been received
+    - <img src="https://raw.githubusercontent.com/mjkim610/IoTLabs/master/assets/img/mqtt_tutorial_mjkim610/connect-event-received.png">
