@@ -4,6 +4,9 @@ import org.eclipse.paho.client.mqttv3.MqttException;
 import org.iotlabs.util.IOUtils;
 import org.iotlabs.util.StringUtils;
 
+/**
+ * publish signal synchronously
+ */
 public class PublisherSync extends BaseSyncClient implements BaseClient {
 
     public PublisherSync(String brokerUrl, String clientId) throws MqttException {
