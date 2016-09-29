@@ -32,6 +32,8 @@
 
   ** Example file
   
-     >> ../Platforms/Java/src/main/resources/config/mqtt_receiver.json
+     > ../Platforms/Java/src/main/resources/config/mqtt_receiver.json
      
+     
+  ** Structure
   
