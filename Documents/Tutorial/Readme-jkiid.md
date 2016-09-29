@@ -1,8 +1,5 @@
 #How to run MQTT Server (Powered by mosquitto)
 
-
-##Windows
-
 * Download the platform from repository and unzip it.
 
   <center><img src = "../../assets/img/readme_mqtt/clone.png"/></center>
@@ -28,3 +25,13 @@
 * After starting task is done, a message 'MQTT Broker started' comes up.
 
   <center><img src = "../../assets/img/readme_mqtt/mqtt_start.png"/></center>
+  
+# MQTT Receiver Registration
+
+* Make JSON file to register MQTT Receivers.
+
+  ** Example file
+  
+     >> ../Platforms/Java/src/main/resources/config/mqtt_receiver.json
+     
+  
