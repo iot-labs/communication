@@ -47,7 +47,7 @@ IoT Labs aims to provide a framework for (communication/storage/analysis) in IoT
 * Github 사용법을 모르시면, `Team Viewer` 라는 프로그램 설치 후 제게 전화 주세요. o1o-9123-066o 김종광
  * 한분한분 원격제어로 봐드리겠습니다. 꼭 전화 주세요!!
 * README.md 파일 맞춤법을 수정해 주세요.
- * 저번에 수정하신 분들 대부분이 Version Conflict 발생하여 Pull Request 가 Reject 되었습니다
+ * 저번에 수정하신 분들 대부분이 Version Conflict 발생하여 Pull Request 가 Reject 되었습니다.
  * 새로 받으셔서(Pull) 다시 고쳐 주셔야 합니다.
  * URL : https://github.com/jongkwang/IoTLabs/blob/master/README.md
 * 기존 코드에 주석을 넣어주세요.
@@ -62,7 +62,7 @@ IoT Labs aims to provide a framework for (communication/storage/analysis) in IoT
 
 
 #### 현재 진행 상황 - 지진알림이 + LED 램프
-* H/W : 송정우님께서 진행 중이십니다
+* H/W : 송정우님께서 진행 중이십니다.
 
 #### 현재 진행 상황 - 화분
 * H/W : 황종순님께서 진행 중이십니다
