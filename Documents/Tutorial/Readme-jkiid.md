@@ -35,7 +35,7 @@
     > ../Platforms/Java/src/main/resources/config/mqtt_receiver.json
      
      
-  * Structure
+  * How to write MQTT receiver information
     
     * Data Type : JSON
     
