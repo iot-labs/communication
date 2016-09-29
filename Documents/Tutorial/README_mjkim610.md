@@ -20,11 +20,15 @@
 ### <a name="download-jdk">Download Java Development Kit
 - Search for `Java SE Development Kit 8 Downloads`
 - Open the official JDK downloads page
-    - For example: `http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html`
+    - Link: `http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html`
 - Download the latest stable JDK version for your machine
     - Check processor architecture
         - 32-bit Windows: `Windows x86`
         - 64-bit Windows: `Windows x64`
-    - <img src="https://raw.githubusercontent.com/mjkim610/IoTLabs/master/assets/img/mqtt_tutorial_mjkim/jdk.png">
+    - <img src="https://raw.githubusercontent.com/mjkim610/IoTLabs/master/assets/img/mqtt_tutorial_mjkim610/jdk.png">
 
 ### <a name="download-git">Download Git for Windows
+- Search for `Git for Windows`
+    - Link: `https://git-scm.com/download/win`
+- Download the latest version of Git for Windows
+- <img src="https://raw.githubusercontent.com/mjkim610/IoTLabs/master/assets/img/mqtt_tutorial_mjkim610/git.png">
