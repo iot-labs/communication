@@ -71,8 +71,8 @@ IoT Labs GitHub Repo: `https://github.com/jongkwang/IoTLabs`
 - Launch Intellij IDEA
     - <img src="https://raw.githubusercontent.com/mjkim610/IoTLabs/master/assets/img/mqtt_tutorial_mjkim610/intellij-splash.png">
 - Click `Import Project`
-    - <img src="https://raw.githubusercontent.com/mjkim610/IoTLabs/master/assets/img/mqtt_tutorial_mjkim610/intellij-import.png">
 - Navigate to `IoTLabs` folder and click `OK`
+    - <img src="https://raw.githubusercontent.com/mjkim610/IoTLabs/master/assets/img/mqtt_tutorial_mjkim610/intellij-import.png">
 - Select `Gradle` external model to import from
 - Select `Use default gradle wrapper` and click `Finish`
 
