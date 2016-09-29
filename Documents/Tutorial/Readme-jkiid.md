@@ -50,7 +50,7 @@
              "client_id" : [Put your receiver's ID]
              "topic" : [Put a topic your receiver subscribes]
              "qos" : 
-              "is_persist" :
+             "is_persist" :
            }
            .
            .
