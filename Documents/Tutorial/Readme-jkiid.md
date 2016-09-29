@@ -58,16 +58,13 @@
         ]
       }     
       ```
-      
+ 
       
         > QOS Level
-          '
           
-          * QOS 0 : Publish a message once without success or failure. 
-          
-          * QOS 1 : Publish a single message more than once until message-delivering success.
-          
-          * QOS 2 : Publish a message in once with 4-level-handshaking.
+          QOS 0 : Publish a message once without success or failure. 
+          QOS 1 : Publish a single message more than once until message-delivering success.
+          QOS 2 : Publish a message in once with 4-level-handshaking.
 
 * Turn on the CMD and change the directory to the MQTT Server's home directory
 
