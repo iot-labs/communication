@@ -56,13 +56,12 @@
            .
            .
         ]
-      }  
-    
+      }     
       ```
       
       
         > QOS Level
-          
+          '
           
           * QOS 0 : Publish a message once without success or failure. 
           
