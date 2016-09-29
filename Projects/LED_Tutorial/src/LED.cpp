@@ -13,6 +13,7 @@ int main()
 	// set pin mode for LED pin to OUTPUT
 	pinMode(LED, OUTPUT);
 
+	// loop forever
 	while(1){
 		// write HIGH to LED pin
 		digitalWrite(LED, 1);
