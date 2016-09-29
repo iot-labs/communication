@@ -59,4 +59,24 @@
       }  
     
       ```
-  
+
+* Turn on the CMD and change the directory to the MQTT Server's home directory
+
+  <center><img src = "../../assets/img/readme_mqtt/cmd.png"/></center>
+
+  ```
+
+  C:\Users\Administration > cd [$APP_HOME]
+
+  ```
+
+* Type following statement to register receivers.
+
+  ```
+
+  [$APP_HOME] > graldew -q register_receivers -Pf=[$src_of_preference_file]
+
+  ```
+
+* After registration task is done, some messages like below comes up.
+
