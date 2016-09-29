@@ -1,4 +1,4 @@
-# IoT Labs - 쉬운 IoT 개발 환경을 위한 프레임워크 <br/> IoT Labs - A Framework for Simpler IoT Development Environment
+﻿# IoT Labs - 쉬운 IoT 개발 환경을 위한 프레임워크 <br/> IoT Labs - A Framework for Simpler IoT Development Environment
 @(_Open Frontier)[IoT Labs]
 
 IoT Labs 는 IoT 개발에 어려움이 되는 (통신/저장/분석)을 프레임워크로 제공하여 보다 쉬운 개발 환경 제공을  목표로 합니다. <br/>
@@ -37,7 +37,7 @@ IoT Labs aims to provide a framework for (communication/storage/analysis) in IoT
   * 채널에 가입 안하시면 채팅이 보이지 않습니다.
 
 #### 해커톤에서 필수 이수 사항
-* 해커톤에서 이것은 해주셔야 "이수"로 인정 하겠습니다
+* 해커톤에서 이것은 해주셔야 "이수"로 인정 하겠습니다.
  * 커밋 3~5회
  * 하지만, 커밋 3회가 어려운 것 잘 알고 있습니다.
  * 그래서, 쉽게 목표를 달성 하실 수 있도록 안내를 다시 배포 하겠습니다. (상세 방법 작성 중...)
