@@ -80,3 +80,8 @@
 
 * After registration task is done, some messages like below comes up.
 
+  <center><img src = "../../assets/img/readme_mqtt/register.png"/></center>
+  
+* Also in server command, registeration success messages alert too.
+
+  <center><img src = "../../assets/img/readme_mqtt/register_server.png"/></center>
