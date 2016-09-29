@@ -10,7 +10,6 @@
 * Turn on the CMD and change the directory to the MQTT Server's home directory
 
 <img src = "../../assets/img/readme_mqtt/cmd.png"/>
-<img src = "../../assets/img/readme_mqtt/cd.png"/>
 
 ```
 
@@ -19,7 +18,6 @@ C:\Users\Administration > cd [$APP_HOME]
 ```
 
 * Type following statement to run MQTT Server
-<img src = "../../assets/img/readme_mqtt/start.png"/>
 
 ```
 
