@@ -14,14 +14,32 @@ int init(){
     pinMode(LEDG, OUTPUT);
     pinMode(LEDB, OUTPUT);
 
+    softToneCreate(BUZZER);
+
     return 0;
 }
 
-int loop(){
+void alarm(){
+    digitalWrite(LEDG, LOW);
+    for(int i=0; i<20; i++){
+        digitalWrite(LEDR, HIGH);
+        softToneWrite(BUZZER, 987.77);
+        delay(200);
+        digitalWrite(LEDR, LOW);
+        softToneWrite(BUZZER, 783.99);
+        delay(200);
+    }
+    digitalWrite(LEDB, HIGH);
+    softToneWrite(BUZZER, 0);
+}
+
+void loop(){
     while(1){
         digitalWrite(LEDR, LOW);
         digitalWrite(LEDG, HIGH);
         digitalWrite(LEDB, LOW);
+        delay(5000);
+        alarm();
     }
 }
 
