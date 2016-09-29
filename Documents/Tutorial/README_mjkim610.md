@@ -1,4 +1,5 @@
-# How to run MQTT (Windows)
+# How to Run MQTT (Windows)
+Tutorial on how to run MQTT server of IoT Labs for the Windows operating system.
 
 ----
 
@@ -45,7 +46,7 @@
 ----
 
 ## <a name="prepare-github-repo">Prepare GitHub Repo
-`https://github.com/jongkwang/IoTLabs`
+IoT Labs GitHub Repo: `https://github.com/jongkwang/IoTLabs`
 
 ### <a name="fork">(Optional) Fork the Original Repo
 - If you wish to make changes to the repo without conflict of the original repo, you should fork the repo into your account
@@ -54,7 +55,7 @@
 - <img src="https://raw.githubusercontent.com/mjkim610/IoTLabs/master/assets/img/mqtt_tutorial_mjkim610/fork.png">
 
 ### <a name="clone">Clone GitHub Repo to Local Machine
-- Copy clone link from GitHub
+- Copy link of the repo from GitHub (This may be the original IoT Labs repo, or your forked repo)
     - <img src="https://raw.githubusercontent.com/mjkim610/IoTLabs/master/assets/img/mqtt_tutorial_mjkim610/github_get_link.png">
 - Start Git Bash
 - Change directory(`cd`) to where you want to save the IoT Labs Project
@@ -97,6 +98,7 @@
     - <img src="https://raw.githubusercontent.com/mjkim610/IoTLabs/master/assets/img/mqtt_tutorial_mjkim610/start-mqtt-broker.png">
 
 ### <a name="start-register-receiver">Start Register Receiver
+- Open a new command prompt and navigate to `\Platforms\Java`
 - Start register receiver by using the `gradlew.bat -q register_receivers -Pf=src/main/resources/config/mqtt_receiver.json` command
     - <img src="https://raw.githubusercontent.com/mjkim610/IoTLabs/master/assets/img/mqtt_tutorial_mjkim610/register-receiver.png">
 
