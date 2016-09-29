@@ -5,13 +5,14 @@
 - [Get Software](#get-software)
     - [Download Java Development Kit](#download-jdk)
     - [Download Git for Windows](#download-git)
-    - [Download Intellij IDEA Community Edition](#intellij)
+    - [Download Intellij IDEA Community Edition](#download-intellij)
 - [Prepare GitHub Repo](#prepare-github-repo)
     - [(Optional) Fork Repo](#fork)
     - [Clone GitHub Repo to Local Machine](#clone)
-- [Run MQTT](#run-mqtt)
+- [Open Project With Gradle](#open-project)
     - [Open Project in Intellij IDEA](#open-in-intellij)
     - [Test Gradle](#test-gradle)
+- [Run MQTT](#run-mqtt)
     - [Start MQTT Broker](#)
     - [Start Register Receiver](#)
 
@@ -63,15 +64,14 @@
 
 ----
 
-
-## <a name="run-mqtt">Run MQTT
+## <a name="open-project">Open Project With Gradle
 
 ### <a name="open-in-intellij">Open Project in Intellij IDEA
 - Launch Intellij IDEA
     - <img src="https://raw.githubusercontent.com/mjkim610/IoTLabs/master/assets/img/mqtt_tutorial_mjkim610/intellij-splash.png">
 - Click `Import Project`
     - <img src="https://raw.githubusercontent.com/mjkim610/IoTLabs/master/assets/img/mqtt_tutorial_mjkim610/intellij-import.png">
-- Navigate to `IoT Labs` repo and click `OK`
+- Navigate to `IoTLabs` folder and click `OK`
 - Select `Gradle` external model to import from
 - Select `Use default gradle wrapper` and click `Finish`
 
@@ -82,8 +82,12 @@
     - <img src="https://raw.githubusercontent.com/mjkim610/IoTLabs/master/assets/img/mqtt_tutorial_mjkim610/intellij-navigate.png">
 - Run Gradle test using the `gradlew.bat test` command
     - <img src="https://raw.githubusercontent.com/mjkim610/IoTLabs/master/assets/img/mqtt_tutorial_mjkim610/intellij-test.png">
-    - If encoding error occurs, reset the Intellij IDEA encoding to UTF-8
-        - Go to `File` -> `Settings`
-        - Type `encoding` at the top left side of the `Settings` window
-        - Change `IDE Encoding` and `Project Encoding` to any other encoding, then back to UTF-8
-            - <img src="https://raw.githubusercontent.com/mjkim610/IoTLabs/master/assets/img/mqtt_tutorial_mjkim610/intellij-encoding.png">
+- **If encoding error occurs**, reset the Intellij IDEA encoding to UTF-8
+    - Go to `File` -> `Settings`
+    - Type `encoding` at the top left side of the `Settings` window
+    - Change `IDE Encoding` and `Project Encoding` to any other encoding, then back to UTF-8
+        - <img src="https://raw.githubusercontent.com/mjkim610/IoTLabs/master/assets/img/mqtt_tutorial_mjkim610/intellij-encoding.png">
+
+----
+
+## <a name="run-mqtt">Run MQTT
