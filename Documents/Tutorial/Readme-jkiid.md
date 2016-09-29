@@ -30,10 +30,29 @@
 
 * Make JSON file to register MQTT Receivers.
 
-  ** Example file
+  * Example file
   
-     > ../Platforms/Java/src/main/resources/config/mqtt_receiver.json
+    > ../Platforms/Java/src/main/resources/config/mqtt_receiver.json
      
      
-  ** Structure
+  * Structure
+    
+    *Data Type : JSON
+
+    '''
+    {
+      "receivers" : [
+        {
+           "broker_url" : [Put your receiver's Address]
+           "client_id" : [Put your receiver's ID]
+           "topic" : [Put a topic your receiver subscribes]
+           "qos" : 
+           "is_persist" :
+         }
+         .
+         .
+         .
+       ]
+    }   
+    '''
   
