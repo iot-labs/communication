@@ -2,7 +2,6 @@ package org.iotlabs.projects.led_tutorial.webclient;
 
 import org.iotlabs.models.mqtt.MqttMsg;
 import spark.ModelAndView;
-import spark.template.thymeleaf.ThymeleafTemplateEngine;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -13,9 +12,7 @@ public class MqttController{
   public static void main(String[] args) {
     Map map = new HashMap<>();
     MqttMsg msg = new MqttMsg();
-    ThymeleafTemplateEngine engine = new ThymeleafTemplateEngine();
-    map.put("hello","Hello World");
-    get("/hello",(request,response)->new ModelAndView(map,"hello"),engine);
+    MustacheTemplateEngine engine = new MustacheTemplateEngine();
     get("/LedSwitcher",(request,response)->new ModelAndView(msg,"LedSwitcher"),engine);
   }
 }

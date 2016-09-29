@@ -41,7 +41,7 @@ dependencies {
     compile 'com.sparkjava:spark-core:2.5'
 
     // front page
-    compile 'com.sparkjava:spark-template-thymeleaf:2.3'
+    compile 'com.sparkjava:spark-template-mustache:2.3'
 
     testCompile 'junit:junit:4.11'
 }
