@@ -11,19 +11,19 @@
 
   <center><img src = "../../assets/img/readme_mqtt/cmd.png"/></center>
 
-```
+  ```
 
-C:\Users\Administration > cd [$APP_HOME]
+  C:\Users\Administration > cd [$APP_HOME]
 
-```
+  ```
 
 * Type following statement to run MQTT Server
 
-```
+  ```
 
-[$APP_HOME] > graldew -q start_mqtt_broker
+  [$APP_HOME] > graldew -q start_mqtt_broker
 
-```
+  ```
 
 * After starting task is done, a message 'MQTT Broker started' comes up.
 
