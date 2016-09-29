@@ -5,11 +5,11 @@
 
 * Download the platform from repository and unzip it.
 
-<center><img src = "../../assets/img/readme_mqtt/clone.png"/></center>
+  <center><img src = "../../assets/img/readme_mqtt/clone.png"/></center>
 
 * Turn on the CMD and change the directory to the MQTT Server's home directory
 
-<center><img src = "../../assets/img/readme_mqtt/cmd.png"/></center>
+  <center><img src = "../../assets/img/readme_mqtt/cmd.png"/></center>
 
 ```
 
@@ -26,4 +26,5 @@ C:\Users\Administration > cd [$APP_HOME]
 ```
 
 * After starting task is done, a message 'MQTT Broker started' comes up.
-<center><img src = "../../assets/img/readme_mqtt/mqtt_start.png"/></center>
+
+  <center><img src = "../../assets/img/readme_mqtt/mqtt_start.png"/></center>
