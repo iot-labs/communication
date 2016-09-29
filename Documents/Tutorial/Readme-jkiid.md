@@ -49,8 +49,8 @@
              "broker_url" : [Put your receiver's Address]
              "client_id" : [Put your receiver's ID]
              "topic" : [Put a topic your receiver subscribes]
-             "qos" : 
-             "is_persist" :
+             "qos" : [Put your receiver's qos level **]
+             "is_persist" : [Enable message auto-registered to Database]
            }
            .
            .
@@ -59,6 +59,14 @@
       }  
     
       ```
+      
+        > QOS Level
+          
+          >> QOS 0 : Publish a message once without success or failure.
+          
+          >> QOS 1 : Publish a single message more than once until message-delivering success.
+          
+          >> QOS 2 : Publish a message in once with 4-level-handshaking.
 
 * Turn on the CMD and change the directory to the MQTT Server's home directory
 
