@@ -2,7 +2,9 @@
 
 
 ##Windows
- 
+
+* Download the platform from repository
+<img src = "../../assets/img/readme_mqtt/clone.png"/>
 
 * Turn on the CMD and change the directory to the MQTT Server's home directory
 
