@@ -1,11 +1,15 @@
 #include  <stdio.h>
 #include <wiringPi.h>
 #include <softTone.h>
+#include "libSensor.h"
 
+using namespace std;
 #define LEDR 1
 #define LEDG 2
 #define LEDB 3
 #define BUZZER 4
+
+Sensor gyro;
 
 int init(){
     if(wiringPiSetup()==-1) return -1;
@@ -34,12 +38,31 @@ void alarm(){
 }
 
 void loop(){
+    int gx, gy, gz, ax, ay, az;
+    int count=0;
     while(1){
         digitalWrite(LEDR, LOW);
         digitalWrite(LEDG, HIGH);
         digitalWrite(LEDB, LOW);
-        delay(5000);
-        alarm();
+        ax=gyro.getAccelX();
+        ay=gyro.getAccelY();
+        az=gyro.getAccelZ();
+        gx=gyro.getAngleX();
+        gy=gyro.getAngleY();
+        gz=gyro.getAngleZ();
+        printf("Angle : %d, %d, %d\n", gx, gy, gz);
+        printf("Accel : %d, %d, %d\n", ax, ay, az);
+        if(gx>20 || gy > 20 || gz > 20){
+            count++;   
+        }
+        else{
+            count = 0;
+        }
+        if(count>10){
+            alarm();
+            printf("************ALART************\n");
+            count=0;
+        }
     }
 }
 
