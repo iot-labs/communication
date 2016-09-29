@@ -5,14 +5,14 @@
 - [Get Software](#get-software)
     - [Download Java Development Kit](#download-jdk)
     - [Download Git for Windows](#download-git)
-    - [Download Intellij IDEA Community Edition](#hello)
-- [Prepare GitHub Repo](#hello)
-    - [(Optional) Fork Repo](#hello)
-    - [Clone GitHub Repo to Local Machine](#hello)
-- [Run MQTT](#hello)
-    - [Test Gradle](#hello)
-    - [Start MQTT Broker](#hello)
-    - [Start Register Receiver](#hello)
+    - [Download Intellij IDEA Community Edition](#intellij)
+- [Prepare GitHub Repo](#)
+    - [(Optional) Fork Repo](#)
+    - [Clone GitHub Repo to Local Machine](#)
+- [Run MQTT](#)
+    - [Test Gradle](#)
+    - [Start MQTT Broker](#)
+    - [Start Register Receiver](#)
 
 ----
 ## <a name="get-software">Get Software
@@ -32,3 +32,9 @@
     - Link: `https://git-scm.com/download/win`
 - Download the latest version of Git for Windows
 - <img src="https://raw.githubusercontent.com/mjkim610/IoTLabs/master/assets/img/mqtt_tutorial_mjkim610/git.png">
+
+### <a name="download-intellij">Download Intellij IDEA Community Edition
+- Search for `Intellij IDEA`
+    - Link: `https://www.jetbrains.com/idea/#chooseYourEdition`
+- Download the latest version of Intellij IDEA Community Edition
+- <img src="https://raw.githubusercontent.com/mjkim610/IoTLabs/master/assets/img/mqtt_tutorial_mjkim610/intellij.png">
