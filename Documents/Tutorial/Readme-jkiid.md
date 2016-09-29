@@ -37,9 +37,10 @@
      
   * Structure
     
-    *Data Type : JSON
+    * Data Type : JSON
 
     '''
+    
     {
       "receivers" : [
         {
@@ -53,6 +54,7 @@
          .
          .
        ]
-    }   
+    }  
+    
     '''
   
