@@ -65,7 +65,7 @@ IoT Labs aims to provide a framework for (communication/storage/analysis) in IoT
 * H/W : 송정우님께서 진행 중이십니다.
 
 #### 현재 진행 상황 - 화분
-* H/W : 황종순님께서 진행 중이십니다
+* H/W : 황종순님께서 진행 중이십니다.
 
 #### 현재 진행 상황 - Environment
 * Environment : 이성민님
