@@ -7,7 +7,8 @@ import spark.template.thymeleaf.ThymeleafTemplateEngine;
 import java.util.HashMap;
 import java.util.Map;
 
-import static spark.Spark.*;
+import static spark.Spark.get;
+import static spark.Spark.port;
 
 public class MqttController{
   private static Logger log = Logger.getLogger(MqttController.class);
