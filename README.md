@@ -27,7 +27,7 @@ IoT Labs aims to provide a framework for (communication/storage/analysis) in IoT
  * 안건 : Free Talking
  * 식사 : 자장면 or 인근 식당
 * 하단 커뮤니케이션 채널에 가입해주세요. (Facebook & Slack)
-* Github 사용법 또는 막히는 것 있으면 언제든지 Slack으로 제가 도움 요청하세요!! (저는 항상 StandBy 상대 입니다)
+* Github 사용법 또는 막히는 것 있으면 언제든지 Slack으로 제가 도움 요청하세요!! (저는 항상 StandBy 상태 입니다)
 
 #### 커뮤니케이션
 * Github : https://github.com/jongkwang/IoTLabs
