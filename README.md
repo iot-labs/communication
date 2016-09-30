@@ -416,7 +416,7 @@ IoT Labs 에서는 이 진입장벽을 낮춤으로써 S/W  를 전공하지 않
 
 <img src="https://raw.githubusercontent.com/jongkwang/IoTLabs/master/assets/img/case_research1.png">
 
-IoT 클라우드 플랫폼을 기반으로 IoT 서비스를 구축 할 수 있도록 도와준다.
+IoT 클라우드 플랫폼을 기반으로 IoT 서비스를 구축 하도록 도와준다.
 
 > Ref. : https://thingplus.net/
 
@@ -477,7 +477,7 @@ LG CNS 에서 제공하는 IoT 플랫폼. <small>*아직 이름이 정해지진 
 
 ##### 특징
 
-* 디바이스 연결  및 관리
+* 디바이스 연결 및 관리
 	* MQTT
 	* WebSockets
 	* HTTP
@@ -485,7 +485,7 @@ LG CNS 에서 제공하는 IoT 플랫폼. <small>*아직 이름이 정해지진 
 	* 모든 연결 지점에서 인증 및 엔드-투-엔드 암호화를 제공
 	* 세분화된 권한이 설정된 정책을 적용
 * 디바이스 데이터 처리
-	* 기존의 AWS 서비스 들과 연계 가능 : AWS Lambda, Amazon Kinesis, Amazon S3, Amazon Machine Learning, Amazon DynamoDB, Amazon CloudWatch, Amazon Elasticsearch Service
+	* 기존의 AWS 서비스들과 연계 가능 : AWS Lambda, Amazon Kinesis, Amazon S3, Amazon Machine Learning, Amazon DynamoDB, Amazon CloudWatch, Amazon Elasticsearch Service
 * 디바이스 상태를 확인 및 설정
 	* 상태를 확인하거나 설정
 	* 디바이스가 언제나 온라인인 것처럼 표시
@@ -530,7 +530,7 @@ IoT Labs를 개선해주세요. Contribution은 언제나 환영합니다.
 ## <a name="license-korean">License
 * [IoT Labs](https://github.com/jongkwang/IoTLabs) 는 [MIT](https://opensource.org/licenses/MIT) 라이센스를 따르며,
 * 함께 사용된 SW와 폰트의 라이센스도 준수해야 합니다.
-* 함께 사용된 SW 와 폰트
+* 함께 사용된 SW와 폰트
 	* Font
 		* [스케치명조](http://www.asiasoft.co.kr/) 폰트가 사용 되었습니다.
 	* Open Source
