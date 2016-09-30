@@ -15,6 +15,13 @@
       "topic" : "/sensor/test1",
       "qos" : 1,
       "is_persist" : true
+    },
+    {
+      "broker_url" : "tcp://localhost:1883",
+      "client_id" : "test_client_2",
+      "topic" : "/test/17",
+      "qos" : 1,
+      "is_persist" : true
     }
   ]
 }
