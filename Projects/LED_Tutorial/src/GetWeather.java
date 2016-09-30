@@ -1,30 +1,36 @@
-import java.io.BufferedReader;
-import java.io.DataOutputStream;
-import java.io.InputStreamReader;
+import java.io.*;
 import java.net.HttpURLConnection;
 import java.net.URL;
+import java.util.Calendar;
 
-import javax.net.ssl.HttpsURLConnection;
 
 public class GetWeather {
     public static void main(String[] args) throws Exception {
-
-        GetWeather http = new GetWeather();
-        String response = http.sendGet();
-        int value = http.getPrecipitationStatus(response);
-
         // 0: no precipitation / 1: rain / 2: snow
-        System.out.println("Precipitation Value: "+value);
+        GetWeather http = new GetWeather();
+        if (new File("weather_ipc").exists()) {
+            RandomAccessFile writer = new RandomAccessFile("weather_ipc", "rw");
+            while (true) {
+                Calendar cal = Calendar.getInstance();
+                if (cal.getTime().getMinutes() == 0 && cal.getTime().getSeconds() == 0) {
+                    String response = http.sendGet();
+                    int value = http.getPrecipitationStatus(response);
+                    writer.write(value);
+                    System.out.printf("%d", value);
+                }
+            }
+        } else {
+            System.out.print("LED Tutorial not on");
+        }
     }
 
     // HTTP GET request
     private String sendGet() throws Exception {
-
-        String city = "daegu";
+        String city = "seoul";
         String country = "KR";
         String unit = "Metric";
         String appID = "3c1d53facddc987dbce12048b5fe27b3";
-        String url = "http://api.openweathermap.org/data/2.5/weather?q=" + city + "," + country + "&units=" + unit + "&mode=xml&APPID="+appID;
+        String url = "http://api.openweathermap.org/data/2.5/weather?q=" + city + "," + country + "&units=" + unit + "&mode=xml&APPID=" + appID;
 
         URL owmUrl = new URL(url);
         HttpURLConnection conn = (HttpURLConnection) owmUrl.openConnection();
@@ -35,7 +41,6 @@ public class GetWeather {
 
         // get value
         int responseCode = conn.getResponseCode();
-        System.out.println("Response Code: "+responseCode);
 
         BufferedReader in = new BufferedReader(new InputStreamReader(conn.getInputStream()));
         String inputLine;
@@ -46,8 +51,6 @@ public class GetWeather {
         }
         in.close();
 
-        //print result
-        System.out.println("Response: "+response.toString());
         return response.toString();
     }
 
@@ -56,8 +59,7 @@ public class GetWeather {
         int substringLength = substringPrecipitation.length();
         int index = input.indexOf(substringPrecipitation);
 
-        // parse string to get precipitation value
-        String substringIntermediate = input.substring(index+substringLength);
+        String substringIntermediate = input.substring(index + substringLength);
         index = substringIntermediate.indexOf("\"");
         String precipitationValue = substringIntermediate.substring(0, index);
 
@@ -73,3 +75,4 @@ public class GetWeather {
         }
     }
 }
+
