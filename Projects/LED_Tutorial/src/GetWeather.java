@@ -9,7 +9,7 @@ import javax.net.ssl.HttpsURLConnection;
 public class GetWeather {
     public static void main(String[] args) throws Exception {
 
-        GetWeather http = new Main();
+        GetWeather http = new GetWeather();
         String response = http.sendGet();
         int value = http.getPrecipitationStatus(response);
 
@@ -20,10 +20,11 @@ public class GetWeather {
     // HTTP GET request
     private String sendGet() throws Exception {
 
-        String city = "seoul";
+        String city = "daegu";
         String country = "KR";
+        String unit = "Metric";
         String appID = "3c1d53facddc987dbce12048b5fe27b3";
-        String url = "http://api.openweathermap.org/data/2.5/weather?q=" + city + "," + country + "&units=" + "Metric" + "&mode=xml&APPID="+appID;
+        String url = "http://api.openweathermap.org/data/2.5/weather?q=" + city + "," + country + "&units=" + unit + "&mode=xml&APPID="+appID;
 
         URL owmUrl = new URL(url);
         HttpURLConnection conn = (HttpURLConnection) owmUrl.openConnection();
@@ -34,7 +35,7 @@ public class GetWeather {
 
         // get value
         int responseCode = conn.getResponseCode();
-        System.out.println("Response Code : " + responseCode);
+        System.out.println("Response Code: "+responseCode);
 
         BufferedReader in = new BufferedReader(new InputStreamReader(conn.getInputStream()));
         String inputLine;
@@ -46,28 +47,28 @@ public class GetWeather {
         in.close();
 
         //print result
-        System.out.println(response.toString());
+        System.out.println("Response: "+response.toString());
         return response.toString();
     }
 
     private int getPrecipitationStatus(String input) {
-        String substringPrecipitation = "precipitation mode=\"";
+        String substringPrecipitation = "mode=\"";
         int substringLength = substringPrecipitation.length();
         int index = input.indexOf(substringPrecipitation);
 
-        System.out.println(index);
         String substringIntermediate = input.substring(index+substringLength);
-        System.out.println(substringIntermediate);
         index = substringIntermediate.indexOf("\"");
-        System.out.println(index);
         String precipitationValue = substringIntermediate.substring(0, index);
-        System.out.println(precipitationValue);
 
-        // no precipitation
-        if (precipitationValue.equals("no")) { return 0; }
-        // rain
-        else if (precipitationValue.equals("rain")) { return 1; }
-        // snow
-        else { return 2; }
+        switch (precipitationValue) {
+            case "no":
+                return 0;
+            case "rain":
+                return 1;
+            case "snow":
+                return 2;
+            default:
+                return -1;
+        }
     }
 }
