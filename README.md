@@ -27,7 +27,7 @@ IoT Labs aims to provide a framework for (communication/storage/analysis) in IoT
  * 안건 : Free Talking
  * 식사 : 자장면 or 인근 식당
 * 하단 커뮤니케이션 채널에 가입해주세요. (Facebook & Slack)
-* Github 사용법 또는 막히는 것 있으면 언제든지 Slack으로 제가 도움 요청하세요!! (저는 항상 StandBy 상대 입니다)
+* Github 사용법 또는 막히는 것이 있으면 언제든 Slack으로 제게 도움을 요청하세요!! (저는 항상 StandBy 상태 입니다)
 
 #### 커뮤니케이션
 * Github : https://github.com/jongkwang/IoTLabs
@@ -39,12 +39,12 @@ IoT Labs aims to provide a framework for (communication/storage/analysis) in IoT
 #### 해커톤에서 필수 이수 사항
 * 해커톤에서 이것은 해주셔야 "이수"로 인정하겠습니다.
  * 커밋 3~5회
- * 하지만, 커밋 3회가 어려운 것 잘 알고 있습니다.
- * 그래서, 쉽게 목표를 달성하실 수 있도록 안내를 다시 배포 하겠습니다. (상세 방법 작성 중...)
+ * 하지만 커밋 3회가 어려운 것 잘 알고 있습니다.
+ * 그래서 쉽게 목표를 달성하실 수 있도록 안내를 다시 배포 하겠습니다. (상세 방법 작성 중...)
 
 #### 해커톤 이수를 위한 추천 작업
 * 해커톤에서 3번 이상 커밋이 있는 분을 이수로 간주 하도록 하겠습니다.
-* Github 사용법을 모르시면, `Team Viewer` 라는 프로그램 설치 후 제게 전화 주세요. o1o-9123-066o 김종광
+* Github 사용법을 모르시면, `Team Viewer` 라는 프로그램 설치 후 제게 전화 해 주세요. o1o-9123-066o 김종광
  * 한분한분 원격제어로 봐드리겠습니다. 꼭 전화 주세요!!
 * README.md 파일 맞춤법을 수정해 주세요.
  * 저번에 수정하신 분들 대부분이 Version Conflict 발생하여 Pull Request 가 Reject 되었습니다.
