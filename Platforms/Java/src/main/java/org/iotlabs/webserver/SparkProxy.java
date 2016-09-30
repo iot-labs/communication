@@ -1,5 +1,6 @@
 package org.iotlabs.webserver;
 
+import org.iotlabs.communication.mqtt.http.LedBluePrint;
 import org.iotlabs.webserver.blueprints.AbstractBluePrint;
 import org.iotlabs.webserver.blueprints.MessageBluePrint;
 import org.iotlabs.webserver.blueprints.MqttBluePrint;
@@ -29,6 +30,7 @@ public class SparkProxy {
         new UsersBluePrint().register();
         new MessageBluePrint().register();
         new MqttBluePrint().register();
+        new LedBluePrint().register();
     }
 
     /**
