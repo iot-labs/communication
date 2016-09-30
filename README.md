@@ -1,7 +1,7 @@
 ﻿# IoT Labs - 쉬운 IoT 개발 환경을 위한 프레임워크 <br/> IoT Labs - A Framework for Simpler IoT Development Environment
 @(_Open Frontier)[IoT Labs]
 
-IoT Labs 는 IoT 개발에 어려움이 되는 (통신/저장/분석)을 프레임워크로 제공하여 보다 쉬운 개발 환경 제공을  목표로 합니다. <br/>
+IoT Labs는 IoT 개발에 어려움이 되는 (통신/저장/분석)을 프레임워크로 제공하여 보다 쉬운 개발 환경 제공을  목표로 합니다. <br/>
 IoT Labs aims to provide a framework for (communication/storage/analysis) in IoT development for increased productivity.
 
 ----
@@ -18,7 +18,7 @@ IoT Labs aims to provide a framework for (communication/storage/analysis) in IoT
 
 ## <a name="dashboard">Dashboard - 공개SW 해커톤
 
-> 공개SW 해커톤 관련해서 꼭 보셔야 하는 것은 이곳에 정리 하겠습니다.
+> 공개SW 해커톤 관련해서 꼭 보셔야 하는 것은 이곳에 정리하겠습니다.
 
 #### 해커톤 공지
 * 번개 공지
@@ -26,8 +26,8 @@ IoT Labs aims to provide a framework for (communication/storage/analysis) in IoT
  * 장소 : 서울 강남구 테헤란로 311, 7층 KossLab
  * 안건 : Free Talking
  * 식사 : 자장면 or 인근 식당
-* 하단 커뮤니케이션 채널에 가입 해주세요. (Facebook & Slack)
-* Github 사용법 또는 막히는 것 있으면 언제든지 Slack 으로 제가 도움 요청하세요!! (저는 항상 StandBy 상대 입니다)
+* 하단 커뮤니케이션 채널에 가입해주세요. (Facebook & Slack)
+* Github 사용법 또는 막히는 것 있으면 언제든지 Slack으로 제가 도움 요청하세요!! (저는 항상 StandBy 상대 입니다)
 
 #### 커뮤니케이션
 * Github : https://github.com/jongkwang/IoTLabs
