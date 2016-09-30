@@ -56,6 +56,7 @@ public class GetWeather {
         int substringLength = substringPrecipitation.length();
         int index = input.indexOf(substringPrecipitation);
 
+        // parse string to get precipitation value
         String substringIntermediate = input.substring(index+substringLength);
         index = substringIntermediate.indexOf("\"");
         String precipitationValue = substringIntermediate.substring(0, index);
