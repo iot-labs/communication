@@ -34,7 +34,10 @@ int init(){
     pinMode(LEDR, OUTPUT);
     pinMode(LEDG, OUTPUT);
     pinMode(LEDB, OUTPUT);
-    
+    digitalWrite(LEDR, LOW);
+    digitalWrite(LEDG, LOW);
+    digitalWrite(LEDB, LOW);
+
     mosquitto_lib_init();
     mosq = mosquitto_new("LED_Tutorial", clean_session, NULL);
     if(mosq){
