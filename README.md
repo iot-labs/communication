@@ -1,7 +1,7 @@
-# IoT Labs - 쉬운 IoT 개발 환경을 위한 프레임워크 <br/> IoT Labs - A Framework for Simpler IoT Development Environment
+﻿# IoT Labs - 쉬운 IoT 개발 환경을 위한 프레임워크 <br/> IoT Labs - A Framework for Simpler IoT Development Environment
 @(_Open Frontier)[IoT Labs]
 
-IoT Labs 는 IoT 개발에 어려움이 되는 (통신/저장/분석)을 프레임워크로 제공하여 보다 쉬운 개발 환경 제공을  목표로 합니다. <br/>
+IoT Labs는 IoT 개발에 어려움이 되는 (통신/저장/분석)을 프레임워크로 제공하여 보다 쉬운 개발 환경 제공을  목표로 합니다. <br/>
 IoT Labs aims to provide a framework for (communication/storage/analysis) in IoT development for increased productivity.
 
 ----
@@ -18,7 +18,7 @@ IoT Labs aims to provide a framework for (communication/storage/analysis) in IoT
 
 ## <a name="dashboard">Dashboard - 공개SW 해커톤
 
-> 공개SW 해커톤 관련해서 꼭 보셔야 하는 것은 이곳에 정리 하겠습니다.
+> 공개SW 해커톤 관련해서 꼭 보셔야 하는 것은 이곳에 정리하겠습니다.
 
 #### 해커톤 공지
 * 번개 공지
@@ -26,8 +26,8 @@ IoT Labs aims to provide a framework for (communication/storage/analysis) in IoT
  * 장소 : 서울 강남구 테헤란로 311, 7층 KossLab
  * 안건 : Free Talking
  * 식사 : 자장면 or 인근 식당
-* 하단 커뮤니케이션 채널에 가입 해주세요. (Facebook & Slack)
-* Github 사용법 또는 막히는 것 있으면 언제든지 Slack 으로 제가 도움 요청하세요!! (저는 항상 StandBy 상대 입니다)
+* 하단 커뮤니케이션 채널에 가입해주세요. (Facebook & Slack)
+* Github 사용법 또는 막히는 것 있으면 언제든지 Slack으로 제가 도움 요청하세요!! (저는 항상 StandBy 상대 입니다)
 
 #### 커뮤니케이션
 * Github : https://github.com/jongkwang/IoTLabs
@@ -37,7 +37,7 @@ IoT Labs aims to provide a framework for (communication/storage/analysis) in IoT
   * 채널에 가입 안하시면 채팅이 보이지 않습니다.
 
 #### 해커톤에서 필수 이수 사항
-* 해커톤에서 이것은 해주셔야 "이수"로 인정 하겠습니다
+* 해커톤에서 이것은 해주셔야 "이수"로 인정 하겠습니다.
  * 커밋 3~5회
  * 하지만, 커밋 3회가 어려운 것 잘 알고 있습니다.
  * 그래서, 쉽게 목표를 달성 하실 수 있도록 안내를 다시 배포 하겠습니다. (상세 방법 작성 중...)
@@ -47,7 +47,7 @@ IoT Labs aims to provide a framework for (communication/storage/analysis) in IoT
 * Github 사용법을 모르시면, `Team Viewer` 라는 프로그램 설치 후 제게 전화 주세요. o1o-9123-066o 김종광
  * 한분한분 원격제어로 봐드리겠습니다. 꼭 전화 주세요!!
 * README.md 파일 맞춤법을 수정해 주세요.
- * 저번에 수정하신 분들 대부분이 Version Conflict 발생하여 Pull Request 가 Reject 되었습니다
+ * 저번에 수정하신 분들 대부분이 Version Conflict 발생하여 Pull Request 가 Reject 되었습니다.
  * 새로 받으셔서(Pull) 다시 고쳐 주셔야 합니다.
  * URL : https://github.com/jongkwang/IoTLabs/blob/master/README.md
 * 기존 코드에 주석을 넣어주세요.
@@ -62,10 +62,10 @@ IoT Labs aims to provide a framework for (communication/storage/analysis) in IoT
 
 
 #### 현재 진행 상황 - 지진알림이 + LED 램프
-* H/W : 송정우님께서 진행 중이십니다
+* H/W : 송정우님께서 진행 중이십니다.
 
 #### 현재 진행 상황 - 화분
-* H/W : 황종순님께서 진행 중이십니다
+* H/W : 황종순님께서 진행 중이십니다.
 
 #### 현재 진행 상황 - Environment
 * Environment : 이성민님

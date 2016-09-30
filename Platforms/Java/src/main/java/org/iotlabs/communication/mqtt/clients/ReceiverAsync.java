@@ -6,6 +6,9 @@ import org.eclipse.paho.client.mqttv3.*;
 import org.iotlabs.models.mqtt.ReceiverPreference;
 import org.iotlabs.util.IOUtils;
 
+/**
+ * receive signal Asynchronously
+ */
 public class ReceiverAsync extends BaseAsyncClient {
 
     private static Logger logger = Logger.getLogger(ReceiverAsync.class);

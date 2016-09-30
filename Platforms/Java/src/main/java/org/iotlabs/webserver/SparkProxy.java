@@ -2,6 +2,7 @@ package org.iotlabs.webserver;
 
 import org.iotlabs.webserver.blueprints.AbstractBluePrint;
 import org.iotlabs.webserver.blueprints.MessageBluePrint;
+import org.iotlabs.webserver.blueprints.MqttBluePrint;
 import org.iotlabs.webserver.blueprints.UsersBluePrint;
 
 public class SparkProxy {
@@ -27,6 +28,7 @@ public class SparkProxy {
     private void registerRouters() {
         new UsersBluePrint().register();
         new MessageBluePrint().register();
+        new MqttBluePrint().register();
     }
 
     /**
