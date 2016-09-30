@@ -13,20 +13,20 @@ import java.io.OutputStreamWriter;
 import java.net.Socket;
 
 public class Client extends HandlerThread {
-    public final String SERVER_ADDRESS = "127.0.0.1"; //raspberry pi's IP address
-    public final int SERVER_PORT = 10000; // port number
-
+    public final String serverAddress = "127.0.0.1"; //raspberry pi's IP address
+    public final int serverPort = 10000; // port number
+    
     Handler mHandler, mainHandler;
-
+    
     Socket socket;
     BufferedWriter out;
     BufferedReader in;
-
+    
     public Client(String name, Handler handler) {
         super(name);
         mainHandler = handler;
     }
-
+    
     @Override
     public synchronized void start() {
         super.start();
@@ -36,10 +36,10 @@ public class Client extends HandlerThread {
                 try {
                     switch (msg.what) {
                         case 0:
-                            socket = new Socket(SERVER_ADDRESS, SERVER_PORT);
+                            socket = new Socket(serverAddress, serverPort);
                             out = new BufferedWriter(new OutputStreamWriter(socket.getOutputStream()));
                             in = new BufferedReader(new InputStreamReader(socket.getInputStream()));
-
+                            
                             sendMessageToMain(0, in.readLine());
                             sendMessageToMain(1, null);
                             break;
@@ -66,27 +66,27 @@ public class Client extends HandlerThread {
                 }
             }
         };
-
+        
         sendMessageToMain(2, null);
     }
-
+    
     public void connect() {
         if (socket == null || socket.isClosed()) mHandler.sendEmptyMessage(0);
     }
-
+    
     public void on() {
         if (socket != null && socket.isConnected()) mHandler.sendEmptyMessage(1);
     }
-
+    
     public void off() {
         if (socket != null && socket.isConnected()) mHandler.sendEmptyMessage(2);
     }
-
+    
     public void close() {
         if (socket != null && socket.isConnected()) mHandler.sendEmptyMessage(3);
     }
-
-    public void buzz_scale(String scale) {
+    
+    public void buzzScale(String scale) {
         if (socket != null && socket.isConnected()) {
             Message msg = new Message();
             msg.obj = scale;
@@ -94,14 +94,14 @@ public class Client extends HandlerThread {
             mHandler.sendMessage(msg);
         }
     }
-
+    
     private void sendMessageToMain(int what, String str) {
         Message msg = new Message();
         msg.what = what;
         if (what == 0) msg.obj = str;
         mainHandler.sendMessage(msg);
     }
-
+    
     @Override
     public boolean quit() {
         if (socket != null && socket.isConnected()) {

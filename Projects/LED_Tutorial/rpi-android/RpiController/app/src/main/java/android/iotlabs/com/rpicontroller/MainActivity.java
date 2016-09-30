@@ -15,9 +15,19 @@ import android.widget.TextView;
 
 public class MainActivity extends Activity implements View.OnClickListener {
     TextView message;
-    Button btn_connect, btn_on, btn_off, btn_close;
-    Button c4, d4, e4, f4, g4, a4, b4, c5;
-    LinearLayout now_connecting;
+    Button btnConnect;
+    Button btnOn;
+    Button btnOff;
+    Button btnClose;
+    Button btnC4;
+    Button btnD4;
+    Button btnE4;
+    Button btnF4;
+    Button btnG4;
+    Button btnA4;
+    Button btnB4;
+    Button btnC5;
+    LinearLayout nowConnecting;
     Client client;
 
     Handler mHandler;
@@ -28,35 +38,38 @@ public class MainActivity extends Activity implements View.OnClickListener {
         setContentView(R.layout.activity_main);
 
         message = (TextView) findViewById(R.id.message);
-        now_connecting = (LinearLayout) findViewById(R.id.now_connecting);
+        nowConnecting = (LinearLayout) findViewById(R.id.now_connecting);
 
-        btn_connect = (Button) findViewById(R.id.btn_connect);
-        btn_on = (Button) findViewById(R.id.btn_on);
-        btn_off = (Button) findViewById(R.id.btn_off);
-        btn_close = (Button) findViewById(R.id.btn_close);
+        // Connection Control
+        btnConnect = (Button) findViewById(R.id.btn_connect);
+        btnOn = (Button) findViewById(R.id.btn_on);
+        btnOff = (Button) findViewById(R.id.btn_off);
+        btnClose = (Button) findViewById(R.id.btn_close);
 
-        c4 = (Button) findViewById(R.id.btn_c);
-        d4 = (Button) findViewById(R.id.btn_d);
-        e4 = (Button) findViewById(R.id.btn_e);
-        f4 = (Button) findViewById(R.id.btn_f);
-        g4 = (Button) findViewById(R.id.btn_g);
-        a4 = (Button) findViewById(R.id.btn_a);
-        b4 = (Button) findViewById(R.id.btn_b);
-        c5 = (Button) findViewById(R.id.btn_C);
 
-        btn_connect.setOnClickListener(this);
-        btn_on.setOnClickListener(this);
-        btn_off.setOnClickListener(this);
-        btn_close.setOnClickListener(this);
+        // Buzzer Control
+        btnC4 = (Button) findViewById(R.id.btn_c);
+        btnD4 = (Button) findViewById(R.id.btn_d);
+        btnE4 = (Button) findViewById(R.id.btn_e);
+        btnF4 = (Button) findViewById(R.id.btn_f);
+        btnG4 = (Button) findViewById(R.id.btn_g);
+        btnA4 = (Button) findViewById(R.id.btn_a);
+        btnB4 = (Button) findViewById(R.id.btn_b);
+        btnC5 = (Button) findViewById(R.id.btn_C);
 
-        c4.setOnClickListener(this);
-        d4.setOnClickListener(this);
-        e4.setOnClickListener(this);
-        f4.setOnClickListener(this);
-        g4.setOnClickListener(this);
-        a4.setOnClickListener(this);
-        b4.setOnClickListener(this);
-        c5.setOnClickListener(this);
+        btnConnect.setOnClickListener(this);
+        btnOn.setOnClickListener(this);
+        btnOff.setOnClickListener(this);
+        btnClose.setOnClickListener(this);
+
+        btnC4.setOnClickListener(this);
+        btnD4.setOnClickListener(this);
+        btnE4.setOnClickListener(this);
+        btnF4.setOnClickListener(this);
+        btnG4.setOnClickListener(this);
+        btnA4.setOnClickListener(this);
+        btnB4.setOnClickListener(this);
+        btnC5.setOnClickListener(this);
 
 
         mHandler = new Handler(getMainLooper()) {
@@ -79,11 +92,11 @@ public class MainActivity extends Activity implements View.OnClickListener {
 
     public void connecting(boolean c) {
         if (c) {
-            btn_connect.setVisibility(View.GONE);
-            now_connecting.setVisibility(View.VISIBLE);
+            btnConnect.setVisibility(View.GONE);
+            nowConnecting.setVisibility(View.VISIBLE);
         } else {
-            btn_connect.setVisibility(View.VISIBLE);
-            now_connecting.setVisibility(View.GONE);
+            btnConnect.setVisibility(View.VISIBLE);
+            nowConnecting.setVisibility(View.GONE);
         }
     }
 
@@ -98,11 +111,10 @@ public class MainActivity extends Activity implements View.OnClickListener {
                 break;
             default:
                 String scale = (String) ((Button) v).getText();
-                client.buzz_scale(scale);
+                client.buzzScale(scale);
                 break;
         }
     }
 
 
 }
-
