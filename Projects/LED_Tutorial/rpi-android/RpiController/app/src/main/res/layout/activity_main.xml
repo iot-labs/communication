@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:layout_margin="10dp">
+    <LinearLayout
+        android:orientation="vertical" android:layout_width="match_parent"
+        android:layout_height="match_parent" android:layout_margin="10dp">
+        <TextView
+            android:id="@+id/message"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:textColor="@android:color/black"
+            android:text="Raspberry Pi"/>
+        <Button
+            android:id="@+id/btn_connect"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="false"
+            android:text="Connect"/>
+        <LinearLayout
+            android:id="@+id/now_connecting"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <Button
+                android:id="@+id/btn_on"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="On"/>
+            <Button
+                android:id="@+id/btn_off"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Off"/>
+            <Button
+                android:id="@+id/btn_close"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:text="Close"/>
+
+            <Button
+                android:id="@+id/btn_c"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#ff0000"
+                android:text="C4"/>
+            <Button
+                android:id="@+id/btn_d"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="D4"/>
+            <Button
+                android:id="@+id/btn_e"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="E4"/>
+            <Button
+                android:id="@+id/btn_f"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="F4"/>
+            <Button
+                android:id="@+id/btn_g"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="G4"/>
+            <Button
+                android:id="@+id/btn_a"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="A4"/>
+            <Button
+                android:id="@+id/btn_b"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="B4"/>
+            <Button
+                android:id="@+id/btn_C"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#ff0000"
+                android:text="C5"/>
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>
