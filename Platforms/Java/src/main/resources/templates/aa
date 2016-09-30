@@ -1,0 +1,50 @@
+<!--&lt;!&ndash; Latest compiled and minified CSS &ndash;&gt;-->
+<!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">-->
+
+<!--&lt;!&ndash; Optional theme &ndash;&gt;-->
+<!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">-->
+
+<!--&lt;!&ndash; Latest compiled and minified JavaScript &ndash;&gt;-->
+<!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>-->
+
+<!--<button type="button" class="btn btn-primary btn-lg active" id="switcher">Primary button</button>-->
+<!--<script type="text/javascript">-->
+    <!--(function() {-->
+        <!--var httpRequest;-->
+        <!--document.getElementById("switcher").onclick = function() { makeRequest('led'); };-->
+
+        <!--function makeRequest(url) {-->
+            <!--if (window.XMLHttpRequest) { // Mozilla, Safari, ...-->
+                <!--httpRequest = new XMLHttpRequest();-->
+            <!--} else if (window.ActiveXObject) { // IE-->
+                <!--try {-->
+                    <!--httpRequest = new ActiveXObject("Msxml2.XMLHTTP");-->
+                <!--}-->
+                <!--catch (e) {-->
+                    <!--try {-->
+                        <!--httpRequest = new ActiveXObject("Microsoft.XMLHTTP");-->
+                    <!--}-->
+                    <!--catch (e) {}-->
+                <!--}-->
+            <!--}-->
+
+            <!--if (!httpRequest) {-->
+                <!--alert('Giving up :( Cannot create an XMLHTTP instance');-->
+                <!--return false;-->
+            <!--}-->
+            <!--httpRequest.onreadystatechange = alertContents;-->
+            <!--httpRequest.open('GET', url);-->
+            <!--httpRequest.send();-->
+        <!--}-->
+
+        <!--function alertContents() {-->
+            <!--if (httpRequest.readyState === 4) {-->
+                <!--if (httpRequest.status === 200) {-->
+                    <!--alert(httpRequest.responseText);-->
+                <!--} else {-->
+                    <!--alert('There was a problem with the request.');-->
+                <!--}-->
+            <!--}-->
+        <!--}-->
+    <!--})();-->
+<!--</script>-->
