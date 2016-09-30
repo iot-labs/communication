@@ -56,7 +56,6 @@ public class SimpleMqttBroker {
         Runtime.getRuntime().addShutdownHook(new Thread() {
             @Override
             public void run() {
-
                 logger.info("Stopping broker");
                 mqttBroker.stopServer();
                 logger.info("Broker stopped");

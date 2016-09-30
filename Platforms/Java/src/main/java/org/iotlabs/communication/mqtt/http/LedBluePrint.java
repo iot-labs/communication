@@ -39,19 +39,12 @@ public class LedBluePrint extends AbstractBluePrint {
 
     private String renderContent(String htmlFile) {
         try {
-            // If you are using maven then your files
-            // will be in a folder called resources.
-            // getResource() gets that folder
-            // and any files you specify.
             URL url = getClass().getResource(htmlFile);
 
-            // Return a String which has all
-            // the contents of the file.
             Path path = Paths.get(url.toURI());
             return new String(Files.readAllBytes(path), Charset.forName("utf-8"));
         } catch (IOException | URISyntaxException e) {
-            // Add your own exception handlers here.
-            log.error("tttttt", e);
+            log.error("error", e);
         }
         return null;
     }
