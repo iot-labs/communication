@@ -18,7 +18,7 @@ public class MqttBluePrint extends AbstractBluePrint {
      *  http://localhost:4567/mqtt/publish?topic=test&client_id=17&payload=hi%20test
      *  mqtt topic : /test/17    * /{topic}/{client_id}
      *  mqtt payload : hi test   * {payload}
-     *
+     * /mqtt/led/blue
      */
     @Override
     public void register() {

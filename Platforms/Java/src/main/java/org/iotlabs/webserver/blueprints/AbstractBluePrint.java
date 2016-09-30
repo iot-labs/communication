@@ -14,7 +14,7 @@ public abstract class AbstractBluePrint {
      * create blueprint object
      * @param blueprintPrefix blueprint name prefix to set
      */
-    AbstractBluePrint(String blueprintPrefix) {
+    public AbstractBluePrint(String blueprintPrefix) {
         if (!blueprintPrefix.startsWith("/")) {
             blueprintPrefix = "/" + blueprintPrefix;
         }
@@ -29,7 +29,7 @@ public abstract class AbstractBluePrint {
      * @param endPoint endpoint
      * @return {blueprint_prefix}/endPoint
      */
-    String getEndPoint(String endPoint) {
+    public String getEndPoint(String endPoint) {
         if (endPoint.startsWith("/")) {
             endPoint = endPoint.substring(1, endPoint.length());
         }
