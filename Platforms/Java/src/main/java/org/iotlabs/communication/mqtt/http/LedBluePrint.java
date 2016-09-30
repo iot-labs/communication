@@ -18,27 +18,25 @@ public class LedBluePrint extends AbstractBluePrint {
   private static Logger log = Logger.getLogger(LedBluePrint.class);
   public LedBluePrint(){
     super("led");
+    MqttProxy.getInstance().initPublisherPool(5, "tcp://192.168.0.159:1883", false);
   }
   @Override
   public void register(){
     get(getEndPoint("ledswitcher"),(req, res) ->renderContent("/templates/ledswitcher.html"));
     get(getEndPoint("red"), (req, res) ->{
-      String clientId = req.queryParams("client_id");
-      String topic = req.queryParams("topic");
-      String payload = req.queryParams("payload");
-      if (!topic.startsWith("/")){
-        topic = "/" + topic;
-      }
-      MqttProxy.getInstance().publish(topic+"/"+clientId, payload, 1, false);
+      MqttProxy.getInstance().publish("/IoTLabs/LED", "r", 1, false);
       return "send";
     });
     get(getEndPoint("green"), (req, res) ->{
-
+      MqttProxy.getInstance().publish("/IoTLabs/LED", "g", 1, false);
+      return "send";
     });
     get(getEndPoint("blue"), (req, res) ->{
-
+      MqttProxy.getInstance().publish("/IoTLabs/LED", "b", 1, false);
+      return "send";
     });
   }
+
   private String renderContent(String htmlFile) {
     try {
       // If you are using maven then your files
