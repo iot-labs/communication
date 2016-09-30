@@ -4,7 +4,9 @@ import org.apache.log4j.Logger;
 import org.eclipse.paho.client.mqttv3.MqttAsyncClient;
 import org.eclipse.paho.client.mqttv3.MqttException;
 import org.iotlabs.util.IOUtils;
-
+/*
+ * the base class to communicate asynchronously with m
+ */
 public class BaseAsyncClient {
     private static final Logger logger = Logger.getLogger(BaseAsyncClient.class);
 
