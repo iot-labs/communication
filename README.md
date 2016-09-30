@@ -27,7 +27,7 @@ IoT Labs aims to provide a framework for (communication/storage/analysis) in IoT
  * 안건 : Free Talking
  * 식사 : 자장면 or 인근 식당
 * 하단 커뮤니케이션 채널에 가입해주세요. (Facebook & Slack)
-* Github 사용법 또는 막히는 것 있으면 언제든지 Slack으로 제가 도움 요청하세요!! (저는 항상 StandBy 상대 입니다)
+* Github 사용법 또는 막히는 것이 있으면 언제든 Slack으로 제게 도움을 요청하세요!! (저는 항상 StandBy 상태 입니다)
 
 #### 커뮤니케이션
 * Github : https://github.com/jongkwang/IoTLabs
@@ -39,12 +39,12 @@ IoT Labs aims to provide a framework for (communication/storage/analysis) in IoT
 #### 해커톤에서 필수 이수 사항
 * 해커톤에서 이것은 해주셔야 "이수"로 인정하겠습니다.
  * 커밋 3~5회
- * 하지만, 커밋 3회가 어려운 것 잘 알고 있습니다.
- * 그래서, 쉽게 목표를 달성하실 수 있도록 안내를 다시 배포 하겠습니다. (상세 방법 작성 중...)
+ * 하지만 커밋 3회가 어려운 것 잘 알고 있습니다.
+ * 그래서 쉽게 목표를 달성하실 수 있도록 안내를 다시 배포 하겠습니다. (상세 방법 작성 중...)
 
 #### 해커톤 이수를 위한 추천 작업
 * 해커톤에서 3번 이상 커밋이 있는 분을 이수로 간주 하도록 하겠습니다.
-* Github 사용법을 모르시면, `Team Viewer` 라는 프로그램 설치 후 제게 전화 주세요. o1o-9123-066o 김종광
+* Github 사용법을 모르시면, `Team Viewer` 라는 프로그램 설치 후 제게 전화 해 주세요. o1o-9123-066o 김종광
  * 한분한분 원격제어로 봐드리겠습니다. 꼭 전화 주세요!!
 * README.md 파일 맞춤법을 수정해 주세요.
  * 저번에 수정하신 분들 대부분이 Version Conflict 발생하여 Pull Request 가 Reject 되었습니다.
@@ -416,7 +416,7 @@ IoT Labs 에서는 이 진입장벽을 낮춤으로써 S/W  를 전공하지 않
 
 <img src="https://raw.githubusercontent.com/jongkwang/IoTLabs/master/assets/img/case_research1.png">
 
-IoT 클라우드 플랫폼을 기반으로 IoT 서비스를 구축 할 수 있도록 도와준다.
+IoT 클라우드 플랫폼을 기반으로 IoT 서비스를 구축 하도록 도와준다.
 
 > Ref. : https://thingplus.net/
 
@@ -477,7 +477,7 @@ LG CNS 에서 제공하는 IoT 플랫폼. <small>*아직 이름이 정해지진 
 
 ##### 특징
 
-* 디바이스 연결  및 관리
+* 디바이스 연결 및 관리
 	* MQTT
 	* WebSockets
 	* HTTP
@@ -485,7 +485,7 @@ LG CNS 에서 제공하는 IoT 플랫폼. <small>*아직 이름이 정해지진 
 	* 모든 연결 지점에서 인증 및 엔드-투-엔드 암호화를 제공
 	* 세분화된 권한이 설정된 정책을 적용
 * 디바이스 데이터 처리
-	* 기존의 AWS 서비스 들과 연계 가능 : AWS Lambda, Amazon Kinesis, Amazon S3, Amazon Machine Learning, Amazon DynamoDB, Amazon CloudWatch, Amazon Elasticsearch Service
+	* 기존의 AWS 서비스들과 연계 가능 : AWS Lambda, Amazon Kinesis, Amazon S3, Amazon Machine Learning, Amazon DynamoDB, Amazon CloudWatch, Amazon Elasticsearch Service
 * 디바이스 상태를 확인 및 설정
 	* 상태를 확인하거나 설정
 	* 디바이스가 언제나 온라인인 것처럼 표시
@@ -530,7 +530,7 @@ IoT Labs를 개선해주세요. Contribution은 언제나 환영합니다.
 ## <a name="license-korean">License
 * [IoT Labs](https://github.com/jongkwang/IoTLabs) 는 [MIT](https://opensource.org/licenses/MIT) 라이센스를 따르며,
 * 함께 사용된 SW와 폰트의 라이센스도 준수해야 합니다.
-* 함께 사용된 SW 와 폰트
+* 함께 사용된 SW와 폰트
 	* Font
 		* [스케치명조](http://www.asiasoft.co.kr/) 폰트가 사용 되었습니다.
 	* Open Source
