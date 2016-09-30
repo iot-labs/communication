@@ -1,7 +1,7 @@
 ﻿# IoT Labs - 쉬운 IoT 개발 환경을 위한 프레임워크 <br/> IoT Labs - A Framework for Simpler IoT Development Environment
 @(_Open Frontier)[IoT Labs]
 
-IoT Labs는 IoT 개발에 어려움이 되는 (통신/저장/분석)을 프레임워크로 제공하여 보다 쉬운 개발 환경 제공을  목표로 합니다. <br/>
+IoT Labs는 IoT 개발에 어려움이 되는 (통신/저장/분석)을 프레임워크로 제공하여 보다 쉬운 개발 환경 제공을 목표로 합니다. <br/>
 IoT Labs aims to provide a framework for (communication/storage/analysis) in IoT development for increased productivity.
 
 ----
@@ -27,23 +27,23 @@ IoT Labs aims to provide a framework for (communication/storage/analysis) in IoT
  * 안건 : Free Talking
  * 식사 : 자장면 or 인근 식당
 * 하단 커뮤니케이션 채널에 가입해주세요. (Facebook & Slack)
-* Github 사용법 또는 막히는 것이 있으면 언제든 Slack으로 제게 도움을 요청하세요!! (저는 항상 StandBy 상태 입니다)
+* Github 사용법 또는 막히는 것이 있으면 언제든 Slack으로 제게 도움을 요청하세요!! (저는 항상 StandBy 상태입니다)
 
 #### 커뮤니케이션
 * Github : https://github.com/jongkwang/IoTLabs
 * 커뮤니티 : https://www.facebook.com/groups/IoTLabs
 * 채팅(Slack) : iotlabs-team.slack.com
  * Design / General / HW / SW / Random : 5개 채널 운영중
-  * 채널에 가입 안하시면 채팅이 보이지 않습니다.
+ * 채널에 가입 안하시면 채팅이 보이지 않습니다.
 
 #### 해커톤에서 필수 이수 사항
 * 해커톤에서 이것은 해주셔야 "이수"로 인정하겠습니다.
  * 커밋 3~5회
- * 하지만 커밋 3회가 어려운 것 잘 알고 있습니다.
+ * 하지만 커밋 3회가 어려운 것을 잘 알고 있습니다.
  * 그래서 쉽게 목표를 달성하실 수 있도록 안내를 다시 배포 하겠습니다. (상세 방법 작성 중...)
 
 #### 해커톤 이수를 위한 추천 작업
-* 해커톤에서 3번 이상 커밋이 있는 분을 이수로 간주 하도록 하겠습니다.
+* 해커톤에서 3번 이상 커밋이 있는 분을 이수로 간주하도록 하겠습니다.
 * Github 사용법을 모르시면, `Team Viewer` 라는 프로그램 설치 후 제게 전화 해 주세요. o1o-9123-066o 김종광
  * 한분한분 원격제어로 봐드리겠습니다. 꼭 전화 주세요!!
 * README.md 파일 맞춤법을 수정해 주세요.
@@ -51,12 +51,12 @@ IoT Labs aims to provide a framework for (communication/storage/analysis) in IoT
  * 새로 받으셔서(Pull) 다시 고쳐 주셔야 합니다.
  * URL : https://github.com/jongkwang/IoTLabs/blob/master/README.md
 * 기존 코드에 주석을 넣어주세요.
- * 한글 주석도 좋습니다
+ * 한글 주석도 좋습니다.
  * 중요하지 않은 주석도 좋습니다.!! (이건 참여에 의미가 있으니까요)
  * 주석 입력 대상 예시 : https://github.com/jongkwang/IoTLabs/blob/master/Platforms/Java/src/test/java/org/iotlabs/communication/mqtt/clients/BaseClientTest.java
  * 클래스 주석이나 메소드 주석이 없으니까 넣어주시면 좋겠어요!!
  * 권장 포멧 : http://javacan.tistory.com/entry/24 참조
-* Gradle 튜토리얼을 만들어 주세요
+* Gradle 튜토리얼을 만들어 주세요.
  * Github 에서 Download 받아서 Gradlew 로 MQTT서버 띄우는 과정을
  * `IoTLabs/Documents/Tutorial/README_여러분아이디.md` 파일로 만들어 주세요.
 
@@ -376,9 +376,9 @@ IoT 디바이스는 잘 다루지만 Web 개발에 익숙하지 않은 개발자
 
 ### 프로젝트 목표
 
-전 세계적으로 IoT 의 영향력이 확대 되고, 우리나라에서도 많은 분야에서 IoT 를 접목하는 시도가 있습니다. 이에 따라 많은 학생이나 입문자들이 IoT 아이템을 개발/발전 시켜나가고 있지만, S/W 를 전공하지 않은 학생이나 일반인들에게는 큰 진입장벽이 되는 부분이 있습니다.
+전 세계적으로 IoT의 영향력이 확대 되고, 우리나라에서도 많은 분야에서 IoT를 접목하는 시도가 있습니다. 이에 따라 많은 학생이나 입문자들이 IoT아이템을 개발/발전 시켜나가고 있지만, S/W를 전공하지 않은 학생이나 일반인들에게는 큰 진입장벽이 되는 부분이 있습니다.
 
-IoT Labs 에서는 이 진입장벽을 낮춤으로써 S/W  를 전공하지 않은 분들도 쉽게 IoT 아이디어를 개발/발전 시킬 수 있도록 돕고 싶습니다.
+IoT Labs에서는 이 진입장벽을 낮춤으로써 S/W를 전공하지 않은 분들도 쉽게 IoT 아이디어를 개발/발전 시킬 수 있도록 돕고 싶습니다.
 
 ----
 
@@ -416,7 +416,7 @@ IoT Labs 에서는 이 진입장벽을 낮춤으로써 S/W  를 전공하지 않
 
 <img src="https://raw.githubusercontent.com/jongkwang/IoTLabs/master/assets/img/case_research1.png">
 
-IoT 클라우드 플랫폼을 기반으로 IoT 서비스를 구축 하도록 도와준다.
+IoT 클라우드 플랫폼을 기반으로 IoT 서비스를 구축하도록 도와준다.
 
 > Ref. : https://thingplus.net/
 
@@ -437,7 +437,7 @@ IoT 클라우드 플랫폼을 기반으로 IoT 서비스를 구축 하도록 도
 * 룰과 타임라인 제공
 	* IFTTT 처럼 조건에 따른 액션(Action)을 정할 수 있음
 * 차트와 통계 제공
-	* 상세한 데이터는 Chart 로 분석
+	* 상세한 데이터는 Chart로 분석
 	* 기간별 통계 분석(Statistics)
 
 ----
@@ -516,7 +516,7 @@ LG CNS 에서 제공하는 IoT 플랫폼. <small>*아직 이름이 정해지진 
 ## 참여
 
 ## Issue
-사용문의 또는 질문 사항들은 [Github 이슈](https://github.com/jongkwang/IoTLabs/issues)에 올려 주시면 바로 처리 해 드리겠습니다.
+사용 문의 또는 질문 사항들은 [Github 이슈](https://github.com/jongkwang/IoTLabs/issues)에 올려 주시면 바로 처리 해 드리겠습니다.
 많은 의견 부탁드립니다.
 
 ## <a name="contribution-korean">Contribution
