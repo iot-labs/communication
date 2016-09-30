@@ -53,6 +53,7 @@ public class Runner {
         } else if (cmd.hasOption("server")) {
             SparkProxy.getInstance().run();
         } else {
+            SparkProxy.getInstance().run();
             usage();
         }
     }
