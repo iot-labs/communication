@@ -156,7 +156,7 @@ public class Configuration {
 
     public int getInteger(String key, int def) {
         if (prop.containsKey(key)) {
-            return getInteger(prop.getProperty(key));
+            return getInteger(key);
         } else {
             return def;
         }

@@ -37,7 +37,7 @@ dependencies {
     compile 'com.google.code.gson:gson:2.7'
     compile 'org.mybatis:mybatis:3.4.0'
 
-    // web framework
+    // spark web frameworks
     compile 'com.sparkjava:spark-core:2.5'
 
     // front page
@@ -128,4 +128,14 @@ task register_receivers(type: JavaExec, dependsOn: classes) {
     if (project.hasProperty("f") ) {
         args "-mqtt", "register_receivers", "-f", f
     }
+}
+
+/**
+ * run sparkjava web server
+ * ./gradlew -q run_webserver
+ */
+task run_webserver(type: JavaExec, dependsOn: classes) {
+    classpath = sourceSets.main.runtimeClasspath
+    main = 'org.iotlabs.Runner'
+    args "-server"
 }

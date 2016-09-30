@@ -22,6 +22,16 @@
         <appender-ref ref="stdout"/>
     </logger>
 
+    <logger name="spark.route">
+        <level value="DEBUG"/>
+        <appender-ref ref="stdout"/>
+    </logger>
+
+    <logger name="org.eclipse.jetty">
+        <level value="DEBUG"/>
+        <appender-ref ref="stdout"/>
+    </logger>
+
     <logger name="org.iotlabs">
         <level value="DEBUG"/>
         <appender-ref ref="stdout"/>
