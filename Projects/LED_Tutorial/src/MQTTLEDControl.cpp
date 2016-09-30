@@ -4,6 +4,7 @@
 #include <mosquitto.h>
 #include <wiringPi.h>
 #include <string.h>
+#include <cstring>
 
 #define LEDR 1
 #define LEDG 2
@@ -18,10 +19,10 @@ int rc=0;
 
 void message_callback(struct mosquitto *mosq, void *obj, const struct mosquitto_message *message){
     printf("%s\n", message->payload);
-    if(strcmp((char*)(message->payload), "ON")==0){
+    if(strcasecmp((char*)(message->payload), "ON")==0){
         digitalWrite(LEDR, HIGH);
     }
-    if(strcmp((char*)(message->payload), "OFF")==0){
+    if(strcasecmp((char*)(message->payload), "OFF")==0){
         digitalWrite(LEDR, LOW);
     }
 }
