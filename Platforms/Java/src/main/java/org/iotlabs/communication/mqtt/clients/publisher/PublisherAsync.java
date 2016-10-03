@@ -1,15 +1,17 @@
-package org.iotlabs.communication.mqtt.clients;
+package org.iotlabs.communication.mqtt.clients.publisher;
 
 import org.eclipse.paho.client.mqttv3.MqttException;
+import org.iotlabs.communication.mqtt.clients.BaseAsyncClient;
+import org.iotlabs.communication.mqtt.clients.BaseClient;
 import org.iotlabs.util.IOUtils;
 import org.iotlabs.util.StringUtils;
 
 /**
- * publish signal synchronously
+ * publish signal Asynchronously
  */
-public class PublisherSync extends BaseSyncClient implements BaseClient {
+public class PublisherAsync extends BaseAsyncClient implements BaseClient {
 
-    public PublisherSync(String brokerUrl, String clientId) throws MqttException {
+    public PublisherAsync(String brokerUrl, String clientId) throws MqttException {
         super(brokerUrl, clientId);
         mMqttClient.connect();
     }

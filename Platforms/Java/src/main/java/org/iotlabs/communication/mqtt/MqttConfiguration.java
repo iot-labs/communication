@@ -3,6 +3,7 @@ package org.iotlabs.communication.mqtt;
 import io.moquette.server.config.IConfig;
 import org.apache.log4j.Logger;
 import org.iotlabs.util.Configuration;
+import org.iotlabs.util.StringUtils;
 
 import java.io.IOException;
 
@@ -19,6 +20,10 @@ public class MqttConfiguration implements IConfig {
     private Configuration configuration;
 
     public MqttConfiguration(String filename) {
+        if (StringUtils.isEmpty(filename)) {
+            logger.warn("Config file name is empty. Using default config file (config/mqtt_broker.conf).");
+            filename = "config/mqtt_broker.conf";
+        }
         try {
             configuration = new Configuration(filename);
         } catch (IOException e) {

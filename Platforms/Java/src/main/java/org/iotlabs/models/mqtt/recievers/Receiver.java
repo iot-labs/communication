@@ -1,9 +1,10 @@
-package org.iotlabs.models.mqtt;
+package org.iotlabs.models.mqtt.recievers;
 
 import com.google.gson.annotations.SerializedName;
 import org.iotlabs.models.BaseModel;
 
-public class ReceiverPreference extends BaseModel {
+public class Receiver extends BaseModel {
+
     @SerializedName("broker_url")
     private String brokerUrl;
 
