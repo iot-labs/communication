@@ -111,7 +111,7 @@ IoT Labs aims to provide a framework for (communication/storage/analysis) in IoT
 ----
 ## Build Status
 #### Platform/Java
-[![Build Status](https://travis-ci.org/toori67/IoTLabs.svg?branch=master)](https://travis-ci.org/toori67/IoTLabs)
+[![Build Status](https://api.travis-ci.org/jongkwang/IoTLabs.svg?branch=master)](https://travis-ci.org/jongkwang/IoTLabs)
 [![Coverage Status](https://coveralls.io/repos/github/toori67/IoTLabs/badge.svg?branch=master)](https://coveralls.io/github/toori67/IoTLabs?branch=master)
 
 ## <a name="news-english">News
