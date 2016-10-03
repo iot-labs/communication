@@ -3,6 +3,8 @@ package org.iotlabs;
 import org.apache.commons.cli.*;
 import org.apache.log4j.Logger;
 import org.iotlabs.communication.mqtt.MqttProxy;
+import org.iotlabs.models.mqtt.recievers.Receiver;
+import org.iotlabs.models.mqtt.recievers.Receivers;
 import org.iotlabs.webserver.SparkProxy;
 
 /**
@@ -42,7 +44,10 @@ public class Runner {
                 case "register_receivers":
                     if (cmd.hasOption("f")) {
                         String registerReceiverFilePath = cmd.getOptionValue("f");
-                        MqttProxy.getInstance().registerReceivers(registerReceiverFilePath, null);
+                        Receivers receivers = MqttProxy.getInstance().getReceiversFromFile(registerReceiverFilePath);
+                        if (receivers != null) {
+                            MqttProxy.getInstance().registerReceivers(receivers, null, true);
+                        }
                     } else {
                         usage();
                     }

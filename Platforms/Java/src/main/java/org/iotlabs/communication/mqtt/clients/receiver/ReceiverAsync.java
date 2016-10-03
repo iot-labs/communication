@@ -1,29 +1,27 @@
-package org.iotlabs.communication.mqtt.clients;
+package org.iotlabs.communication.mqtt.clients.receiver;
 
 import io.moquette.proto.MQTTException;
 import org.apache.log4j.Logger;
 import org.eclipse.paho.client.mqttv3.*;
-import org.iotlabs.models.mqtt.ReceiverPreference;
+import org.iotlabs.communication.mqtt.clients.BaseAsyncClient;
+import org.iotlabs.models.mqtt.recievers.Receiver;
 import org.iotlabs.util.IOUtils;
 
 /**
- * receive signal Asynchronously
+ * receive mqtt signal Asynchronously
  */
 public class ReceiverAsync extends BaseAsyncClient {
 
     private static Logger logger = Logger.getLogger(ReceiverAsync.class);
 
-    private ReceiverPreference receiverPreference;
+    private Receiver receiver;
 
-    public ReceiverAsync(ReceiverPreference receiverPreference) throws MqttException {
-        super(receiverPreference.getBrokerUrl(), receiverPreference.getClientId());
-        this.receiverPreference = receiverPreference;
+    public ReceiverAsync(Receiver receiver) throws MqttException {
+        super(receiver.getBrokerUrl(), receiver.getClientId());
+        this.receiver = receiver;
     }
 
-    public void subscribeAsync(MqttCallback mqttCallback) throws MqttException {
-        if (mMqttClient.isConnected()) {
-            mMqttClient.disconnectForcibly();
-        }
+    public void subscribe(MqttCallback mqttCallback) throws MqttException {
         if (mqttCallback != null) {
             mMqttClient.setCallback(mqttCallback);
         }
@@ -31,7 +29,7 @@ public class ReceiverAsync extends BaseAsyncClient {
             @Override
             public void onSuccess(IMqttToken asyncActionToken) {
                 try {
-                    mMqttClient.subscribe(receiverPreference.getTopic(), receiverPreference.getQos());
+                    mMqttClient.subscribe(receiver.getTopic(), receiver.getQos());
                 } catch (MqttException e) {
                     throw new MQTTException(e);
                 }
@@ -44,9 +42,9 @@ public class ReceiverAsync extends BaseAsyncClient {
         });
     }
 
-    public void unSubscribe() {
+    public void unsubscribe() {
         try {
-            mMqttClient.unsubscribe(receiverPreference.getTopic());
+            mMqttClient.unsubscribe(receiver.getTopic());
             IOUtils.closeMqttClientQuite(mMqttClient);
         } catch (MqttException e) {
             logger.error("Fail on un subscribe receiver.", e);

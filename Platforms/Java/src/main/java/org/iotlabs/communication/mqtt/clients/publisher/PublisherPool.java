@@ -1,4 +1,4 @@
-package org.iotlabs.communication.mqtt;
+package org.iotlabs.communication.mqtt.clients.publisher;
 
 import org.apache.commons.pool2.BasePooledObjectFactory;
 import org.apache.commons.pool2.ObjectPool;
@@ -8,8 +8,6 @@ import org.apache.commons.pool2.impl.GenericObjectPool;
 import org.apache.commons.pool2.impl.GenericObjectPoolConfig;
 import org.apache.log4j.Logger;
 import org.iotlabs.communication.mqtt.clients.BaseClient;
-import org.iotlabs.communication.mqtt.clients.PublisherAsync;
-import org.iotlabs.communication.mqtt.clients.PublisherSync;
 
 import java.util.UUID;
 
