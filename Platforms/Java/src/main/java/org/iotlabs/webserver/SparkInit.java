@@ -21,10 +21,13 @@ class SparkInit {
             logger.info("Configuration not found. Run server with default settings.");
             return;
         }
-        ipAddress(configuration.getString("host", "0.0.0.0"));
+        ipAddress(configuration.getString("host", "localhost"));
         port(configuration.getInteger("port", 4567));
         int minThread = configuration.getInteger("min_thread", 2);
         int maxThread = configuration.getInteger("max_thread", 9);
+        if (maxThread < 9) {
+            maxThread = 9;
+        }
         int timeoutInMillis = configuration.getInteger("timeout", 30000);
         threadPool(maxThread, minThread, timeoutInMillis);
     }
