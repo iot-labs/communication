@@ -5,9 +5,7 @@ import org.iotlabs.util.Configuration;
 
 import java.io.IOException;
 
-import static spark.Spark.ipAddress;
-import static spark.Spark.port;
-import static spark.Spark.threadPool;
+import static spark.Spark.*;
 
 class SparkInit {
     private static Logger logger = Logger.getLogger(SparkInit.class);
@@ -21,6 +19,7 @@ class SparkInit {
             logger.info("Configuration not found. Run server with default settings.");
             return;
         }
+        staticFileLocation("/web/statics");
         ipAddress(configuration.getString("host", "localhost"));
         port(configuration.getInteger("port", 4567));
         int minThread = configuration.getInteger("min_thread", 2);

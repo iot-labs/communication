@@ -19,10 +19,6 @@ public class BaseModel implements Jsonify {
     @SerializedName("created_at")
     private long createTimeStamp;
 
-    public long getCreateTimeStamp() {
-        return createTimeStamp;
-    }
-
     public BaseModel() {
         createTimeStamp = System.currentTimeMillis();
     }
