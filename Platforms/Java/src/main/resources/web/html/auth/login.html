@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{title}}</title>
+    <link rel="stylesheet" href="/css/auth/login.css">
+    <link rel="stylesheet" href="/css/base.css">
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/bootstrap-theme.min.css">
+</head>
+<body>
+<form class="form-signin" method="POST">
+    <h2 class="form-signin-heading">Sign in</h2>
+    <p>If you don't have account, Ask <a href="mailto:{{admin_mail}}">Admin</a>.</p>
+    <input type="text" name="username" class="form-control" placeholder="User name" required="" autofocus="">
+    <input type="password" name="password" class="form-control" placeholder="Password" required="">
+    <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+</form>
+
+<!-- scripts -->
+<script src="/js/bootstrap.min.js"></script>
+</body>
+</html>

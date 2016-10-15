@@ -1,0 +1,46 @@
+
+/* italic */
+@font-face {
+    font-family: 'Lato';
+    font-style: italic;
+    src: local("Lato Light Italic"),
+         local('Lato-LightItalic'),
+         url(/fonts/Lato-Light-Italic.woff2) format('woff2');
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'Lato';
+    font-style: italic;
+    src: local("Lato Bold Italic"),
+         local('Lato-BoldItalic'),
+         url(/fonts/Lato-Bold-Italic.woff2) format('woff2');
+    font-style: normal;
+    font-weight: bold;
+}
+
+/* light as regular */
+@font-face {
+    font-family: 'Lato';
+    font-style: normal;
+    src: local("Lato Light"),
+         local('Lato-Light'),
+         url(/fonts/Lato-Light.woff2) format('woff2');
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'Lato';
+    font-style: normal;
+    src: local("Lato Bold"),
+         local('Lato-Bold'),
+         url(/fonts/Lato-Bold.woff2) format('woff2');
+    font-style: normal;
+    font-weight: bold;
+}
+
+* {
+    font-family: 'Lato'
+}

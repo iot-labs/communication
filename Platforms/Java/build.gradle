@@ -40,13 +40,14 @@ dependencies {
 
     // spark web frameworks
     compile 'com.sparkjava:spark-core:2.5'
+    compile 'com.sparkjava:spark-template-mustache:2.3'
 }
 
 // static code analyze with findbugs
 tasks.withType(FindBugs) {
     reports {
-        xml.enabled = true
-        html.enabled = false
+        xml.enabled = false
+        html.enabled = true
     }
     exclude '**/com/pi4j/*'
     classes = classes.filter {

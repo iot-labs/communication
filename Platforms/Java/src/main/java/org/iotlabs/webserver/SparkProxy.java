@@ -1,6 +1,8 @@
 package org.iotlabs.webserver;
 
 import org.iotlabs.webserver.blueprints.AbstractBluePrint;
+import org.iotlabs.webserver.blueprints.AuthBluePrint;
+import org.iotlabs.webserver.blueprints.RootBluePrint;
 
 public class SparkProxy {
     private static class Holder {
@@ -23,6 +25,8 @@ public class SparkProxy {
      * register default setted routers.
      */
     private void registerRouters() {
+        new AuthBluePrint().register();
+        new RootBluePrint().register();
     }
 
     /**
