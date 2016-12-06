@@ -1,18 +1,7 @@
-# IoT Labs - 쉬운 IoT 개발 환경을 위한 프레임워크 <br/> IoT Labs - A Framework for Simpler IoT Development Environment
-@(_Open Frontier)[IoT Labs]
+#### Language
 
-IoT Labs는 IoT 개발에 어려움이 되는 (통신/저장/분석)을 프레임워크로 제공하여 보다 쉬운 개발 환경 제공을 목표로 합니다. <br/>
-IoT Labs aims to provide a framework for (communication/storage/analysis) in IoT development for increased productivity.
-
-----
-
-<!-- TOC depthFrom:1 depthTo:1 withLinks:1 updateOnSave:1 orderedList:0 -->
-
-- [IoT Labs - English](#iotlabs-english)
-
-<!-- /TOC -->
-
-----
+* English : https://github.com/iot-labs/communication/blob/master/README.md
+* Korean : https://github.com/iot-labs/communication/blob/master/README.kr.md
 
 # <a name="iotlabs-english">IoT Labs - A Framework for Simpler IoT Development Environment
 @(_Open Frontier)[IoT Labs]
