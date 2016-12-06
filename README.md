@@ -202,6 +202,32 @@ IoT platform provided by LG CNS. <small>*Offical name to be determined*</small>
 
 ----
 
+## Development
+
+#### Travis-CI
+Contributor 가 많아짐에 따라 Test 와 CI(Continuous Integration)이 중요해짐
+그래서 오픈소스인 Travis-CI 를 이용하고 있음
+
+* 모든 개발 코드에는 Test 코드를 넣어야 함 (의무)
+* Travis CI 의 테스트를 통화한 것만 Merge 될 수 있습니다
+
+![img04](https://cloud.githubusercontent.com/assets/897510/20933154/8150c43c-bc1a-11e6-915f-6f6a729355d7.jpg)
+![img05](https://cloud.githubusercontent.com/assets/897510/20933169/8e93df26-bc1a-11e6-93e7-6985dca9abcf.png)
+
+#### Codecov
+프로젝트가 복잡해지고, 혼자 개발하는 것이 아니다보니 테스트에 대한 중요도가 높아짐
+Codecov를 통한 테스트 코드의 커버리지 확인
+
+* Code Coverage 를 표시 한다
+ * Patch before/after 비교를 해준다
+ * Line count 로 명확히 표시한다
+* Github 에 직접 Code Coverage 를 표시해 준다
+
+![img06](https://cloud.githubusercontent.com/assets/897510/20933250/d5c99142-bc1a-11e6-8a35-ed6c04eed351.png)
+![img07](https://cloud.githubusercontent.com/assets/897510/20933255/d8540852-bc1a-11e6-8c7f-2e697283df0a.png)
+
+----
+
 ## Get Involved
 
 ## Issues
