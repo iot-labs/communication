@@ -49,39 +49,43 @@ def buzz(pitch, duration):
 		GPIO.output(buzzer_pin, False)
 		time.sleeep(delay)
 
-
 # When Connected
-while True:
-  data = client_socket.recv(4).decode()
-  if not (data is none):
-    sys.stdout.write(data + ': ')
-    if data == 'on':
-      GPIO.output(LED_DATA, GPIO.HIGH)
-      print("Turning led on")
-    elif data == 'off':
-      GPIO.output(LED_DATA, GPIO.LOW)
-      print("Turning led off")
-    elif data == 'C4':
-      buzz(262, duration)
-    elif data == 'D4':
-      buzz(294, duration)
-    elif data == 'E4':
-      buzz(330, duration)
-    elif data == 'F4':
-      buzz(349, duration)
-    elif data == 'G4':
-      buzz(392, duration)
-    elif data == 'A4':
-      buzz(440, duration)
-    elif data == 'B4':
-      buzz(492, duration)
-    elif data == 'C5':
-      buzz(523, duration)
-    else:
-      break;
+def server():
+  while True:
+    data = client_socket.recv(4).decode()
+    if not (data is none):
+      sys.stdout.write(data + ': ')
+      if data == 'on':
+        GPIO.output(LED_DATA, GPIO.HIGH)
+        print("Turning led on")
+      elif data == 'off':
+        GPIO.output(LED_DATA, GPIO.LOW)
+        print("Turning led off")
+      elif data == 'C4':
+        buzz(262, duration)
+      elif data == 'D4':
+        buzz(294, duration)
+      elif data == 'E4':
+        buzz(330, duration)
+      elif data == 'F4':
+        buzz(349, duration)
+      elif data == 'G4':
+        buzz(392, duration)
+      elif data == 'A4':
+        buzz(440, duration)
+      elif data == 'B4':
+        buzz(492, duration)
+      elif data == 'C5':
+        buzz(523, duration)
+      else:
+        print("Invalid Command")
+	break
 
-# Socket Close
-print("End")
-client_socket.close()
-server_socket.close()
-GPIO.cleanup()
+  # Socket Close
+  print("Connection Closed")
+  client_socket.close()
+  server_socket.close()
+  GPIO.cleanup()
+
+if __name__ == '__main__':
+    server()
