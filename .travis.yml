@@ -3,15 +3,30 @@ env:
   global:
     - COVERALLS_REPO_TOKEN=AME7sDQ3lHLAcrrAkWUNWb4CIjZBTbehF
     - CI_NAME=travis-ci
-language: java
-jdk: oraclejdk8
-before_cache:
-  - rm -f  $HOME/.gradle/caches/modules-2/modules-2.lock
-  - rm -fr $HOME/.gradle/caches/*/plugin-resolution/
-cache:
-  directories:
-    - $HOME/.gradle/caches/
-    - $HOME/.gradle/wrapper/
-before_script: cd Platforms/Java
-script: ./gradlew ci
-after_success: CI=true CI_name=travis-ci COVERALLS_REPO_TOKEN=AME7sDQ3lHLAcrrAkWUNWb4CIjZBTbehF ./gradlew jacocoTestReport coveralls
+
+matrix:
+  include:
+    - language: node_js
+      sudo: required
+      node_js:
+        - "5"
+      before_script:
+        - cd Platforms/NodeJS-MQTT
+        - npm install mosca --save
+      script:
+        - node broker.js
+        - node client-sub.js
+        - node client-pub.js
+
+    - language: java
+      jdk: oraclejdk8
+      before_cache:
+        - rm -f  $HOME/.gradle/caches/modules-2/modules-2.lock
+        - rm -fr $HOME/.gradle/caches/*/plugin-resolution/
+      cache:
+        directories:
+          - $HOME/.gradle/caches/
+          - $HOME/.gradle/wrapper/
+      before_script: cd Platforms/Java
+      script: ./gradlew ci
+      after_success: CI=true CI_name=travis-ci COVERALLS_REPO_TOKEN=AME7sDQ3lHLAcrrAkWUNWb4CIjZBTbehF ./gradlew jacocoTestReport coveralls
