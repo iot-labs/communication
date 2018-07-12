@@ -5,10 +5,9 @@ var mqtt = require('mqtt');
 var client  = mqtt.connect('mqtt://localhost');
 
 /* GET users listing. */
-router.get('/:pubMessage', function(req, res, next) {
-  res.send('respond with a resource');
-  client.publish('presence', req.params.pubMessage);
-  console.log('\n=================', req.params.pubMessage ,'=================\n');
+router.get('/:pubTopic/:pubMessage', function(req, res, next) {
+  res.render('pub_complete', { 'Topic' : req.params.pubTopic , 'Message' : req.params.pubMessage });
+  client.publish(req.params.pubTopic, req.params.pubMessage);
 });
 
 module.exports = router;

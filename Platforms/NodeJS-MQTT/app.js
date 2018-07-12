@@ -16,7 +16,7 @@ var app = express();
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
-app.set('view engine', 'pug');
+app.set('view engine', 'ejs');
 
 app.use(logger('dev'));
 app.use(express.json());
@@ -74,11 +74,11 @@ server.published = function(packet, client, cb) {
     var newPacket = {
         topic: 'echo/' + packet.topic,
         payload: packet.payload,
-        retain: packet.retain,
+        retain: true, // packet.retain default value = false
         qos: packet.qos
     };
 
-    console.log('newPacket', newPacket);
+    //console.log('newPacket', newPacket);
     server.publish(newPacket, cb);
 
 };
