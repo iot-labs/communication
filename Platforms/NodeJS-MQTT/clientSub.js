@@ -3,11 +3,11 @@
  * Topic : presence
  */
 
-var mqtt = require('mqtt');
+var mosca = require('mosca');
 var setup = require('./setup');
 
-// var client  = mqtt.connect('mqtt://{Your MQTT Host Domain/IP}');
-var client  = mqtt.connect(setup.MQTT_LOCALHOST);
+// var client  = mosca.connect('mqtt://{Your MQTT Host Domain/IP}');
+var client  = mosca.connect(setup.MQTT_LOCALHOST);
 
 const args = process.argv;
 

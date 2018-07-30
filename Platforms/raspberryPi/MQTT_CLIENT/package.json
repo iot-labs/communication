@@ -1,0 +1,18 @@
+{
+  "name": "MQTT_CLIENT",
+  "version": "1.0.0",
+  "description": "",
+  "main": "mqtt_client.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node ./mqtt_client"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "mqtt": "^2.18.3",
+    "readline": "^1.3.0",
+    "rpi-gpio": "^1.0.0"
+  }
+}

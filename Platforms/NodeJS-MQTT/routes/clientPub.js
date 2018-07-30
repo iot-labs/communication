@@ -1,9 +1,9 @@
 var express = require('express');
 var router = express.Router();
 
-var mqtt = require('mqtt');
+var mosca = require('mosca');
 var setup = require('../setup');
-var client  = mqtt.connect(setup.MQTT_LOCALHOST);
+var client  = mosca.connect(setup.MQTT_LOCALHOST);
 
 /* GET users listing. */
 router.get('/:pubTopic/:pubMessage', function(req, res, next) {
