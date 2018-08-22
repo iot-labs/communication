@@ -15,7 +15,7 @@ __아두이노에서 사용되는 대표적인 블루투스 모듈인 HC-06에 �
 
 
 ## 1. HC-06 특징 소개
-![Alt HC-06](../../assets/img/Projects/HC_06/HC06.png)
+![Alt HC-06](../../assets/img/Projects/HC_Module/HC06.png)
   
   - 무선 전송 모듈
     1. 수신감도 -80dBm 까지 도달
@@ -31,7 +31,7 @@ __아두이노에서 사용되는 대표적인 블루투스 모듈인 HC-06에 �
     7. 저전력 시스템
 
 ## 2. HC-06의 핀 설명
->![Alt HC-06_Pins](../../assets/img/Projects/HC_06/Pins.png)
+>![Alt HC-06_Pins](../../assets/img/Projects/HC_Module/Pins.png)
 > ####[HC-06 Diagram]
 
 핀 이름    | 핀 번호     | 핀 타입                         | 설명                                                          | 비고
