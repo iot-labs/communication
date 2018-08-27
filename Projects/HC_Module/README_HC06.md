@@ -17,7 +17,7 @@ __아두이노에서 사용되는 대표적인 블루투스 모듈인 HC-06에 �
 ## 1. HC-06 특징 소개
 ![Alt HC-06](../../assets/img/Projects/HC_Module/HC06.png)
   
-  - 무선 전송 모듈
+  - 블루투스 무선 전송 모듈
     1. 수신감도 -80dBm 까지 도달
     2. 전송 전력 -4 ~ +6dBm
     
@@ -80,8 +80,8 @@ __전송은 HC-06으로 보내는 문자열이며,
   + 반환: OK
   
 * 블루투스 Baud rate 변경
-  + 전송: AT+BAUD*1* or ATBAUD*2* ...
-  + 반환: OK1200 or OK 2400 ...
+  + 전송: AT+BAUD*1* or AT+BAUD*2* ...
+  + 반환: OK1200 or OK2400 ...
   + 1~9, A, B, C 까지 지원하며, C에서 최대 1382400 까지 지원한다.
   
   | BAUD*param* | BAUD rate | 비고 |
