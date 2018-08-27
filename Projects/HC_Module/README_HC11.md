@@ -103,7 +103,7 @@ __전송은 HC-11으로 보내는 바이트들이며,
   수신 모듈에 AT+FCSF
   를 전송한다. (아래 그림 참고)
   ```
- ![HC-11 Remote IO](../../assets/img/Projects/HC_Module/HC11REMOTEIO.PNG)
+ ![HC-11 Remote IO](../../assets/img/Projects/HC_Module/HC11REMOTEIO.png)
 
 * 모듈의 무선 전송 모드 변경(펌웨어 V1.8 이상) 
   + 전송: AT+FU*1*(기본 값) or AT+FU*4* ...
