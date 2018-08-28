@@ -14,11 +14,22 @@
     </script>
 </head>
 <body>
-<h1>Publish Message</h1>
+<h1>Publish Messages</h1>
 <div>
     <p>Topic : <input type="text" id="topic"></p>
     <p>Message : <input type="text" id="message"></p>
     <p><button id="send">토픽 전송</button></p>
+</div>
+<div>
+    <h1>Message</h1>
+    <%
+        if(Arr) {
+        for(var i = 0; i < Arr.length; i++) {
+    %>
+    <%=Arr[i].content%> <br>
+    <%
+    } } else {%>No data!<%}
+    %>
 </div>
 </body>
 </html>

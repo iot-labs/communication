@@ -9,27 +9,32 @@ var mysql = require('mysql');
 /* GET home page. */
 router.get('/', function (req, res, next) {
 
-    var obj;
+    let result;
 
     try {
-        var conn = mysql.createConnection(db_config);
+        let conn = mysql.createConnection(db_config);
 
-        var query = conn.query("select * from topic_table;", function (err, rows) {
+        conn.query("select * from topic_table;", function (err, rows) {
             conn.end();
 
             if (err) {
+                // 쿼리 에러 Throw
                 console.log(err);
                 throw err;
             }
 
-            obj = {'obj': rows.length > 0 ? rows : 'No data' };
-            console.log(obj);
-        });
-    } catch {
-        obj = "query error";
-    }
+            if(rows.length > 0) result = rows;
+            else result = 'No data';
 
-    res.render('index', obj);
+            /**
+             * 쿼리는 비동기로 처리되기 때문에 콜백 밖에 render 함수를 호출하면
+             * result 값을 MariaDB로 부터 받기도 전에 수행되어 undefined 상태로 전달된다.
+             */
+            res.render('index', { 'Arr' : result });
+        });
+    } catch (exception) {
+        console.log(exception);
+    }
 });
 
 module.exports = router;
