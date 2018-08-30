@@ -4,8 +4,8 @@
     <% include header.ejs %>
 
     <script>
-        $(function() {
-            $('#send').on('click', function() {
+        $(function () {
+            $('#send').on('click', function () {
                 var topic = $('#topic').val();
                 var msg = $('#message').val();
                 location.href = '/pub/' + topic + '/' + msg;
@@ -18,18 +18,44 @@
 <div>
     <p>Topic : <input type="text" id="topic"></p>
     <p>Message : <input type="text" id="message"></p>
-    <p><button id="send">토픽 전송</button></p>
+    <p>
+        <button id="send">토픽 전송</button>
+    </p>
 </div>
+
+<% if(!name) { %>
+<h1>Login</h1>
+<form action="/auth/login" method="post">
+    <div>
+        <label>Username:</label>
+        <input type="text" name="username"/>
+    </div>
+    <div>
+        <label>Password:</label>
+        <input type="password" name="password"/>
+    </div>
+    <div>
+        <input type="submit" value="Log In"/>
+    </div>
+</form>
+<% } else { %>
+Hello, <%= name %>
+<a href="/auth/logout">Logout</a>
+
 <div>
     <h1>Message</h1>
     <%
-        if(Arr) {
-        for(var i = 0; i < Arr.length; i++) {
+    if(Arr) {
+    for(var i = 0; i < Arr.length; i++) {
     %>
-    <%=Arr[i].content%> <br>
+    <%= Arr[i].content %> <br>---------<br>
     <%
-    } } else {%>No data!<%}
+    } } else { %>
+    No data!
+    <% }
     %>
 </div>
+
+<% } %>
 </body>
 </html>
