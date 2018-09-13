@@ -7,6 +7,9 @@ var mysql = require('mysql');
 var passport = setup.PASSPORT;
 var LocalSrategy = setup.LOCAL_STRATEGY;
 
+var bkfd2Password = require('pbkdf2-password');
+var hasher = bkfd2Password();
+
 
 passport.serializeUser(function (user, done) {
     // done의 두번 째 파라미터가 false가 아닌 경우 실행되는 함수
@@ -46,7 +49,6 @@ passport.use(new LocalSrategy(
         var pwd = password;     // password는 form의 password name으로 전달된 파라미터
 
         // 로그인 처리
-
         try {
             let conn = mysql.createConnection(db_config);
             conn.query("select * from auth;", function (err, rows) {
@@ -59,22 +61,24 @@ passport.use(new LocalSrategy(
                 }
 
                 for (let i = 0; i < rows.length; i++) {
-                    if (rows[i].id === uname && rows[i].password === pwd) {
-                        //user 정보 done에 3번 째 파라미터에 { message : 'Your messages' } 를 주면 failureFlash과 관련됨.
-                        console.log('LocalStrategy');
-                        done(null, rows[i]);
+                    if (rows[i].id === uname) {
                         // return의 이유는 비동기로 콜백이 동작하기 때문에 아래의 done() 함수가 또 다시 호출되어 http 패킷 중복 에러 발생
-                        return;
+                        return hasher({password: pwd, salt: rows[i].salt}, function (err, pass, salt, hash) {
+                            if (hash === rows[i].password) {
+                                //user 정보 done에 3번 째 파라미터에 { message : 'Your messages' } 를 주면 failureFlash과 관련됨.
+                                done(null, rows[i]);
+                            }
+                            else {
+                                done(null, false);
+                                // res.render('index', {'Arr': result});
+                            }
+                        })
                     }
                 }
-                done(null, false);
-                // res.render('index', {'Arr': result});
-            })
+            });
         } catch (exception) {
-            console.log(exception)
+            console.error(exception)
         }
-
-
     }));
 
 router.post('/login',
@@ -87,12 +91,41 @@ router.post('/login',
         })
 );
 
-router.get('/logout', function(req, res){
+router.get('/logout', function (req, res) {
     req.logout();
     //session 제거 작업이 완료된 것을 확인하고 redirect
-    req.session.save(function(){
+    req.session.save(function () {
         res.redirect('/');
     })
+});
+
+router.get('/register', function (req, res) {
+    res.render('register');
+});
+
+router.post('/register', function (req, res) {
+    var uid = req.body.id;
+    var upasswd = req.body.password;
+    var uname = req.body.uname;
+
+    hasher({password:upasswd}, function(err, pass, salt, hash) {
+        try {
+            let conn = mysql.createConnection(db_config);
+            let params = [uid, hash, salt, uname];
+            conn.query('insert into auth (id, password, salt, name) values (?, ?, ?, ?);', params, function (err, rows) {
+                conn.end();
+                if (err) {
+                    // 쿼리 에러 Throw
+                    console.error(err);
+                    throw err;
+                } else {
+                    res.redirect('/');
+                }
+            })
+        } catch (exception) {
+            console.error(exception)
+        }
+    });
 });
 
 module.exports = router;

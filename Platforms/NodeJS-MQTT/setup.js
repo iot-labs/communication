@@ -16,7 +16,7 @@ module.exports = {
         host : 'localhost',               // DB 호스팅 URL
         port : 3306,                      // DB 포트 번호
         user : 'root',                    // DB 유저, 일반 계정일 경우 DB에서 privilege 설정을 해야 접근 가능
-        password : 'cheol0381!',    // DB 유저의 비밀번호
+        password : 'YOUR_PASSWORD',    // DB 유저의 비밀번호
         database : 'lect'         // DB 이름
     },
 

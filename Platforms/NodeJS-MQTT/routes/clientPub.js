@@ -13,20 +13,20 @@ router.get('/:pubTopic/:pubMessage', function(req, res, next) {
   try {
       res.render('pub_complete', {'Topic': req.params.pubTopic, 'Message': req.params.pubMessage});
       client.publish(req.params.pubTopic, req.params.pubMessage);
-      var conn = mysql.createConnection(db_config);
+      let conn = mysql.createConnection(db_config);
 
       // URL로 넘어온 파라미터를 insert 구문의 파라미터로 사용
-      var params = [req.params.pubTopic, req.params.pubMessage];
-      const query = conn.query("insert into topic_table (id, content) values (?, ?);", params, function (err, rows) {
+      let params = [req.params.pubTopic, req.params.pubMessage];
+      conn.query("insert into topic_table (id, content) values (?, ?);", params, function (err, rows) {
           conn.end();
           if (err) {
               // 쿼리 에러 Throw
-              console.log(err);
+              console.error(err);
               throw err;
           }
       });
   } catch (e) {
-      console.log(e);
+      console.error(e);
   }
 });
 
