@@ -5,6 +5,7 @@
 var session = require('express-session');
 var passport = require('passport');
 var LocalStrategy = require('passport-local').Strategy;
+var FacebookStrategy = require('passport-facebook').Strategy;
 
 module.exports = {
 
@@ -42,5 +43,9 @@ module.exports = {
     }),
 
     PASSPORT : passport,
-    LOCAL_STRATEGY : LocalStrategy
+    LOCAL_STRATEGY : LocalStrategy,
+
+    FACEBOOK_STRATEGY : FacebookStrategy,
+    FACEBOOK_CLIENT_ID : 'YOUR_FACEBOOK_APP_ID',
+    FACEBOOK_CLIENT_SECRET : 'YOUR_FACEBOOK_APP_ID_SECRET'
 };

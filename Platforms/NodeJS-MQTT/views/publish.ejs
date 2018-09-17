@@ -1,0 +1,18 @@
+<script>
+    $(function () {
+        $('#send').on('click', function () {
+            var topic = $('#topic').val();
+            var msg = $('#message').val();
+            location.href = '/pub/' + topic + '/' + msg;
+        });
+    });
+</script>
+
+<h1>Publish Messages</h1>
+<div>
+    <p>Topic : <input type="text" id="topic"></p>
+    <p>Message : <input type="text" id="message"></p>
+    <p>
+        <button id="send">토픽 전송</button>
+    </p>
+</div>

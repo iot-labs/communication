@@ -2,46 +2,16 @@
 <html>
 <head>
     <% include header.ejs %>
-
-    <script>
-        $(function () {
-            $('#send').on('click', function () {
-                var topic = $('#topic').val();
-                var msg = $('#message').val();
-                location.href = '/pub/' + topic + '/' + msg;
-            });
-        });
-    </script>
 </head>
 <body>
-<h1>Publish Messages</h1>
-<div>
-    <p>Topic : <input type="text" id="topic"></p>
-    <p>Message : <input type="text" id="message"></p>
-    <p>
-        <button id="send">토픽 전송</button>
-    </p>
-</div>
 
-<% if(!name) { %>
-<h1>Login</h1>
-<form action="/auth/login" method="post">
-    <div>
-        <label>Username:</label>
-        <input type="text" name="username"/>
-    </div>
-    <div>
-        <label>Password:</label>
-        <input type="password" name="password"/>
-    </div>
-    <div>
-        <input type="submit" value="Log In"/>
-    </div>
-</form>
-<a href="/auth/register">회원가입</a>
+<% if(typeof name == 'undefined' || !name) { %>
+<% include auth/login.ejs %>
 <% } else { %>
 Hello, <%= name %>
 <a href="/auth/logout">Logout</a>
+
+<% include publish.ejs %>
 
 <div>
     <h1>Message</h1>

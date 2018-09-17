@@ -30,7 +30,7 @@ router.get('/', function (req, res, next) {
              * 쿼리는 비동기로 처리되기 때문에 콜백 밖에 render 함수를 호출하면
              * result 값을 MariaDB로 부터 받기도 전에 수행되어 undefined 상태로 전달된다.
              */
-            console.log('index page', req.user);
+            // console.log('index page', req.user);
             let name;
             if(req.user) name = req.user.name;
             else name = false;
@@ -39,14 +39,6 @@ router.get('/', function (req, res, next) {
     } catch (exception) {
         console.log(exception);
     }
-});
-
-// router.get('/aa', function(req, res, next) {
-//     res.render('aa');
-// });
-
-router.get('/loginFailed', function (req, res, next) {
-    res.render('login');
 });
 
 module.exports = router;
