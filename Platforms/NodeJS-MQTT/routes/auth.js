@@ -42,6 +42,8 @@ passport.deserializeUser(function (id, done) {
     } catch (exception) {
         console.log(exception);
     }
+
+    done('There is no User');
 });
 
 passport.use(new LocalSrategy(
@@ -96,7 +98,8 @@ router.post('/login',
 passport.use(new FacebookStrategy({
         clientID: setup.FACEBOOK_CLIENT_ID,
         clientSecret: setup.FACEBOOK_CLIENT_SECRET,
-        callbackURL: "/auth/facebook/callback"
+        callbackURL: "/auth/facebook/callback",
+        profileFields: ['id', 'email', 'gender', 'link', 'locale', 'name', 'timezone', 'updated_time', 'verified', 'displayName']
     }, function (accessToken, refreshToken, profile, done) {
         /** accessToken, refreshToken : 추후 facebook api 사용 시
          * profile 기반으로 사용자 찾기
@@ -154,7 +157,8 @@ passport.use(new FacebookStrategy({
 // SNS 기반 인증 구현
 router.get('/facebook',
     passport.authenticate(
-        'facebook'
+        'facebook',
+        { scope : 'email' } // email 정보 가지고 오기 위함
     )
 );
 
