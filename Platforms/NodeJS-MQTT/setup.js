@@ -6,6 +6,7 @@ var session = require('express-session');
 var passport = require('passport');
 var LocalStrategy = require('passport-local').Strategy;
 var FacebookStrategy = require('passport-facebook').Strategy;
+var KaKaoStrategy = require('passport-kakao').Strategy;
 
 module.exports = {
 
@@ -46,6 +47,10 @@ module.exports = {
     LOCAL_STRATEGY : LocalStrategy,
 
     FACEBOOK_STRATEGY : FacebookStrategy,
-    FACEBOOK_CLIENT_ID : 'YOUR_FACEBOOK_APP_ID',
-    FACEBOOK_CLIENT_SECRET : 'YOUR_FACEBOOK_APP_ID_SECRET'
+    FACEBOOK_CLIENT_ID : '301946650600139',
+    FACEBOOK_CLIENT_SECRET : 'e00bb1585b65ca07ba8282da3be66d2f',
+
+    KAKAO_STRATEGY : KaKaoStrategy,
+    KAKAO_CLIENT_RESTAPI_ID : '0f1a502b9a49653f275e749fa18a50b8',
+
 };

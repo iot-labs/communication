@@ -7,6 +7,7 @@ var mysql = require('mysql');
 var passport = setup.PASSPORT;
 var LocalSrategy = setup.LOCAL_STRATEGY;
 var FacebookStrategy = setup.FACEBOOK_STRATEGY;
+var KakaoStrategy = setup.KAKAO_STRATEGY;
 
 var bkfd2Password = require('pbkdf2-password');
 var hasher = bkfd2Password();
@@ -38,12 +39,11 @@ passport.deserializeUser(function (id, done) {
                     // return의 이유는 비동기로 콜백이 동작하기 때문에 아래의 done() 함수가 또 다시 호출되어 http 패킷 중복 에러 발생
                 }
             }
+            done({'message': 'There is no User!', 'location': 'deserialize'});
         });
     } catch (exception) {
         console.log(exception);
     }
-
-    done('There is no User');
 });
 
 passport.use(new LocalSrategy(
@@ -117,7 +117,7 @@ passport.use(new FacebookStrategy({
                 if (err) {
                     // 쿼리 에러 Throw
                     console.log(err);
-                    return done('Facebook Auth Query error 1');
+                    return done({'message': 'Facebook Auth Query error 1', 'location': 'FacebookStrategy'});
                 }
                 for (let i = 0; i < rows.length; i++) {
                     if (rows[0].facebook_id === authID) {
@@ -131,7 +131,7 @@ passport.use(new FacebookStrategy({
                     if (err) {
                         // 쿼리 에러 Throw
                         console.log(err);
-                        return done('Facebook Auth Query error 2');
+                        return done({'message': 'Facebook Auth Query error 2', 'location': 'FacebookStrategy'});
                     }
 
                     conn.query("SELECT * FROM auth WHERE facebook_id = ?;", [authID], function (err, rows) {
@@ -139,7 +139,7 @@ passport.use(new FacebookStrategy({
                         if (err) {
                             // 쿼리 에러 Throw
                             console.log(err);
-                            return done('Facebook Auth Query error 3');
+                            return done({'message': 'Facebook Auth Query error 3', 'location': 'FacebookStrategy'});
                         }
                         conn.end();
                         done(null, rows[0]);
@@ -154,17 +154,95 @@ passport.use(new FacebookStrategy({
     }
 ));
 
+
+passport.use('kakao', new KakaoStrategy({
+        clientID: setup.KAKAO_CLIENT_RESTAPI_ID,
+        callbackURL: "/auth/kakao/callback"
+    }, function (accessToken, refreshToken, profile, done) {
+        /** accessToken, refreshToken : 추후 Kakao REST api 사용 시
+         * profile 기반으로 사용자 찾기
+         * done 함수 두 번째 인자로 사용자 정보 담아서 전송
+         **/
+
+        try {
+            // profile.id : Kakao의 고유 id
+            var authID = profile.id + '';
+            var authName = profile.displayName;
+
+            let conn = mysql.createConnection(db_config);
+            conn.query("SELECT * FROM auth WHERE kakao_id = ?;", [authID], function (err, rows) {
+                // Kakao로 등록된 User 찾는 첫 번째 Callback
+                if (err) {
+                    // 쿼리 에러 Throw
+                    console.log(err);
+                    return done({'message': 'Kakao Auth Query error 1', 'location': 'KakaoStrategy'});
+                }
+                for (let i = 0; i < rows.length; i++) {
+                    if (rows[0].kakao_id === authID) {
+                        conn.end();
+                        return done(null, rows[0]);
+                    }
+                }
+
+                conn.query("INSERT INTO auth (name, kakao_id) VALUES (?, ?);", [authName, authID], function (err) {
+                    // Kakao로 등록 안된 User를 위한 Insert, 두 번째 Callback
+                    if (err) {
+                        // 쿼리 에러 Throw
+                        console.log(err);
+                        return done({'message': 'Kakao Auth Query error 2', 'location': 'KakaoStrategy'});
+                    }
+
+                    conn.query("SELECT * FROM auth WHERE kakao_id = ?;", [authID], function (err, rows) {
+                        // Insert된 User의 pid를 얻기 위한 세 번째 Callback
+                        if (err) {
+                            // 쿼리 에러 Throw
+                            console.log(err);
+                            return done({'message': 'Kakao Auth Query error 3', 'location': 'KakaoStrategy'});
+                        }
+                        conn.end();
+                        done(null, rows[0]);
+                    });
+                });
+            });
+
+        }
+        catch (exception) {
+            console.error(exception);
+        }
+    }
+));
+
+
 // SNS 기반 인증 구현
 router.get('/facebook',
     passport.authenticate(
         'facebook',
-        { scope : 'email' } // email 정보 가지고 오기 위함
+        {scope: 'email'} // email 정보 가지고 오기 위함
     )
 );
 
 router.get('/facebook/callback',
     passport.authenticate(
         'facebook',
+        {
+            successRedirect: '/',   // 로그인 성공 시 redirect 될 주소
+            failureRedirect: '/auth/loginFailed',   // 로그인 실패 시 redirect 될 주소
+        }
+    )
+);
+
+router.get('/kakao',
+    passport.authenticate(
+        'kakao',
+        {
+            failureRedirect: '/auth/loginFailed'
+        }
+    )
+);
+
+router.get('/kakao/callback',
+    passport.authenticate(
+        'kakao',
         {
             successRedirect: '/',   // 로그인 성공 시 redirect 될 주소
             failureRedirect: '/auth/loginFailed',   // 로그인 실패 시 redirect 될 주소
