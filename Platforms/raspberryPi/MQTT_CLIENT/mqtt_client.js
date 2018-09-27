@@ -59,7 +59,7 @@ var selectTopic = (line) => {
                 reject();
             publish_cnt++;
         })
-    }
+    };
 
     interval_function = setInterval(publish_topic, mqtt_setup.PUBLISH_TIMEOUT);
 
