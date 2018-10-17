@@ -2,7 +2,7 @@
   "name": "MQTT_CLIENT",
   "version": "1.0.0",
   "description": "",
-  "main": "mqtt_client.js",
+  "main": "client_pub.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node ./mqtt_client"
