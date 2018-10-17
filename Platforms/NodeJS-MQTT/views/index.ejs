@@ -5,28 +5,7 @@
 </head>
 <body>
 
-<% if(typeof name == 'undefined' || !name) { %>
 <% include auth/login.ejs %>
-<% } else { %>
-Hello, <%= name %>
-<a href="/auth/logout">Logout</a>
 
-<% include publish.ejs %>
-
-<div>
-    <h1>Message</h1>
-    <%
-    if(Arr) {
-    for(var i = 0; i < Arr.length; i++) {
-    %>
-    <%= Arr[i].content %> <br>---------<br>
-    <%
-    } } else { %>
-    No data!
-    <% }
-    %>
-</div>
-
-<% } %>
 </body>
 </html>

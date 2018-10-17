@@ -12,6 +12,7 @@ var setup = require('./setup');
 var mosca = require('mosca');
 
 var indexRouter = require('./routes/index');
+var boardRouter = require('./routes/board');
 
 //MQTT Publish를 위한 로직 API
 var pubRouter = require('./routes/clientPub');
@@ -41,6 +42,7 @@ app.use(setup.PASSPORT.initialize());
 app.use(setup.PASSPORT.session());
 
 app.use('/', indexRouter);
+app.use('/', boardRouter);
 app.use('/pub', pubRouter);
 app.use('/auth', authRouter);
 

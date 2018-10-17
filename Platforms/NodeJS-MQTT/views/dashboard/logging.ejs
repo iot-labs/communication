@@ -1,0 +1,13 @@
+<div>
+    <h1>Message</h1>
+    <%
+    if(Arr) {
+    for(var i = 0; i < Arr.length; i++) {
+    %>
+    <%= Arr[i].content %> <br>---------<br>
+    <%
+    } } else { %>
+    No data!
+    <% }
+    %>
+</div>

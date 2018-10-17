@@ -89,7 +89,7 @@ router.post('/login',
     passport.authenticate(
         'local',                    // Local 전략 실행(Google, Facebook 등일 경우 해당 전략 사용)
         {
-            successRedirect: '/',   // 로그인 성공 시 redirect 될 주소
+            successRedirect: '/board',   // 로그인 성공 시 redirect 될 주소
             failureRedirect: '/auth/loginFailed',   // 로그인 실패 시 redirect 될 주소
             failureFlash: false     // 로그인 실패 시 사용자에게 딱 한번 오류를 보여줄 때 사용
         })
@@ -225,7 +225,7 @@ router.get('/facebook/callback',
     passport.authenticate(
         'facebook',
         {
-            successRedirect: '/',   // 로그인 성공 시 redirect 될 주소
+            successRedirect: '/board',   // 로그인 성공 시 redirect 될 주소
             failureRedirect: '/auth/loginFailed',   // 로그인 실패 시 redirect 될 주소
         }
     )
@@ -244,7 +244,7 @@ router.get('/kakao/callback',
     passport.authenticate(
         'kakao',
         {
-            successRedirect: '/',   // 로그인 성공 시 redirect 될 주소
+            successRedirect: '/board',   // 로그인 성공 시 redirect 될 주소
             failureRedirect: '/auth/loginFailed',   // 로그인 실패 시 redirect 될 주소
         }
     )
@@ -259,7 +259,7 @@ router.get('/logout', function (req, res) {
 });
 
 router.get('/loginFailed', function (req, res, next) {
-    res.render('index', {err: 'Login Failed'});
+    res.redirect('index', {err: 'Login Failed'});
 });
 
 router.get('/register', function (req, res) {
