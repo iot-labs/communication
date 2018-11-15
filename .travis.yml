@@ -7,7 +7,7 @@ matrix:
   include:
     - language: node_js
       node_js:
-        -  "5"
+        -  "8"
       before_install:
         - npm install mocha -g
         - cd ./Platforms/NodeJS-MQTT/
