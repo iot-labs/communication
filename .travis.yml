@@ -4,6 +4,16 @@ env:
     - COVERALLS_REPO_TOKEN=AME7sDQ3lHLAcrrAkWUNWb4CIjZBTbehF
     - CI_NAME=travis-ci
 matrix:
+  - language: node_js
+    node_js:
+        -  "5"
+    before_install:
+        - npm install mocha -g
+        - cd ./Platforms/NodeJS-MQTT/
+        - npm install
+    script:
+        - npm test
+
   - language: java
     jdk: oraclejdk8
     before_cache:
@@ -16,13 +26,3 @@ matrix:
     before_script: cd Platforms/Java
     script: ./gradlew ci
     after_success: CI=true CI_name=travis-ci COVERALLS_REPO_TOKEN=AME7sDQ3lHLAcrrAkWUNWb4CIjZBTbehF ./gradlew jacocoTestReport coveralls
-  
-  - language: node_js
-    node_js:
-        -  "5"
-    before_install:
-        - npm install mocha -g
-        - cd ./Platforms/NodeJS-MQTT/
-        - npm install
-    script:
-        - npm test
