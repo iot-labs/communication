@@ -4,8 +4,8 @@ env:
     - COVERALLS_REPO_TOKEN=AME7sDQ3lHLAcrrAkWUNWb4CIjZBTbehF
     - CI_NAME=travis-ci
 matrix:
-    include:
-      - language: node_js
+  include:
+    - language: node_js
       node_js:
         -  "5"
       before_install:
@@ -15,15 +15,15 @@ matrix:
       script:
         - npm test
 
-      - language: java
-        jdk: oraclejdk8
-        before_cache:
-          - rm -f  $HOME/.gradle/caches/modules-2/modules-2.lock
-          - rm -fr $HOME/.gradle/caches/*/plugin-resolution/
-        cache:
-          directories:
-            - $HOME/.gradle/caches/
-            - $HOME/.gradle/wrapper/
-        before_script: cd Platforms/Java
-        script: ./gradlew ci
-        after_success: CI=true CI_name=travis-ci COVERALLS_REPO_TOKEN=AME7sDQ3lHLAcrrAkWUNWb4CIjZBTbehF ./gradlew jacocoTestReport coveralls
+    - language: java
+      jdk: oraclejdk8
+      before_cache:
+        - rm -f  $HOME/.gradle/caches/modules-2/modules-2.lock
+        - rm -fr $HOME/.gradle/caches/*/plugin-resolution/
+      cache:
+        directories:
+          - $HOME/.gradle/caches/
+          - $HOME/.gradle/wrapper/
+      before_script: cd Platforms/Java
+      script: ./gradlew ci
+      after_success: CI=true CI_name=travis-ci COVERALLS_REPO_TOKEN=AME7sDQ3lHLAcrrAkWUNWb4CIjZBTbehF ./gradlew jacocoTestReport coveralls
