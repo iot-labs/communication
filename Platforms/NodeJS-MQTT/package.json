@@ -3,7 +3,8 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "start": "node ./bin/www"
+    "start": "node ./bin/www",
+    "test": "mocha ./**/*.spec.js"
   },
   "dependencies": {
     "body-parser": "^1.18.3",
@@ -22,6 +23,7 @@
     "passport-facebook": "^2.1.1",
     "passport-kakao": "0.0.5",
     "passport-local": "^1.0.0",
-    "pbkdf2-password": "^1.2.1"
+    "pbkdf2-password": "^1.2.1",
+    "supertest": "latest"
   }
 }

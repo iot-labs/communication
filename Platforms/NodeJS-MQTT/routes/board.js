@@ -7,7 +7,7 @@ var db_config = setup.DB_CONFIG;
 var mysql = require('mysql');
 
 router.get('/board', function (req, res, next) {
-    let name;
+    var name;
     if(req.user) name = req.user.name;
     else name = false;
     res.render('dashboard/board', {'page': 'publish', 'name': name});
