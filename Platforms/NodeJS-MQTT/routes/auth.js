@@ -259,7 +259,7 @@ router.get('/logout', function (req, res) {
 });
 
 router.get('/loginFailed', function (req, res, next) {
-    res.redirect('index', {err: 'Login Failed'});
+    return res.redirect('/?error=loginFailed');
 });
 
 router.get('/register', function (req, res) {

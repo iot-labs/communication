@@ -7,7 +7,11 @@ router.get('/', function (req, res, next) {
         res.redirect('/board');
     }
     else {
-        res.render('index');
+        let err = {};
+        if (req.query.error == "loginFailed") {
+            err = { err : 'Login Failed' };
+        }
+        res.render('index', err);
     }
 });
 
