@@ -19,7 +19,9 @@ router.get('/logging', function (req, res, next) {
     try {
         let conn = mysql.createConnection(db_config);
 
-        conn.query("select * from topic_table;", function (err, rows) {
+        // console.log(req.user);
+        let param = [req.user.pid];
+        conn.query("select * from topic_table where owner_id = ?;", param,function (err, rows) {
             conn.end();
 
             if (err) {
