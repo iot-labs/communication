@@ -1,0 +1,22 @@
+<h1>Login</h1>
+<form action="/auth/login" method="post">
+    <div>
+        <label>Username:</label>
+        <input type="text" name="username"/>
+    </div>
+    <div>
+        <label>Password:</label>
+        <input type="password" name="password"/>
+    </div>
+    <div>
+        <input type="submit" value="Log In"/>
+    </div>
+</form>
+
+<a href="/auth/facebook">facebook 로그인</a>
+<a href="/auth/kakao">kakao 로그인</a>
+<a href="/auth/register">회원가입</a>
+
+<% if(typeof err != 'undefined') { %>
+Login error = <%=err%>
+<%}%>
