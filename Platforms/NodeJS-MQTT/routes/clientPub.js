@@ -10,11 +10,13 @@ var mysql = require('mysql');
 
 /* GET users listing. */
 router.get('/:pubTopic/:pubMessage', function (req, res, next) {
-    let pid = 0;
+    let pid = 0, name;
     console.log(req.user);
-    if (req.user) pid = req.user.pid;
+    if (typeof req.user !== "undefined") {
+        pid = req.user.pid;
+        name = req.user.name;
+    }
 
-    let page = 'error';
     try {
         client.publish(req.params.pubTopic, req.params.pubMessage);
         let conn = mysql.createConnection(db_config);
@@ -23,6 +25,7 @@ router.get('/:pubTopic/:pubMessage', function (req, res, next) {
         let params = [pid, req.params.pubTopic, req.params.pubMessage];
         conn.query("insert into topic_table (owner_id, id, content) values (?, ?, ?);", params, function (err, rows) {
             conn.end();
+            let page = 'error';
             if (err) {
                 // 쿼리 에러 Throw
                 console.error(err);
@@ -30,7 +33,8 @@ router.get('/:pubTopic/:pubMessage', function (req, res, next) {
             } else {
                 page = 'pub_complete';
             }
-            res.render(page, {'Topic': req.params.pubTopic, 'message': req.params.pubMessage});
+            if(pid === 0) page = 'error';
+            res.render('dashboard/board', {'page': page, 'name': name, 'Topic': req.params.pubTopic, 'message': req.params.pubMessage});
         });
     } catch (e) {
         console.error(e);

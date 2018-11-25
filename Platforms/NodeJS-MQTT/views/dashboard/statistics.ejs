@@ -1,0 +1,59 @@
+<h1>Statistics</h1>
+<div>
+    <!-- Step 1) Load D3.js -->
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <script src="/billboard/billboard.js"></script>
+    <link rel="stylesheet" href="/billboard/billboard.css">
+
+    <div id="chart"></div>
+
+    <script>
+        var Arr = '<%-JSON.stringify(Arr)%>';
+        let list = JSON.parse(Arr);
+        let legend = new Array();
+        let data = new Array();
+        data.push('Topic');
+        for(var i = 0; i < list.length; i++) {
+            // console.log(list[i].count);
+            legend.push(list[i].id.toString());
+            data.push(list[i].count);
+        }
+        var chart = bb.generate({
+            bindto: "#chart",
+            data: {
+                columns: [
+                    data
+                ]
+            },
+            axis: {
+                x: {
+                    type: "category",
+                    categories: legend
+                }
+            }
+        });
+
+
+    </script>
+
+    <% if(typeof Arr != "undefined" && Arr) { %>
+        <table class="table table-striped table-hover">
+            <thead>
+                <tr>
+                    <th> Topic </th>
+                    <th> Count </th>
+                </tr>
+            </thead>
+            <tbody>
+            <% for(var i = 0; i < Arr.length; i++) {%>
+                <tr>
+                    <td> <%= Arr[i].id %> </td>
+                    <td> <%= Arr[i].count %></td>
+                </tr>
+            <% } %>
+            </tbody>
+        </table>
+    <% } else { %>
+        <p> No Data </p>
+    <% } %>
+</div>

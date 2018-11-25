@@ -7,6 +7,41 @@ var db_config = setup.DB_CONFIG;
 var mysql = require('mysql');
 
 router.get('/board', function (req, res, next) {
+    let result;
+
+    try {
+        let conn = mysql.createConnection(db_config);
+
+        let name, pid;
+        if (req.user) {
+            name = req.user.name;
+            pid = req.user.pid;
+        } else {
+            name = false;
+            pid = 0;
+        }
+
+        let param = [pid];
+        conn.query("select id, count(*) as count from topic_table where owner_id = ? group by id;", param,function (err, rows) {
+            conn.end();
+
+            if (err) {
+                // 쿼리 에러 Throw
+                console.log(err);
+                throw err;
+            }
+
+            if (rows.length > 0) result = rows;
+            else result = 'No data';
+
+            res.render('dashboard/board', {'page': 'statistics', 'Arr': result, 'name': name});
+        });
+    } catch (exception) {
+        console.log(exception);
+    }
+});
+
+router.get('/publish', function (req, res, next) {
     let name;
     if(req.user) name = req.user.name;
     else name = false;
