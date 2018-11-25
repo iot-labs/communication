@@ -19,8 +19,16 @@ router.get('/logging', function (req, res, next) {
     try {
         let conn = mysql.createConnection(db_config);
 
-        // console.log(req.user);
-        let param = [req.user.pid];
+        let name, pid;
+        if(req.user) {
+            name = req.user.name;
+            pid = req.user.pid;
+        } else {
+            name = false;
+            pid = 0;
+        }
+
+        let param = [pid];
         conn.query("select * from topic_table where owner_id = ?;", param,function (err, rows) {
             conn.end();
 
@@ -37,10 +45,6 @@ router.get('/logging', function (req, res, next) {
              * 쿼리는 비동기로 처리되기 때문에 콜백 밖에 render 함수를 호출하면
              * result 값을 MariaDB로 부터 받기도 전에 수행되어 undefined 상태로 전달된다.
              */
-                // console.log('index page', req.user);
-            let name;
-            if(req.user) name = req.user.name;
-            else name = false;
             res.render('dashboard/board', {'page': 'logging', 'Arr': result, 'name': name});
         });
     } catch (exception) {

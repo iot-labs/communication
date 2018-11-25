@@ -6,10 +6,11 @@
     <body>
         <% include ./header.ejs%>
 
+        <div class="container" style="margin-top: 10px">
         <div class="menu">
-            <a href="/logging">메세지 로그</a>
-            <a href="/board">메세지 발행</a>
-            <a href="/nodeinfo">노드 관리</a>
+            <a class="btn btn-primary" href="/logging">메세지 로그</a>
+            <a class="btn btn-primary" href="/board">메세지 발행</a>
+            <a class="btn btn-primary" href="/nodeinfo">노드 관리</a>
         </div>
         <div class="content">
             <% if(page === 'logging') { %>
@@ -18,5 +19,7 @@
             <% include ./publish.ejs %>
             <% }%>
         </div>
+        </div>
+        <% include ../footer.ejs %>
     </body>
 </html>
