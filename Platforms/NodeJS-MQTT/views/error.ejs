@@ -5,8 +5,8 @@
 </head>
 <body>
 <h1>Error</h1>
-<p>Message : <%= message %></p>
-<p>Location : <%= location %></p>
-<p>Stack : <%= error.stack %></p>
+<p>Message : <% if(typeof message != 'undefined') { %> <%= message %></p> <% } %>
+<p>Location : <% if(typeof location != 'undefined') { %> <%= location %></p> <% } %>
+<p>Stack : <% if(typeof error != 'undefined') { %> <%= error.stack %></p><% } %>
 </body>
 </html>
